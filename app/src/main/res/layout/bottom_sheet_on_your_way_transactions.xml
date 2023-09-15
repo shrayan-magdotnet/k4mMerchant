@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_rounded_dialog"
+    tools:context=".ui.fragments.customer.total_transaction.on_your_way_bottom_sheet.OnYourWayTransactionsBottomSheet">
+
+    <TextView
+        android:id="@+id/tv_on_your_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="$0.00"
+        android:textColor="@color/on_your_way"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_on_your_way_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Balance"
+        android:textAllCaps="true"
+        android:textColor="@color/on_your_way"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_on_your_way" />
+
+    <include
+        android:id="@+id/empty_state"
+        layout="@layout/layout_empty_state_with_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/you_don_t_have_any_transactions"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_on_your_way_caption"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_transactions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_on_your_way_caption"
+        tools:itemCount="25"
+        tools:listitem="@layout/item_on_your_way_transaction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

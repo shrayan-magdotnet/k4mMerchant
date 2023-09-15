@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.fragments.customer.search.CustomerSearchFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/findMerchantET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="16dp"
+            android:hint="@string/find_store"
+            android:paddingBottom="16dp"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/ic_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/filterButtonMBTG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:checkedButton="@id/nearestBtn"
+            app:layout_constraintTop_toBottomOf="@id/findMerchantET"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <!--We don't need all button so hiding it-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/allBtn"
+                style="@style/Widget.App.Blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:text="@string/all"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <!--Nearest should have label as "all"-->
+            <Button
+                android:id="@+id/nearestBtn"
+                style="@style/Widget.App.Blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:text="@string/all"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/azBtn"
+                style="@style/Widget.App.Blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:text="@string/a_to_z"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/cashBackBtn"
+                style="@style/Widget.App.Blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:text="@string/cashback"
+                android:textSize="12sp" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customerRV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="16dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterButtonMBTG"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_merchant" />
+
+        <include
+            android:id="@+id/empty_state"
+            layout="@layout/layout_empty_state_with_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterButtonMBTG" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

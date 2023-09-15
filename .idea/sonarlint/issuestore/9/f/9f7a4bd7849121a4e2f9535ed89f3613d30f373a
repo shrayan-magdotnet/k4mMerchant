@@ -1,0 +1,14 @@
+
+Ykotlin:S6615Ì";Remove this variable, which is assigned but never accessed.(®ª­ùÿÿÿÿ
+Dkotlin:S6615Ş"&The value assigned here is never used.(»ç×úÿÿÿÿ
+7kotlin:S125¾"Remove this commented out code.(œçğØ
+<kotlin:S125Ö"Remove this commented out code.(Öó¼™ıÿÿÿÿ
+>kotlin:S125Ü"Remove this commented out code.(œĞ—Ë8„©‘ú›1
+7kotlin:S125ã"Remove this commented out code.(À©«‹
+Ckotlin:S125î"Remove this commented out code.(ÏÄ›ñşÿÿÿÿ8•“ú›1
+Wkotlin:S1144û"7Remove this unused private "validatePostalCode" method.(ªè–Î8Œ•“ú›1
+Ykotlin:S1481ê"4Remove this unused "selectedCountry" local variable.(¸¶ÆÒûÿÿÿÿ8•“ú›1
+;kotlin:S1874g"#Deprecated code should not be used.(‡¥‹²
+Akotlin:S1874‰"#Deprecated code should not be used.(èÎ•‚ÿÿÿÿÿ
+<kotlin:S1874§"#Deprecated code should not be used.(‚´Ã¬
+pkotlin:S3776Ú"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(õ§»Œüÿÿÿÿ

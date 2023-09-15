@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.merchant.merchant_profile.MerchantProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout">
+
+            <View
+                android:id="@+id/divider_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/grayBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/profileCardOuter"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/primary_text_color"
+                app:cardCornerRadius="100dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_1">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/profileCard"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="100dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/profileIV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_person" />
+                </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintBottom_toBottomOf="@id/profileCardOuter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/profileCardOuter"
+                app:layout_constraintTop_toTopOf="@id/profileCardOuter"
+                tools:text="@tools:sample/full_names" />
+
+            <View
+                android:id="@+id/divider_2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grayBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileCardOuter" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/lightGrayBackground"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:text="@string/address"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@id/divider_2"
+                app:layout_constraintStart_toStartOf="@id/divider_2"
+                app:layout_constraintTop_toBottomOf="@id/divider_2" />
+
+            <View
+                android:id="@+id/divider_3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grayBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_address" />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/grey_outline_bg"
+                android:padding="8dp"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintEnd_toStartOf="@id/btn_edit"
+                app:layout_constraintStart_toStartOf="@id/divider_3"
+                app:layout_constraintTop_toBottomOf="@id/divider_3" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:textAllCaps="false"
+                android:textColor="@color/grayText"
+                app:layout_constraintBottom_toBottomOf="@id/et_address"
+                app:layout_constraintEnd_toEndOf="@id/divider_3"
+                app:layout_constraintTop_toTopOf="@id/et_address" />
+
+            <EditText
+                android:id="@+id/et_zip_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/grey_outline_bg"
+                android:hint="@string/zip_code"
+                android:padding="8dp"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintEnd_toEndOf="@id/btn_edit"
+                app:layout_constraintStart_toStartOf="@id/et_address"
+                app:layout_constraintTop_toBottomOf="@id/et_address" />
+
+            <View
+                android:id="@+id/divider_4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grayBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_zip_code" />
+
+            <TextView
+                android:id="@+id/tv_contact_information"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/lightGrayBackground"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:text="@string/contact_information"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@id/divider_4"
+                app:layout_constraintStart_toStartOf="@id/divider_4"
+                app:layout_constraintTop_toBottomOf="@id/divider_4" />
+
+            <View
+                android:id="@+id/divider_5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grayBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_contact_information" />
+
+            <TextView
+                android:id="@+id/tv_cell_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/cell_phone"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@id/divider_5"
+                app:layout_constraintStart_toStartOf="@id/divider_5"
+                app:layout_constraintTop_toBottomOf="@id/divider_5" />
+
+            <EditText
+                android:id="@+id/et_cell_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@id/tv_cell_phone"
+                app:layout_constraintStart_toStartOf="@id/tv_cell_phone"
+                app:layout_constraintTop_toBottomOf="@id/tv_cell_phone"
+                tools:text="@string/cell_phone" />
+
+            <View
+                android:id="@+id/divider_6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grayBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_cell_phone" />
+
+            <TextView
+                android:id="@+id/tv_email_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/email"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@id/divider_6"
+                app:layout_constraintStart_toStartOf="@id/divider_6"
+                app:layout_constraintTop_toBottomOf="@id/divider_6" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/dummy_merchant_email_address"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@id/tv_email_address"
+                app:layout_constraintStart_toStartOf="@id/tv_email_address"
+                app:layout_constraintTop_toBottomOf="@id/tv_email_address" />
+
+            <Button
+                android:id="@+id/updateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:letterSpacing="0"
+                android:padding="16dp"
+                android:text="@string/update"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/et_email" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

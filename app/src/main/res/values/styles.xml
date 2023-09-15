@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="App.ShapeAppearanceOverlay.MaterialComponents.Chip" parent="ShapeAppearanceOverlay.MaterialComponents.Chip">
+        <item name="chipCornerRadius">24dp</item>
+    </style>
+
+    <style name="Title1">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Title2">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Title3">
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="CustomerName">
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Caption.Normal">
+        <item name="android:textColor">@color/grayText</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Caption">
+        <item name="android:textColor">@color/primary_text_color</item>
+    </style>
+
+    <style name="AmountGreen">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AmountOrange">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AmountBlue">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AmountBlack">
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:maxLength">15</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.App.Blue" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="materialThemeOverlay">@style/BlueButtonThemeOverlay</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/grayText</item>
+    </style>
+
+    <style name="BlueButtonThemeOverlay" parent="">
+        <item name="colorPrimary">@color/blue</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="currencyTextInputLayout">
+        <item name="android:paddingVertical">16dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:maxLength">15</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="currencyEditText">
+        <item name="android:background">@drawable/bg_rectangle_cornered_outlined_green</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:maxLength">15</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:paddingHorizontal">2dp</item>
+    </style>
+
+    <style name="RoundedCornersDialog" parent="@style/Theme.MaterialComponents.Dialog">
+        <item name="dialogCornerRadius">16dp</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+        <item name="backgroundTint">@color/bg_blue</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="promotionalBanner">
+        <item name="android:background">#96a8b8</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:letterSpacing">0.10</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#FFFC41</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="CustomLinearProgressIndicator" parent="Widget.MaterialComponents.LinearProgressIndicator">
+        <item name="indicatorColor">@color/blue_progress_made</item>
+        <item name="trackColor">@color/blue_progress_remaining</item>
+        <item name="trackCornerRadius">16dp</item>
+        <item name="trackThickness">8dp</item>
+    </style>
+
+    <style name="HintTextAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/white</item> <!-- Set your desired text color -->
+    </style>
+
+    <style name="TransactionSummaryTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/app_grey_letters</item>
+    </style>
+
+</resources>

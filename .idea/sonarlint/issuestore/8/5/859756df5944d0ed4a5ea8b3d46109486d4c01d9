@@ -1,0 +1,27 @@
+
+Pkotlin:S1172¾"2Use "_" instead of these unused lambda parameters.(«æòûÿÿÿÿ
+Pkotlin:S1172’"2Use "_" instead of these unused lambda parameters.(«æòûÿÿÿÿ
+<kotlin:S125®"Remove this commented out code.(ùß‚„ÿÿÿÿÿ
+<kotlin:S125´"Remove this commented out code.(¥˜€œùÿÿÿÿ
+<kotlin:S125À"Remove this commented out code.(ƒ‚Òüÿÿÿÿ
+<kotlin:S125Â"Remove this commented out code.(ŞÔä”úÿÿÿÿ
+<kotlin:S125”"Remove this commented out code.(ƒ‚Òüÿÿÿÿ
+<kotlin:S125–"Remove this commented out code.(ŞÔä”úÿÿÿÿ
+<kotlin:S125	"Remove this commented out code.(ˆŞéıÿÿÿÿ
+<kotlin:S125§
+"Remove this commented out code.(ÿØßşÿÿÿÿ
+ckotlin:S1144á"ERemove this unused private "updateMerchantLogoUsingMultipart" method.(óíÁßşÿÿÿÿ
+[kotlin:S1144“	"=Remove this unused private "updateLogoUsingMultipart" method.(©™±çùÿÿÿÿ
+nkotlin:S6558«"URemove this it parameter declaration or give this lambda parameter a meaningful name.(Ä»Ï
+nkotlin:S6558Æ"URemove this it parameter declaration or give this lambda parameter a meaningful name.(Ä»Ï
+Gkotlin:S1481Ì")Remove this unused "logo" local variable.(· œüÿÿÿÿ
+Gkotlin:S1481±")Remove this unused "logo" local variable.(· œüÿÿÿÿ
+;kotlin:S1874°"#Deprecated code should not be used.(âèÍ
+;kotlin:S1874Ë"#Deprecated code should not be used.(âèÍ
+Akotlin:S1874õ"#Deprecated code should not be used.(¶¹Ñüÿÿÿÿ
+;kotlin:S1874Æ"#Deprecated code should not be used.(²¾´@
+;kotlin:S1874ê"#Deprecated code should not be used.(²¾´@
+Akotlin:S1874È"#Deprecated code should not be used.(´¾ø½ıÿÿÿÿ
+Akotlin:S1874Ì"#Deprecated code should not be used.(èÎ•‚ÿÿÿÿÿ
+<kotlin:S1874õ"#Deprecated code should not be used.(‚´Ã¬
+kkotlin:S3776¾"RRefactor this method to reduce its Cognitive Complexity from 63 to the 15 allowed.(…˜±²

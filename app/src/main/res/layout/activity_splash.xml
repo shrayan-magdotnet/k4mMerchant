@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/mainLogoIV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_without_wings" />
+
+    <ImageView
+        android:id="@+id/blackWingIV"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@id/mainLogoIV"
+        android:layout_alignBottom="@id/mainLogoIV"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/black_wing"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/orangeWingIV"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@id/blackWingIV"
+        android:layout_alignTop="@id/blackWingIV"
+        android:layout_alignBottom="@id/blackWingIV"
+        android:layout_marginStart="28dp"
+        android:src="@drawable/orange_wing"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/greenWingIV"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@id/orangeWingIV"
+        android:layout_alignTop="@id/orangeWingIV"
+        android:layout_alignEnd="@id/orangeWingIV"
+        android:layout_alignBottom="@id/orangeWingIV"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/green_wing"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/dollarIV"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@id/blackWingIV"
+        android:layout_alignTop="@id/blackWingIV"
+        android:layout_alignBottom="@id/blackWingIV"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/dollar"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fl_cover_photo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="@id/toolbar_layout"
+        app:layout_constraintStart_toStartOf="@id/toolbar_layout"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+
+        <ImageView
+            android:id="@+id/iv_cover_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/bg_black_transparent"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                tools:text="@tools:sample/lorem" />
+
+            <ImageView
+                android:id="@+id/iv_location_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_pin" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/zero_km"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_cover_photo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingVertical="12dp">
+
+                <include
+                    android:id="@+id/merchant_logo"
+                    layout="@layout/layout_merchant_logo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toTopOf="@id/cv_promotional_banner"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_spend_limit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="@color/grayBackground"
+                    app:cardCornerRadius="12dp"
+                    app:contentPaddingBottom="6dp"
+                    app:contentPaddingTop="6dp"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toStartOf="@id/cv_earn_cashback"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toEndOf="@id/merchant_logo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_spend_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/transaction_header_amounts"
+                            android:textSize="14sp"
+                            tools:text="$67,89,09,87,654.00" />
+
+                        <TextView
+                            android:id="@+id/tv_spend_limit_caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/spend_limit"
+                            android:textAllCaps="true"
+                            android:textColor="@color/transaction_header_amounts"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_earn_cashback"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="@color/grayBackground"
+                    app:cardCornerRadius="12dp"
+                    app:contentPaddingBottom="6dp"
+                    app:contentPaddingTop="6dp"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cv_spend_limit"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_cashback_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:text="$67,89,09,87,654.00" />
+
+                        <TextView
+                            android:id="@+id/tv_cashback_amount_caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/earn_cashback"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:id="@+id/iv_go_there"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/circle_stroke_thin"
+                    android:backgroundTint="?colorPrimary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_map_outlined"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@id/iv_call"
+                    app:layout_constraintStart_toEndOf="@id/merchant_logo"
+                    app:layout_constraintTop_toBottomOf="@id/cv_spend_limit"
+                    app:tint="?colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/iv_call"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/circle_stroke_thin"
+                    android:backgroundTint="?colorPrimary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_call"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_go_there"
+                    app:layout_constraintEnd_toStartOf="@id/iv_website"
+                    app:layout_constraintStart_toEndOf="@id/iv_go_there"
+                    app:layout_constraintTop_toTopOf="@id/iv_go_there"
+                    app:tint="?colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/iv_website"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/circle_stroke_thin"
+                    android:backgroundTint="?colorPrimary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_link_outlined"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_go_there"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_call"
+                    app:layout_constraintTop_toTopOf="@id/iv_go_there"
+                    app:tint="?colorPrimary"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_promotional_banner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#96a8b8"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:contentPaddingBottom="8dp"
+                    app:contentPaddingTop="8dp"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_go_there">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="6dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_price_tag"
+                            app:tint="#FFFC41" />
+
+                        <TextView
+                            android:id="@+id/tv_promotional_banner"
+                            style="@style/promotionalBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="8dp"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            tools:text="@tools:sample/lorem/random" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                android:id="@+id/layout_account_creation_prompt"
+                layout="@layout/layout_account_creation_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_spend_progress_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="visible"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_you_spent_caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:elevation="10dp"
+                    android:text="@string/you_spent"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue_progress_made"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/halfPieChart" />
+
+                <TextView
+                    android:id="@+id/tv_you_spent_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue_progress_made"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_you_spent_caption"
+                    app:layout_constraintTop_toBottomOf="@id/tv_you_spent_caption"
+                    tools:text="$322.60" />
+
+                <TextView
+                    android:id="@+id/tv_your_goal_caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:elevation="10dp"
+                    android:text="@string/your_goal"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue_progress_remaining"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_you_spent_caption" />
+
+                <TextView
+                    android:id="@+id/tv_your_goal_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue_progress_remaining"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/tv_your_goal_caption"
+                    app:layout_constraintTop_toBottomOf="@id/tv_your_goal_caption"
+                    tools:text="$322.60" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/halfPieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="-50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_view_announcement"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="?colorPrimary"
+                    android:src="@drawable/ic_announcement"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/iv_request_cashback"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#FFA630" />
+
+                <TextView
+                    android:id="@+id/tv_view_announcement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/announcement"
+                    android:textColor="?colorPrimary"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_view_announcement"
+                    app:layout_constraintStart_toStartOf="@id/iv_view_announcement"
+                    app:layout_constraintTop_toBottomOf="@id/iv_view_announcement" />
+
+
+                <ImageView
+                    android:id="@+id/iv_request_cashback"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_stroke"
+                    android:backgroundTint="?colorPrimary"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_money"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_view_announcement"
+                    app:layout_constraintEnd_toStartOf="@id/iv_view_transactions"
+                    app:layout_constraintStart_toEndOf="@id/iv_view_announcement"
+                    app:layout_constraintTop_toTopOf="@id/iv_view_announcement"
+                    app:tint="?colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/request_cashback"
+                    android:textColor="?colorPrimary"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_request_cashback"
+                    app:layout_constraintStart_toStartOf="@id/iv_request_cashback"
+                    app:layout_constraintTop_toBottomOf="@id/iv_request_cashback" />
+
+                <ImageView
+                    android:id="@+id/iv_view_transactions"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_stroke"
+                    android:backgroundTint="?colorPrimary"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_eye"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_request_cashback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_request_cashback"
+                    app:layout_constraintTop_toTopOf="@id/iv_request_cashback"
+                    app:tint="?colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/transactions"
+                    android:textColor="?colorPrimary"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_view_transactions"
+                    app:layout_constraintStart_toStartOf="@id/iv_view_transactions"
+                    app:layout_constraintTop_toBottomOf="@id/iv_view_transactions" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_qr_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_rounded_dialog"
+                android:visibility="visible"
+                tools:visibility="visible">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_qr_code"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginTop="24dp"
+                    app:cardElevation="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.75"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.75">
+
+                    <ImageView
+                        android:id="@+id/iv_qr_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:src="@tools:sample/backgrounds/scenic" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="12dp"
+                    android:justificationMode="inter_word"
+                    android:text="Show this QR code to the store and get cash back assigned"
+                    android:textSize="9sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/cv_qr_code"
+                    app:layout_constraintStart_toStartOf="@id/cv_qr_code"
+                    app:layout_constraintTop_toBottomOf="@id/cv_qr_code"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_profile_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:justificationMode="inter_word"
+                android:maxLines="4"
+                android:textColor="@color/primary_text_color"
+                android:visibility="visible"
+                tools:text="@tools:sample/lorem/random"
+                tools:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

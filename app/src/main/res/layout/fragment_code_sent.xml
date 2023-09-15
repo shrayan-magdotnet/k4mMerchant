@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.activity.merchant.send_cashback_code.CodeSentFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/code_sent"
+        style="@style/Title3"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/iv_success"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_checkmark_outlined"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_code_generate_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/code_generate_success"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_success"
+        android:layout_marginHorizontal="96dp" />
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title1"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_code_generate_success"
+        android:layout_marginTop="16dp"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_code_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:text="@string/code"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_code" />
+
+    <TextView
+        android:id="@+id/tv_cashback_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title1"
+        android:textSize="28sp"
+        android:textColor="@color/transaction_header_amounts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_code_caption"
+        android:layout_marginTop="32dp"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_cashback_amount_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:text="@string/purchase_amount"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_cashback_amount" />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/done" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

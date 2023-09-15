@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.merchant.return_purchase.PurchaseReturnConfirmationActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_customer_name"
+        style="@style/Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tv_customer_code"
+        style="@style/Title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_customer_name"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tv_enter_amount_to_withdraw"
+        style="@style/Title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/purchase_amount"
+        android:textColor="@color/grayText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_customer_code" />
+
+    <TextView
+        android:id="@+id/tv_purchase_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text_color"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_amount_to_withdraw"
+        app:layout_constraintWidth_percent=".80"
+        tools:text="$0.00" />
+
+    <TextView
+        android:id="@+id/tv_cashback_amount_caption"
+        style="@style/Title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/cash_back_amount"
+        android:textColor="@color/grayText"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_purchase_amount" />
+
+    <TextView
+        android:id="@+id/tv_cashback_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text_color"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tv_cashback_amount_caption"
+        app:layout_constraintStart_toStartOf="@id/tv_cashback_amount_caption"
+        app:layout_constraintTop_toBottomOf="@id/tv_cashback_amount_caption"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_transaction_date_caption"
+        style="@style/Title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/transaction_date"
+        android:textColor="@color/grayText"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_cashback_amount" />
+
+    <TextView
+        android:id="@+id/tv_transaction_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text_color"
+        app:layout_constraintEnd_toEndOf="@id/tv_transaction_date_caption"
+        app:layout_constraintStart_toStartOf="@id/tv_transaction_date_caption"
+        app:layout_constraintTop_toBottomOf="@id/tv_transaction_date_caption"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

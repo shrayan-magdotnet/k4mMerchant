@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.merchant.return_purchase.PurchaseReturnSuccessActivity">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_success"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_checkmark_outlined"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout" />
+
+    <TextView
+        android:id="@+id/tv_cash_back_sent"
+        style="@style/Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/purchase_return_success"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/iv_success"
+        app:layout_constraintStart_toStartOf="@id/iv_success"
+        app:layout_constraintTop_toBottomOf="@id/iv_success" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        style="@style/AmountGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="32sp"
+        tools:text="$200.00"
+        app:layout_constraintEnd_toEndOf="@id/tv_cash_back_sent"
+        app:layout_constraintStart_toStartOf="@id/tv_cash_back_sent"
+        app:layout_constraintTop_toBottomOf="@id/tv_cash_back_sent" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/grayText"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:text="@string/thank_you_for_using_kash4me_your_purchase_return_has_been_successful"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_amount" />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:paddingVertical="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

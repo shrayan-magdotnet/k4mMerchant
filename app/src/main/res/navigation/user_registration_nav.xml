@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/merchant_registration_nav"
+    app:startDestination="@id/registerFragment">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.kash4me.ui.fragments.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/navigateToVerifyFragment"
+            app:destination="@id/verifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyFragment"
+        android:name="com.kash4me.ui.fragments.verify.VerifyEmailFragment"
+        android:label="fragment_verify"
+        tools:layout="@layout/fragment_verify" />
+</navigation>

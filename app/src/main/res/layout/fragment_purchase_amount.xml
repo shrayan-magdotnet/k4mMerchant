@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.merchant.search.assign_cashback.fragment.purchase_amount.PurchaseAmountFragment">
+
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_customer_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Customer name goes here"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/cv_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="@id/tv_customer_name"
+        app:layout_constraintStart_toStartOf="@id/tv_customer_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_customer_name"
+        tools:text="@string/dummy_code" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/lighter_gray"
+        app:cardCornerRadius="16dp"
+        app:contentPaddingBottom="16dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_code"
+        app:strokeColor="#2c8db4"
+        app:strokeWidth="0dp">
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="@string/merchant_enter_purchase_amount_description"
+            android:textColor="@color/grayText" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_enter_purchase_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/enter_purchase_amount"
+        android:textColor="@color/grayText"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_description" />
+
+    <com.blackcat.currencyedittext.CurrencyEditText
+        android:id="@+id/et_purchase_amount"
+        style="@style/currencyEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/grayText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_purchase_amount"
+        app:layout_constraintWidth_percent=".75"
+        tools:text="$0.00" />
+
+    <TextView
+        android:id="@+id/tv_cashback_value_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/cash_back_value"
+        android:textColor="@color/grayText"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_purchase_amount" />
+
+    <com.kash4me.utils.custom_views.CurrencyTextView
+        android:id="@+id/tv_cashback_value_body"
+        style="@style/AmountGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="32sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/tv_cashback_value_title"
+        app:layout_constraintStart_toStartOf="@id/tv_cashback_value_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_cashback_value_title"
+        tools:text="$0.0" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

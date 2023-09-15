@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.merchant.registration.finish.FinishFragment">
+
+    <include
+        android:id="@+id/stepper"
+        layout="@layout/customer_registration_stepper_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/fullDetailsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/please_confirm_below_information_are_correct"
+        android:textColor="@color/primary_text_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepper" />
+
+    <TextView
+        android:id="@+id/userNameLTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/nickname"
+        app:layout_constraintTop_toBottomOf="@id/fullDetailsTV" />
+
+    <TextView
+        android:id="@+id/customerNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="@string/your_nickname"
+        android:textColor="@color/primary_text_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/userNameLTV" />
+
+    <TextView
+        android:id="@+id/userEmailLTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/country"
+        app:layout_constraintTop_toBottomOf="@id/customerNameTV" />
+
+    <TextView
+        android:id="@+id/countryTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="@string/your_country"
+        android:textColor="@color/primary_text_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/userEmailLTV" />
+
+    <TextView
+        android:id="@+id/postalCodeLTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:visibility="gone"
+        android:text="@string/postal_code"
+        app:layout_constraintTop_toBottomOf="@id/countryTV" />
+
+    <TextView
+        android:id="@+id/postalCodeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:visibility="gone"
+        android:text="@string/postal_code_here"
+        android:textColor="@color/primary_text_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/postalCodeLTV" />
+
+    <TextView
+        android:id="@+id/dobLTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:visibility="gone"
+        android:text="@string/date_of_birth"
+        app:layout_constraintTop_toBottomOf="@id/postalCodeTV" />
+
+    <TextView
+        android:id="@+id/dobTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="@string/your_date_of_brith_here"
+        android:visibility="gone"
+        android:textColor="@color/primary_text_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/dobLTV" />
+
+    <TextView
+        android:id="@+id/phoneNumberLTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/phone_number"
+        app:layout_constraintTop_toBottomOf="@id/dobTV" />
+
+    <TextView
+        android:id="@+id/phoneNumberTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="@string/your_phone_number_here"
+        android:textColor="@color/primary_text_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumberLTV" />
+
+
+    <Button
+        android:id="@+id/finishBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/finish"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumberTV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

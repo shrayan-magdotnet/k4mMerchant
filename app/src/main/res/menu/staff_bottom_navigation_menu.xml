@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_1"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/scan_qr"
+        android:icon="@drawable/ic_qr"
+        android:title="@string/scan" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_person"
+        android:title="@string/profile" />
+</menu>

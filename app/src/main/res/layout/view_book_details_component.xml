@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.kash4me.ui.activity.merchant.transaction_details.utils.ScrollDisabledListView
+        android:id="@+id/bookDetailsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:divider="@color/grayText"
+        android:dividerHeight="2dp"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_today_sell_new" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

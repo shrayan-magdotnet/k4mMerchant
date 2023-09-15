@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:contentPadding="12dp"
+    app:strokeColor="#8B81AF"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/merchant_logo"
+            layout="@layout/layout_merchant_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/dark_gray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_cash_rewards_caption"
+            app:layout_constraintStart_toEndOf="@id/merchant_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/tv_cash_rewards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/primary_text_color"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_cash_rewards_caption"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_name"
+            tools:text="$1000.85" />
+
+        <TextView
+            android:id="@+id/tv_cash_rewards_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/cash_rewards"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_text_color"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_cash_rewards" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/grayText"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_cash_rewards"
+            app:layout_constraintStart_toStartOf="@id/tv_shop_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_name"
+            tools:text="@tools:sample/lorem/random" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tv_address,tv_cash_rewards_caption" />
+
+        <!--TODO: Add a guideline or a barrier-->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_bar"
+            style="@style/CustomLinearProgressIndicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_address"
+            app:layout_constraintTop_toBottomOf="@id/barrier"
+            tools:progress="50" />
+
+        <TextView
+            android:id="@+id/tv_spent_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/primary_text_color"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tv_goal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/progress_bar"
+            app:layout_constraintTop_toBottomOf="@id/progress_bar"
+            tools:text="YOU SPENT: $36.09" />
+
+        <TextView
+            android:id="@+id/tv_goal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/primary_text_color"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/progress_bar"
+            app:layout_constraintTop_toBottomOf="@id/progress_bar"
+            tools:text="GOAL: $100.00" />
+
+        <TextView
+            android:id="@+id/tv_on_your_way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/on_your_way"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/progress_bar"
+            app:layout_constraintTop_toBottomOf="@id/tv_spent_amount"
+            tools:text="ON YOUR WAY: $15.00" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

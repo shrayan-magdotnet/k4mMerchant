@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.customer.search.CustomerSearchFragment">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/findCustomerET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/find_your_customer"
+            android:paddingBottom="16dp"
+            app:boxBackgroundColor="@color/search_bar_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/ic_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/filterButtonMBTG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:checkedButton="@id/allBtn"
+            app:layout_constraintTop_toBottomOf="@id/findCustomerET"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/allBtn"
+                style="@style/Widget.App.Blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingHorizontal="1dp"
+                android:text="@string/all"
+                android:textSize="12sp"
+                app:iconPadding="-10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/azBtn"
+                style="@style/Widget.App.Blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingHorizontal="1dp"
+                android:text="@string/a_to_z"
+                android:textSize="12sp"
+                app:iconPadding="-10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/earnedBtn"
+                style="@style/Widget.App.Blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingHorizontal="1dp"
+                android:text="@string/earned"
+                android:textSize="12sp"
+                app:iconPadding="-10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/processingBtn"
+                style="@style/Widget.App.Blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:paddingHorizontal="1dp"
+                android:text="@string/processing"
+                android:textSize="12sp"
+                app:iconPadding="-10dp" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:id="@+id/tv_customer_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterButtonMBTG"
+            tools:text="You have gained 0 customer so far" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customerRV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_customer_count"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_customer_search" />
+
+        <include
+            android:id="@+id/empty_state"
+            layout="@layout/layout_empty_state_with_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterButtonMBTG" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

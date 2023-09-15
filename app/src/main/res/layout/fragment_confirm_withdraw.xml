@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.merchant.withdraw_cash.ConfirmWithdrawFragment">
+
+    <TextView
+        android:id="@+id/tv_withdraw_amount_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:text="You are trying to withdraw cash. Please confirm below information are correct."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_withdraw_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/primary_text_color"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_withdraw_amount_description"
+        tools:text="$15.00" />
+
+    <TextView
+        android:id="@+id/tv_withdraw_amount_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/withdraw_amount"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tv_withdraw_amount"
+        app:layout_constraintStart_toStartOf="@id/tv_withdraw_amount"
+        app:layout_constraintTop_toBottomOf="@id/tv_withdraw_amount" />
+
+    <TextView
+        android:id="@+id/tv_transaction_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/primary_text_color"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_withdraw_amount_caption"
+        tools:text="$20.00" />
+
+    <TextView
+        android:id="@+id/tv_transaction_fee_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transaction_fee"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tv_transaction_fee"
+        app:layout_constraintStart_toStartOf="@id/tv_transaction_fee"
+        app:layout_constraintTop_toBottomOf="@id/tv_transaction_fee" />
+
+    <TextView
+        android:id="@+id/tv_remaining_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/primary_text_color"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_transaction_fee_caption"
+        tools:text="$10.00" />
+
+    <TextView
+        android:id="@+id/tv_remaining_balance_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remaining_balance"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tv_remaining_balance"
+        app:layout_constraintStart_toStartOf="@id/tv_remaining_balance"
+        app:layout_constraintTop_toBottomOf="@id/tv_remaining_balance" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="36dp"
+        android:justificationMode="inter_word"
+        android:text="It could take 1-3 business days to process your transaction. You could see the Balance in your Bank Account after processing is complete. If you have any questions, please call us at 1-877-385-9898"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_remaining_balance_caption" />
+
+    <Button
+        android:id="@+id/btn_withdraw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/withdraw"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

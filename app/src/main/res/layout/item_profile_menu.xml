@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@id/menuTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menuTV"
+            tools:src="@drawable/ic_back"
+            app:tint="@color/grayText" />
+
+        <TextView
+            android:id="@+id/menuTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingVertical="16dp"
+            android:textColor="@color/primary_text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/goTV"
+            app:layout_constraintStart_toEndOf="@id/iv_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/hello" />
+
+
+        <ImageView
+            android:id="@+id/goTV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="center"
+            android:gravity="end|center_vertical"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/graySurface" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:dividerColor="@color/grayBackground" />
+
+</LinearLayout>

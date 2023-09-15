@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment_information_nav"
+    app:startDestination="@id/paymentInformationFragment">
+
+    <fragment
+        android:id="@+id/paymentInformationFragment"
+        android:name="com.kash4me.ui.activity.payment_gateway.payment_information.PaymentInformationFragment"
+        android:label="@string/payment_information"
+        tools:layout="@layout/fragment_payment_information">
+        <action
+            android:id="@+id/action_paymentInformationFragment_to_interacInformationFragment"
+            app:destination="@id/interacInformationFragment" />
+        <action
+            android:id="@+id/action_paymentInformationFragment_to_connectYourBankFragment"
+            app:destination="@id/connectYourBankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interacInformationFragment"
+        android:name="com.kash4me.ui.activity.payment_gateway.InteracInformationFragment"
+        android:label="@string/interac_information"
+        tools:layout="@layout/fragment_interac_information">
+        <argument
+            android:name="hasMultiplePaymentMethodsLinked"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/connectYourBankFragment"
+        android:name="com.kash4me.ui.activity.payment_gateway.connect_your_bank.ConnectYourBankFragment"
+        android:label="@string/connect_your_bank"
+        tools:layout="@layout/fragment_connect_your_bank">
+        <argument
+            android:name="hasMultiplePaymentMethodsLinked"
+            app:argType="boolean" />
+    </fragment>
+</navigation>

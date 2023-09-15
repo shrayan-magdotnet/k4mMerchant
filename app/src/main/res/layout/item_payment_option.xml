@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp">
+
+    <RadioButton
+        android:id="@+id/radio_button"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/app_green"
+        app:layout_constraintBottom_toBottomOf="@id/tv_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/radio_button"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/tv_default_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/default_surrounded_with_big_brackets"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textColor="@color/app_orange"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_link_complete_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:justificationMode="inter_word"
+        android:textColor="@color/app_green"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/radio_button"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="@string/bank_connected_description"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:justificationMode="inter_word"
+        android:text="Text View 2"
+        android:textColor="@color/primary_text_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/radio_button"
+        app:layout_constraintTop_toBottomOf="@id/tv_link_complete_message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pay_nav"
+    app:startDestination="@id/payByKash4meFragment">
+
+    <fragment
+        android:id="@+id/payByKash4meFragment"
+        android:name="com.kash4me.ui.activity.customer.pay.PayByKash4meFragment"
+        android:label="fragment_pay_by_kash4me"
+        tools:layout="@layout/fragment_pay_by_kash4me">
+        <action
+            android:id="@+id/action_payByKash4meFragment_to_confirmPayByKash4meFragment"
+            app:destination="@id/confirmPayByKash4meFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPayByKash4meFragment"
+        android:name="com.kash4me.ui.activity.customer.pay.ConfirmPayByKash4meFragment"
+        android:label="fragment_confirm_pay_by_kash4me"
+        tools:layout="@layout/fragment_confirm_pay_by_kash4me">
+        <argument
+            android:name="arg"
+            app:argType="com.kash4me.data.models.customer.pay_by_kash4me.PayByKash4meResponse" />
+        <argument
+            android:name="purchase_amount"
+            app:argType="float" />
+    </fragment>
+
+</navigation>

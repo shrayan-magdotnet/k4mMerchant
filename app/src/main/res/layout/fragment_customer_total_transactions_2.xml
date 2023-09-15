@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.customer.total_transaction.CustomerTotalTransactions2Fragment">
+
+    <include
+        android:id="@+id/layout_account_creation_prompt"
+        layout="@layout/layout_account_creation_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:visibility="gone">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:contentPadding="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_your_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="$0.00"
+                    android:textColor="?colorPrimary"
+                    android:textSize="36sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_your_balance_caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Balance"
+                    android:textAllCaps="true"
+                    android:textColor="?colorPrimary"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@id/tv_your_balance"
+                    app:layout_constraintStart_toStartOf="@id/tv_your_balance"
+                    app:layout_constraintTop_toBottomOf="@id/tv_your_balance" />
+
+                <ImageView
+                    android:id="@+id/iv_withdraw"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/circle_stroke"
+                    android:backgroundTint="?colorPrimary"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/ic_withdraw"
+                    app:civ_border_color="?colorPrimary"
+                    app:civ_border_width="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/iv_pay"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_your_balance_caption"
+                    app:tint="?colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/withdraw"
+                    android:textColor="?colorPrimary"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_withdraw"
+                    app:layout_constraintStart_toStartOf="@id/iv_withdraw"
+                    app:layout_constraintTop_toBottomOf="@id/iv_withdraw" />
+
+                <ImageView
+                    android:id="@+id/iv_pay"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_stroke"
+                    android:backgroundTint="?colorPrimary"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:src="@drawable/ic_file"
+                    app:civ_border_color="?colorPrimary"
+                    app:civ_border_width="4dp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_withdraw"
+                    app:layout_constraintEnd_toStartOf="@id/iv_view_transactions"
+                    app:layout_constraintStart_toEndOf="@id/iv_withdraw"
+                    app:layout_constraintTop_toTopOf="@id/iv_withdraw"
+                    app:tint="?colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/pay"
+                    android:textColor="?colorPrimary"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_pay"
+                    app:layout_constraintStart_toStartOf="@id/iv_pay"
+                    app:layout_constraintTop_toBottomOf="@id/iv_pay" />
+
+                <ImageView
+                    android:id="@+id/iv_view_transactions"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_stroke"
+                    android:backgroundTint="?colorPrimary"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:src="@drawable/ic_eye"
+                    app:civ_border_color="?colorPrimary"
+                    app:civ_border_width="4dp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_pay"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_pay"
+                    app:layout_constraintTop_toTopOf="@id/iv_pay"
+                    app:tint="?colorPrimary" />
+
+
+                <TextView
+                    android:id="@+id/tv_view_transactions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/transactions"
+                    android:textColor="?colorPrimary"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_view_transactions"
+                    app:layout_constraintStart_toStartOf="@id/iv_view_transactions"
+                    app:layout_constraintTop_toBottomOf="@id/iv_view_transactions" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:contentPadding="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_on_your_way"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="$0.00"
+                    android:textColor="@color/on_your_way"
+                    android:textSize="36sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_on_your_way_caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/on_your_way"
+                    android:textAllCaps="true"
+                    android:textColor="@color/on_your_way"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@id/tv_on_your_way"
+                    app:layout_constraintStart_toStartOf="@id/tv_on_your_way"
+                    app:layout_constraintTop_toBottomOf="@id/tv_on_your_way" />
+
+                <TextView
+                    android:id="@+id/iv_on_your_way_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="It takes 1-2 business days to reflect this amount to your balance"
+                    android:textAlignment="center"
+                    android:textColor="@color/on_your_way"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_on_your_way_caption" />
+
+                <ImageView
+                    android:id="@+id/iv_view_processing_transactions"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_stroke"
+                    android:backgroundTint="@color/on_your_way"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:src="@drawable/ic_eye"
+                    app:civ_border_color="@color/on_your_way"
+                    app:civ_border_width="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_on_your_way_description"
+                    app:layout_constraintVertical_bias="0.7"
+                    app:tint="@color/on_your_way" />
+
+
+                <TextView
+                    android:id="@+id/tv_view_processing_transactions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/transactions"
+                    android:textColor="@color/on_your_way"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_view_processing_transactions"
+                    app:layout_constraintStart_toStartOf="@id/iv_view_processing_transactions"
+                    app:layout_constraintTop_toBottomOf="@id/iv_view_processing_transactions" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

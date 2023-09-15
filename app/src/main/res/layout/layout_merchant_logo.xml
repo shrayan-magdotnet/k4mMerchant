@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:layout_gravity="center"
+    app:cardCornerRadius="8dp"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/grayButton"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_shop_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C0C0C0" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#ebebeb"
+            android:scaleType="fitCenter"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

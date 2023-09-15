@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:contentPaddingLeft="8dp"
+    app:contentPaddingRight="8dp"
+    app:contentPaddingBottom="10dp"
+    app:contentPaddingTop="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/bg_border"
+    app:strokeWidth="0.75dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/customerNameTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textAllCaps="true"
+                android:maxLines="2"
+                android:text="@string/customer_name"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/earnedTV"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@tools:sample/lorem"
+                android:textColor="@color/primary_text_color"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/customerNameTV"
+                app:layout_constraintTop_toBottomOf="@id/customerNameTV" />
+
+            <com.kash4me.utils.custom_views.CurrencyTextView
+                android:id="@+id/earnedTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/dollar_40_00"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/customerNameTV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_cashback_earned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cash_rewards"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_text_color"
+                android:textSize="9sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@id/earnedTV"
+                app:layout_constraintTop_toBottomOf="@id/earnedTV" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tv_code, tv_cashback_earned" />
+
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_bar"
+                style="@style/CustomLinearProgressIndicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_code"
+                app:layout_constraintTop_toBottomOf="@id/barrier"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/tv_spent_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"
+                android:textColor="#042457"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@id/tv_goal"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/progress_bar"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar"
+                tools:text="SPENT: $36.09" />
+
+            <TextView
+                android:id="@+id/tv_goal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAlignment="viewEnd"
+                android:textColor="#042457"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/progress_bar"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar"
+                tools:text="GOAL: $100.00" />
+
+            <TextView
+                android:id="@+id/tv_processing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/progress_bar"
+                app:layout_constraintTop_toBottomOf="@id/tv_spent_amount"
+                tools:text="PROCESSING: $15.00" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>

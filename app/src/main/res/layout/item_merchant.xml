@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    android:elevation="16dp"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="@color/bg_border"
+    app:strokeWidth="0.75dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="8dp"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/merchantNameTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/south_indian_grocery"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/spendTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="@string/on_every_100_00_spent"
+                    android:textColor="@color/blue"
+                    app:autoSizeTextType="uniform" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/earnTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="@string/dollar_20_00"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="24sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/earnLTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/earn_cashback"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="8sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_promotional_banner"
+            style="@style/promotionalBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="@string/dummy_promotional_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/merchantAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/merchant_address_will_be_displayed_here"
+                tools:text="@tools:sample/lorem/random" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="4dp">
+
+                <TextView
+                    android:id="@+id/distanceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="@string/_7_5_km"
+                    android:textColor="@color/primary_text_color" />
+
+                <ImageView
+                    android:id="@+id/locationIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_pin" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

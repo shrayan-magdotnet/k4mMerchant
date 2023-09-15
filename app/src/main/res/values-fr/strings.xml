@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="about">Sur</string>
+    <string name="person">La personne</string>
+    <string name="search">Chercher</string>
+    <string name="home">Domicile</string>
+    <string name="notification">Notification</string>
+    <string name="how_it_works">Comment ça fonctionne</string>
+    <string name="whats_new">Quoi de neuf</string>
+    <string name="cashback_settings">Paramètres de remise en argent</string>
+    <string name="language_settings">Paramètres de langue</string>
+    <string name="change_password">Changer le mot de passe</string>
+    <string name="log_out">Se déconnecter</string>
+    <string name="infobox">Boîte d\'info</string>
+    <string name="coming_soon">Bientôt disponible</string>
+    <string name="changing_language_requires_app_restart">Le changement de langue nécessite le redémarrage de l\'application</string>
+    <string name="view_profile">Voir le profil</string>
+    <string name="cashback">Remise en argent</string>
+
+</resources>

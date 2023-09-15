@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.activity.customer.merchant_details.MerchantDetailsActivity">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainCL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/mainLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <LinearLayout
+                        android:id="@+id/merchantOtherDetailLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:weightSum="3"
+                        app:layout_constraintTop_toBottomOf="@id/merchantAddressTV">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_spend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:maxLines="1"
+                                android:text="@string/on_every_100_spend"
+                                android:textColor="@color/blue"
+                                app:layout_constraintBaseline_toBaselineOf="@id/tv_earn_cashback_amount"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_promotional_banner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                app:cardBackgroundColor="@android:color/transparent"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:layout_constrainedWidth="true"
+                                app:layout_constraintEnd_toStartOf="@id/guideline"
+                                app:layout_constraintHorizontal_bias="0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_spend">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/bg_right_rounded"
+                                    android:paddingVertical="6dp">
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="8dp"
+                                        android:src="@drawable/ic_price_tag"
+                                        app:tint="#FFFC41" />
+
+                                    <TextView
+                                        android:id="@+id/tv_promotional_banner"
+                                        style="@style/promotionalBanner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:layout_marginEnd="8dp"
+                                        tools:text="@tools:sample/lorem/random" />
+
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:id="@+id/tv_earn_cashback_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:maxLines="1"
+                                android:text="@string/dollar_150_00"
+                                android:textColor="@color/primary_text_color"
+                                android:textSize="24sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_earn_cashback_caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:text="@string/earn_cashback"
+                                android:textAllCaps="true"
+                                android:textColor="@color/primary_text_color"
+                                android:textSize="8sp"
+                                app:layout_constraintEnd_toEndOf="@id/tv_earn_cashback_amount"
+                                app:layout_constraintTop_toBottomOf="@id/tv_earn_cashback_amount" />
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintGuide_begin="247dp"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/merchantAddressTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="4"
+                            android:text="@string/address"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toBottomOf="@id/merchantNameTV"
+                            tools:text="@tools:sample/lorem/random" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/locationIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="4dp"
+                                android:src="@drawable/ic_pin" />
+
+                            <TextView
+                                android:id="@+id/distanceTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="@string/Distance_150_00_km"
+                                android:textColor="@color/primary_text_color"
+                                android:textSize="18sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/spendLeftLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="16dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:id="@+id/spendLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/green_circle_stroke"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="@string/total_earned"
+                                android:textAllCaps="true"
+                                android:textSize="10sp" />
+
+
+                            <com.kash4me.utils.custom_views.CurrencyTextView
+                                android:id="@+id/earnedCashTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:maxLines="1"
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/orange_circle_stroke"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="@string/yet_to_spend"
+                                android:textAllCaps="true"
+                                android:textSize="10sp" />
+
+
+                            <com.kash4me.utils.custom_views.CurrencyTextView
+                                android:id="@+id/leftTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:maxLines="1"
+                                android:textColor="@android:color/holo_red_dark"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/orange_circle_stroke"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="@string/processing"
+                                android:textAllCaps="true"
+                                android:textSize="10sp" />
+
+                            <com.kash4me.utils.custom_views.CurrencyTextView
+                                android:id="@+id/processingTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/linkBlue"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/instructionTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="@string/show_this_qr_code_to_merchant_and_get_cash_back_assigned_merchant_will_scan_and_give_you_cash_back"
+                    app:layout_constraintTop_toBottomOf="@id/mainLL" />
+
+                <ImageView
+                    android:id="@+id/qrIV"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/instructionTV" />
+
+                <TextView
+                    android:id="@+id/merchantDetailsTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/qrIV"
+                    tools:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s_when_an_unknown_printer_took_a_galley_of_type_and_scrambled_it_to_make_a_type_specimen_book_it_has_survived_not_only_five_centuries_but_also_the_leap_into_electronic_typesetting_remaining_essentially_unchanged_it_was_popularised_in_the_1960s_with_the_release_of_letraset_sheets_containing_lorem_ipsum_passages_and_more_recently_with_desktop_publishing_software_like_aldus_pagemaker_including_versions_of_lorem_ipsum" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonsLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/merchantDetailsTV">
+
+        <Button
+            android:id="@+id/goThereBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="@string/go_there"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/requestCashBackBtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+            android:id="@+id/requestCashBackBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:text="@string/request_cashback"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/goThereBtn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_transactions"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Transactions"
+            app:layout_constraintBottom_toTopOf="@id/goThereBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

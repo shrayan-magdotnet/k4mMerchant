@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.merchant.send_cashback_code.SendCashbackCodeFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_cashback_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/lighter_gray"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:contentPaddingBottom="16dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingTop="16dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <TextView
+            android:id="@+id/tv_send_cashback_code_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:justificationMode="inter_word"
+            android:text="@string/send_cashback_link_description" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/email_address"
+        app:layout_constraintEnd_toEndOf="@id/cv_cashback_label"
+        app:layout_constraintStart_toStartOf="@id/cv_cashback_label"
+        app:layout_constraintTop_toBottomOf="@id/cv_cashback_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_purchase_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/purchase_amount"
+        app:layout_constraintEnd_toEndOf="@id/til_email_address"
+        app:layout_constraintStart_toStartOf="@id/til_email_address"
+        app:layout_constraintTop_toBottomOf="@id/til_email_address">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

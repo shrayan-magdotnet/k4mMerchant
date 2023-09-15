@@ -1,0 +1,7 @@
+
+Pkotlin:S1172q"8Use "_" instead of this unused lambda parameter "which".(Ë§ù—
+Pkotlin:S1172m"8Use "_" instead of this unused lambda parameter "which".(¦»¾ý
+5kotlin:S6310Ó"Avoid hardcoded dispatchers.(Ô¥‚ü
+5kotlin:S6310÷"Avoid hardcoded dispatchers.(Ô¥‚ü
+qkotlin:S6311Ó"QRemove this dispatcher. It is pointless when used with only suspending functions.(Ô¥‚ü8öÖÔ¯¤1
+qkotlin:S6311÷"QRemove this dispatcher. It is pointless when used with only suspending functions.(Ô¥‚ü8öÖÔ¯¤1

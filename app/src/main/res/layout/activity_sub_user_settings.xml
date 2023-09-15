@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.merchant.sub_user_settings.SubUserSettingsActivity">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/helpers_can_assign_cash_back_to_the_customer_they_use_the_userid_and_password_created_here_to_login_to_the_app"
+        android:textColor="@color/primary_text_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_toolbar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nick_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/nick_name"
+        app:layout_constraintEnd_toEndOf="@id/tv_description"
+        app:layout_constraintStart_toStartOf="@id/tv_description"
+        app:layout_constraintTop_toBottomOf="@id/tv_description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_user_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/userid"
+        app:layout_constraintEnd_toEndOf="@id/til_nick_name"
+        app:layout_constraintStart_toStartOf="@id/til_nick_name"
+        app:layout_constraintTop_toBottomOf="@id/til_nick_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="@id/til_user_id"
+        app:layout_constraintStart_toStartOf="@id/til_user_id"
+        app:layout_constraintTop_toBottomOf="@id/til_user_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textVisiblePassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_add_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/add_user"
+        app:layout_constraintEnd_toEndOf="@id/til_password"
+        app:layout_constraintStart_toStartOf="@id/til_password"
+        app:layout_constraintTop_toBottomOf="@id/til_password" />
+
+    <TextView
+        android:id="@+id/tv_my_helpers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/my_helpers"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/btn_add_user"
+        app:layout_constraintStart_toStartOf="@id/btn_add_user"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_user" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sub_users"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_my_helpers"
+        app:layout_constraintStart_toStartOf="@id/tv_my_helpers"
+        app:layout_constraintTop_toBottomOf="@id/tv_my_helpers" />
+
+    <include
+        android:id="@+id/empty_state"
+        layout="@layout/layout_empty_state_with_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_my_helpers"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

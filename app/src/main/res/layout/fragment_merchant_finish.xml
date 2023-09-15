@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.merchant.registration.finish.FinishFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp">
+
+        <include
+            android:id="@+id/stepper"
+            layout="@layout/merchant_registration_stepper_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="1.00" />
+
+        <TextView
+            android:id="@+id/tv_card_preview_caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="4dp"
+            android:text="@string/with_the_information_you_provided_your_card_looks_like_this_customer_will_find_you_by_seeing_this_card"
+            android:textColor="@color/primary_text_color"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stepper" />
+
+        <include
+            android:id="@+id/cv_merchant_card_preview"
+            layout="@layout/item_merchant_store"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@id/tv_card_preview_caption"
+            app:layout_constraintStart_toStartOf="@id/tv_card_preview_caption"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_preview_caption" />
+
+        <TextView
+            android:id="@+id/fullDetailsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/please_confirm_below_information_are_correct"
+            android:textColor="@color/primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_merchant_card_preview" />
+
+        <TextView
+            android:id="@+id/tv_basic_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="2dp"
+            android:text="@string/basic_info"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/fullDetailsTV" />
+
+        <TextView
+            android:id="@+id/businessNameLTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/company_name"
+            app:layout_constraintEnd_toEndOf="@id/tv_basic_info"
+            app:layout_constraintStart_toStartOf="@id/tv_basic_info"
+            app:layout_constraintTop_toBottomOf="@id/tv_basic_info" />
+
+        <TextView
+            android:id="@+id/businessNameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="@string/business_name_will_be_displayed_here"
+            android:textColor="@color/primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/businessNameLTV"
+            app:layout_constraintStart_toStartOf="@id/businessNameLTV"
+            app:layout_constraintTop_toBottomOf="@id/businessNameLTV" />
+
+        <TextView
+            android:id="@+id/addressLTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/address"
+            app:layout_constraintEnd_toEndOf="@id/businessNameLTV"
+            app:layout_constraintStart_toStartOf="@id/businessNameLTV"
+            app:layout_constraintTop_toBottomOf="@id/businessNameTV" />
+
+        <TextView
+            android:id="@+id/addressTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="@string/your_address_will_be_displayed_here"
+            android:textColor="@color/primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/addressLTV"
+            app:layout_constraintStart_toStartOf="@id/addressLTV"
+            app:layout_constraintTop_toBottomOf="@id/addressLTV" />
+
+        <TextView
+            android:id="@+id/tv_country_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/country"
+            app:layout_constraintEnd_toEndOf="@id/addressLTV"
+            app:layout_constraintStart_toStartOf="@id/addressLTV"
+            app:layout_constraintTop_toBottomOf="@id/addressTV" />
+
+        <TextView
+            android:id="@+id/tv_country_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:textColor="@color/primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_country_title"
+            app:layout_constraintStart_toStartOf="@id/tv_country_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_country_title"
+            tools:text="@string/your_country" />
+
+        <TextView
+            android:id="@+id/tv_postal_code_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/postal_code"
+            app:layout_constraintEnd_toEndOf="@id/tv_country_title"
+            app:layout_constraintStart_toStartOf="@id/tv_country_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_country_body" />
+
+        <TextView
+            android:id="@+id/tv_postal_code_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:textColor="@color/primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_postal_code_title"
+            app:layout_constraintStart_toStartOf="@id/tv_postal_code_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_postal_code_title"
+            tools:text="@string/postal_code_here" />
+
+        <TextView
+            android:id="@+id/tv_promotional_text_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/promotions_or_offer"
+            app:layout_constraintEnd_toEndOf="@id/tv_postal_code_title"
+            app:layout_constraintStart_toStartOf="@id/tv_postal_code_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_postal_code_body" />
+
+        <TextView
+            android:id="@+id/tv_promotional_text_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:textColor="@color/primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_promotional_text_title"
+            app:layout_constraintStart_toStartOf="@id/tv_promotional_text_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_promotional_text_title"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/tv_description_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/description"
+            app:layout_constraintEnd_toEndOf="@id/tv_promotional_text_title"
+            app:layout_constraintStart_toStartOf="@id/tv_promotional_text_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_promotional_text_body" />
+
+        <TextView
+            android:id="@+id/tv_description_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:textColor="@color/primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_description_title"
+            app:layout_constraintStart_toStartOf="@id/tv_description_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_description_title"
+            tools:text="@tools:sample/lorem" />
+
+        <LinearLayout
+            android:id="@+id/phoneAndHeadOfficeLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="@id/tv_description_title"
+            app:layout_constraintStart_toStartOf="@id/tv_description_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_description_body">
+
+            <LinearLayout
+                android:id="@+id/phoneLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/addressTV">
+
+                <TextView
+                    android:id="@+id/phoneLTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/phone_number"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/phoneTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_number"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/phoneLTV" />
+
+                <TextView
+                    android:id="@+id/tv_contact_person_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/contact_person"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_contact_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xxx8987"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_contact_person_title" />
+
+                <TextView
+                    android:id="@+id/headOfficeLTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/head_office_id"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/headOfficeTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xxx8987"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/headOfficeLTV" />
+
+                <TextView
+                    android:id="@+id/tv_website_caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/website_optional"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/headOfficeLTV"
+                    tools:text="@string/xxx8987" />
+
+                <TextView
+                    android:id="@+id/tv_tags_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/tags"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_tags_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xxx8987"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/headOfficeLTV" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cashBackInfoTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="2dp"
+            android:text="@string/cashback_info"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/phoneAndHeadOfficeLL" />
+
+        <LinearLayout
+            android:id="@+id/spendAndGetLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/cashBackInfoTV">
+
+            <LinearLayout
+                android:id="@+id/spendLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/addressTV">
+
+                <TextView
+                    android:id="@+id/spendLTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    tools:text="@string/spend" />
+
+                <com.kash4me.utils.custom_views.CurrencyTextView
+                    android:id="@+id/tv_spend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dollar_100_00"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/spendLTV" />
+
+
+                <TextView
+                    android:id="@+id/tv_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dollar_100_00"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/spendLTV" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/getLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/addressTV">
+
+                <TextView
+                    android:id="@+id/getLTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    tools:text="@string/get" />
+
+                <com.kash4me.utils.custom_views.CurrencyTextView
+                    android:id="@+id/tv_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dollar_20_00"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/getLTV" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/finishBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:padding="16dp"
+            android:text="@string/finish"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spendAndGetLL" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

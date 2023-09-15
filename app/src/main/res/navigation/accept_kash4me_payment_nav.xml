@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/accept_payment_by_kash4me"
+    app:startDestination="@id/acceptKash4mePaymentFragment">
+
+    <fragment
+        android:id="@+id/acceptKash4mePaymentFragment"
+        android:name="com.kash4me.ui.activity.merchant.accept_kash4me_payment.AcceptKash4mePaymentFragment"
+        android:label="fragment_accept_kash4me_payment"
+        tools:layout="@layout/fragment_accept_kash4me_payment">
+        <action
+            android:id="@+id/action_acceptKash4mePaymentFragment_to_completeAcceptKash4mePaymentFragment"
+            app:destination="@id/completeAcceptKash4mePaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completeAcceptKash4mePaymentFragment"
+        android:name="com.kash4me.ui.activity.merchant.accept_kash4me_payment.CompleteAcceptKash4mePaymentFragment"
+        android:label="fragment_complete_accept_kash4me_payment"
+        tools:layout="@layout/fragment_complete_accept_kash4me_payment">
+        <argument
+            android:name="accept_payment_response"
+            app:argType="com.kash4me.data.models.merchant.accept_kash4me_payment.AcceptKash4mePaymentResponse" />
+        <argument
+            android:name="actual_amount"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

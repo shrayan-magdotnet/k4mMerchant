@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/merchant_registration_nav"
+    app:startDestination="@id/merchantBasicInfoFragment">
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.kash4me.ui.fragments.merchant.registration.finish.FinishFragment"
+        android:label="fragment_merchant_finish"
+        tools:layout="@layout/fragment_merchant_finish" />
+    <fragment
+        android:id="@+id/cashBackFragment"
+        android:name="com.kash4me.ui.fragments.merchant.registration.cashbackinfo.CashBackFragment"
+        android:label="fragment_cash_back"
+        tools:layout="@layout/fragment_cash_back">
+        <action
+            android:id="@+id/action_cashBackFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/merchantBasicInfoFragment"
+        android:name="com.kash4me.ui.fragments.merchant.registration.basicinfo.MerchantBasicInfoFragment"
+        android:label="fragment_merchant_basic_info"
+        tools:layout="@layout/fragment_merchant_basic_info">
+        <action
+            android:id="@+id/action_merchantBasicInfoFragment_to_imageUploadFragment"
+            app:destination="@id/imageUploadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageUploadFragment"
+        android:name="com.kash4me.ui.fragments.merchant.registration.image_upload.ImageUploadFragment"
+        android:label="fragment_image_upload"
+        tools:layout="@layout/fragment_image_upload">
+        <action
+            android:id="@+id/action_imageUploadFragment_to_cashBackFragment"
+            app:destination="@id/cashBackFragment" />
+    </fragment>
+</navigation>

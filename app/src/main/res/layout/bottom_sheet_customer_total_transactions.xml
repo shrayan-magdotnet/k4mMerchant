@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    tools:context=".ui.fragments.customer.home.CustomerHomeBottomSheet">
+
+    <TextView
+        android:id="@+id/tv_yet_to_spend_title"
+        style="@style/Title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grayText"
+        android:text="@string/cash_balance" />
+
+    <TextView
+        android:id="@+id/tv_yet_to_spend_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="This is the amount you could withdraw anytime."
+        android:textColor="@color/primary_text_color" />
+
+    <TextView
+        android:id="@+id/tv_processing_title"
+        style="@style/Title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/grayText"
+        android:text="@string/processing" />
+
+    <TextView
+        android:id="@+id/tv_processing_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="This amount is in progress to be available in balance. It might take 1-2 business days to reflect in Cash Balance."
+        android:textColor="@color/primary_text_color" />
+
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_rounded_dialog"
+    android:orientation="vertical"
+    android:paddingHorizontal="32dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="32dp"
+    tools:context=".ui.activity.merchant.merchant_dashboard.payment_setup_reminder.PaymentSetupReminderBottomSheet">
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_happy_face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#E8C600" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="Congratulations!!"
+        android:textColor="#004D65"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/iv_icon"
+        app:layout_constraintStart_toStartOf="@id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:justificationMode="inter_word"
+        android:text="Your Customer has already reached the limit and waiting for your Cash Back amount."
+        android:textAlignment="center"
+        android:textColor="#00364A"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_icon"
+        app:layout_constraintStart_toStartOf="@id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:justificationMode="inter_word"
+        android:text="Its time to setup your payment method. You can go to profile and setup your payment method."
+        android:textAlignment="center"
+        android:textColor="#004D65"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_icon"
+        app:layout_constraintStart_toStartOf="@id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon" />
+
+    <Button
+        android:id="@+id/btn_go_to_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:textAllCaps="false"
+        android:text="Go to Profile"
+        android:textColor="@color/white"
+        app:backgroundTint="#00364A"
+        app:cornerRadius="16dp" />
+
+</LinearLayout>

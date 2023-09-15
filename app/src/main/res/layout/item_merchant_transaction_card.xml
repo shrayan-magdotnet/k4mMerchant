@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="80dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:contentPadding="8dp"
+    app:strokeColor="@color/bg_border"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="80dp">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/today_s_sell"
+            android:textAllCaps="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/all_card_title_text"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.kash4me.utils.custom_views.CurrencyTextView
+            android:id="@+id/amountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/dollar_20_00"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            android:textColor="@color/business_dashboard_amounts"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-medium"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:paddingTop="14dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintVertical_bias="1.0"
+            app:dividerColor="@color/grayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/transactionsTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/amountTV" />
+
+        <TextView
+            android:id="@+id/transactionsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/transactions_3"
+            android:textColor="@color/all_card_title_text"
+            android:textSize="12sp"
+            app:layout_constraintVertical_bias="1.0"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

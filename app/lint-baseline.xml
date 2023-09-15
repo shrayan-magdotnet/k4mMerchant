@@ -1,0 +1,2175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues name="AGP (7.2.1)" by="lint 7.2.1" client="gradle" dependencies="false" format="6"
+    type="baseline" variant="all" version="7.2.1">
+
+    <issue errorLine1="        fusedLocationClient.lastLocation"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="MissingPermission"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`">
+        <location column="9" file="src/main/java/com/kash4me/ui/activity/SplashActivity.kt"
+            line="215" />
+    </issue>
+
+    <issue errorLine1="    override fun onRequestPermissionsResult("
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~~~~~" id="MissingSuperCall"
+        message="Overriding method should call `super.onRequestPermissionsResult`">
+        <location column="18" file="src/main/java/com/kash4me/ui/activity/SplashActivity.kt"
+            line="225" />
+    </issue>
+
+    <issue
+        errorLine1="            it.getNetworkCapabilities(connectivityManager.activeNetwork)?.apply {"
+        errorLine2="                                                          ~~~~~~~~~~~~~"
+        id="NewApi"
+        message="Call requires API level 23 (current min is 22): `android.net.ConnectivityManager#getActiveNetwork`">
+        <location column="59"
+            file="src/main/java/com/kash4me/data/api/NetworkConnectionInterceptor.kt" line="30" />
+    </issue>
+
+    <issue errorLine1="        android:width=&quot;16dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~" id="UnusedAttribute"
+        message="Attribute `width` is only used in API level 23 and higher (current min is 22)">
+        <location column="9" file="src/main/res/drawable/dollar_handling_xml.xml" line="5" />
+    </issue>
+
+    <issue errorLine1="        android:height=&quot;16dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~" id="UnusedAttribute"
+        message="Attribute `height` is only used in API level 23 and higher (current min is 22)">
+        <location column="9" file="src/main/res/drawable/dollar_handling_xml.xml" line="6" />
+    </issue>
+
+    <issue errorLine1="        sessionManager = SessionManager(activity!!.applicationContext)"
+        errorLine2="                                        ~~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location column="41"
+            file="src/main/java/com/kash4me/ui/fragments/calculate_cashback/CalculateCashBackFragment.kt"
+            line="70" />
+    </issue>
+
+    <issue errorLine1="                NetworkConnectionInterceptor(context!!.applicationContext),"
+        errorLine2="                                             ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="46"
+            file="src/main/java/com/kash4me/ui/fragments/calculate_cashback/CalculateCashBackFragment.kt"
+            line="75" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(&quot;Please enter valid amount&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/calculate_cashback/CalculateCashBackFragment.kt"
+            line="124" />
+    </issue>
+
+    <issue errorLine1="                NetworkConnectionInterceptor(context!!.applicationContext),"
+        errorLine2="                                             ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="46"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/cashbackinfo/CashBackFragment.kt"
+            line="51" />
+    </issue>
+
+    <issue errorLine1="        sessionManager = SessionManager(activity!!.applicationContext)"
+        errorLine2="                                        ~~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location column="41"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/cashbackinfo/CashBackFragment.kt"
+            line="62" />
+    </issue>
+
+    <issue
+        errorLine1="                    context!!.toast(&quot;Percentage must be less than 100%&quot;)"
+        errorLine2="                    ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="21"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/cashbackinfo/CashBackFragment.kt"
+            line="107" />
+    </issue>
+
+    <issue
+        errorLine1="                    context!!.toast(&quot;Limit must be less than 100%&quot;)"
+        errorLine2="                    ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="21"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/cashbackinfo/CashBackFragment.kt"
+            line="114" />
+    </issue>
+
+    <issue errorLine1="            context!!.toast(it.toString())"
+        errorLine2="            ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="13"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/cashbackinfo/CashBackFragment.kt"
+            line="144" />
+    </issue>
+
+    <issue
+        errorLine1="        firstImageView.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.ic_check))"
+        errorLine2="                                                                  ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="67"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/cashbackinfo/CashBackFragment.kt"
+            line="156" />
+    </issue>
+
+    <issue errorLine1="        sessionManager = SessionManager(activity!!.applicationContext)"
+        errorLine2="                                        ~~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location column="41"
+            file="src/main/java/com/kash4me/ui/fragments/customer/basicinfo/CustomerBasicInfoFragment.kt"
+            line="61" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(&quot;Please enter a valid name&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/customer/basicinfo/CustomerBasicInfoFragment.kt"
+            line="81" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(&quot;Please enter postal code&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/customer/basicinfo/CustomerBasicInfoFragment.kt"
+            line="85" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(&quot;Please enter date of birth&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/customer/basicinfo/CustomerBasicInfoFragment.kt"
+            line="89" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(&quot;Please enter phone number&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/customer/basicinfo/CustomerBasicInfoFragment.kt"
+            line="93" />
+    </issue>
+
+    <issue errorLine1="                NetworkConnectionInterceptor(context!!.applicationContext),"
+        errorLine2="                                             ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="46"
+            file="src/main/java/com/kash4me/ui/fragments/customer/basicinfo/CustomerBasicInfoFragment.kt"
+            line="146" />
+    </issue>
+
+    <issue errorLine1="            context!!.toast(&quot;Details updated&quot;)"
+        errorLine2="            ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="13"
+            file="src/main/java/com/kash4me/ui/fragments/customer/basicinfo/CustomerBasicInfoFragment.kt"
+            line="159" />
+    </issue>
+
+    <issue errorLine1="            context!!.toast(it.toString())"
+        errorLine2="            ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="13"
+            file="src/main/java/com/kash4me/ui/fragments/customer/basicinfo/CustomerBasicInfoFragment.kt"
+            line="167" />
+    </issue>
+
+    <issue errorLine1="        sessionManager = SessionManager(activity!!.applicationContext)"
+        errorLine2="                                        ~~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location column="41"
+            file="src/main/java/com/kash4me/ui/fragments/customer/home/CustomerHomeFragment.kt"
+            line="43" />
+    </issue>
+
+    <issue errorLine1="                NetworkConnectionInterceptor(context!!.applicationContext),"
+        errorLine2="                                             ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="46"
+            file="src/main/java/com/kash4me/ui/fragments/customer/home/CustomerHomeFragment.kt"
+            line="59" />
+    </issue>
+
+    <issue
+        errorLine1="        firstImageView.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.ic_check))"
+        errorLine2="                                                                  ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="67"
+            file="src/main/java/com/kash4me/ui/fragments/customer/finish/FinishFragment.kt"
+            line="66" />
+    </issue>
+
+    <issue
+        errorLine1="        firstImageView.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.ic_check))"
+        errorLine2="                                                                  ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="67"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/finish/FinishFragment.kt"
+            line="80" />
+    </issue>
+
+    <issue
+        errorLine1="        secondImageView.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.ic_check))"
+        errorLine2="                                                                   ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="68"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/finish/FinishFragment.kt"
+            line="81" />
+    </issue>
+
+    <issue errorLine1="                NetworkConnectionInterceptor(context!!.applicationContext),"
+        errorLine2="                                             ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="46"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/basicinfo/MerchantBasicInfoFragment.kt"
+            line="61" />
+    </issue>
+
+    <issue errorLine1="        sessionManager = SessionManager(activity!!.applicationContext)"
+        errorLine2="                                        ~~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location column="41"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/basicinfo/MerchantBasicInfoFragment.kt"
+            line="77" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(" errorLine2="                ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/basicinfo/MerchantBasicInfoFragment.kt"
+            line="102" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(" errorLine2="                ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/basicinfo/MerchantBasicInfoFragment.kt"
+            line="109" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(" errorLine2="                ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/basicinfo/MerchantBasicInfoFragment.kt"
+            line="115" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(" errorLine2="                ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/basicinfo/MerchantBasicInfoFragment.kt"
+            line="122" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(" errorLine2="                ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/basicinfo/MerchantBasicInfoFragment.kt"
+            line="130" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(" errorLine2="                ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/basicinfo/MerchantBasicInfoFragment.kt"
+            line="137" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(it.toString())"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/basicinfo/MerchantBasicInfoFragment.kt"
+            line="164" />
+    </issue>
+
+    <issue errorLine1="                NetworkConnectionInterceptor(context!!.applicationContext),"
+        errorLine2="                                             ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="46"
+            file="src/main/java/com/kash4me/ui/fragments/register/RegisterFragment.kt" line="49" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(&quot;Please enter a valid email&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/register/RegisterFragment.kt" line="100" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(&quot;Please enter password&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/register/RegisterFragment.kt" line="104" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(&quot;Please enter confirm password&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/register/RegisterFragment.kt" line="108" />
+    </issue>
+
+    <issue
+        errorLine1="                context!!.toast(&quot;Password and confirm password doesn&apos;t match&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/register/RegisterFragment.kt" line="112" />
+    </issue>
+
+    <issue errorLine1="            context!!.toast(it.detail)" errorLine2="            ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="13"
+            file="src/main/java/com/kash4me/ui/fragments/register/RegisterFragment.kt" line="129" />
+    </issue>
+
+    <issue errorLine1="            context!!.toast(it.toString())"
+        errorLine2="            ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="13"
+            file="src/main/java/com/kash4me/ui/fragments/register/RegisterFragment.kt" line="137" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(&quot;Cancelled&quot;)"
+        errorLine2="                ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/scan_qr/ScanQRFragment.kt"
+            line="53" />
+    </issue>
+
+    <issue errorLine1="                context!!.toast(" errorLine2="                ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/scan_qr/ScanQRFragment.kt"
+            line="56" />
+    </issue>
+
+    <issue errorLine1="            context!!.toast(&quot;Invalid QR&quot;, Toast.LENGTH_SHORT)"
+        errorLine2="            ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="13"
+            file="src/main/java/com/kash4me/ui/fragments/merchant/scan_qr/ScanQRFragment.kt"
+            line="77" />
+    </issue>
+
+    <issue errorLine1="        sessionManager = SessionManager(activity!!.applicationContext)"
+        errorLine2="                                        ~~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location column="41"
+            file="src/main/java/com/kash4me/ui/fragments/verify/VerifyEmailFragment.kt" line="67" />
+    </issue>
+
+    <issue errorLine1="                NetworkConnectionInterceptor(context!!.applicationContext),"
+        errorLine2="                                             ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="46"
+            file="src/main/java/com/kash4me/ui/fragments/verify/VerifyEmailFragment.kt"
+            line="105" />
+    </issue>
+
+    <issue errorLine1="            context!!.toast(it)" errorLine2="            ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="13"
+            file="src/main/java/com/kash4me/ui/fragments/verify/VerifyEmailFragment.kt"
+            line="131" />
+    </issue>
+
+    <issue errorLine1="            context!!.toast(it.detail)" errorLine2="            ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="13"
+            file="src/main/java/com/kash4me/ui/fragments/verify/VerifyEmailFragment.kt"
+            line="136" />
+    </issue>
+
+    <issue
+        errorLine1="        firstImageView.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.ic_check))"
+        errorLine2="                                                                  ~~~~~~~~~"
+        id="UseRequireInsteadOfGet" message="Use requireContext() instead of context!!">
+        <location column="67"
+            file="src/main/java/com/kash4me/ui/fragments/verify/VerifyEmailFragment.kt"
+            line="150" />
+    </issue>
+
+    <issue errorLine1="            context!!.toast(&quot;Please enter a valid pin&quot;)"
+        errorLine2="            ~~~~~~~~~" id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location column="13"
+            file="src/main/java/com/kash4me/ui/fragments/verify/VerifyEmailFragment.kt"
+            line="162" />
+    </issue>
+
+    <issue errorLine1="class SplashActivity : AppCompatActivity() {"
+        errorLine2="      ~~~~~~~~~~~~~~" id="CustomSplashScreen"
+        message="The application should not provide its own launch screen">
+        <location column="7" file="src/main/java/com/kash4me/ui/activity/SplashActivity.kt"
+            line="26" />
+    </issue>
+
+    <issue errorLine1="            android:screenOrientation=&quot;portrait&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="LockedOrientationActivity"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices">
+        <location column="13" file="src/main/AndroidManifest.xml" line="79" />
+    </issue>
+
+    <issue
+        errorLine1="        &lt;item name=&quot;android:statusBarColor&quot; tools:targetApi=&quot;l&quot;>?attr/colorPrimaryVariant&lt;/item>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~"
+        id="ObsoleteSdkInt" message="Unnecessary; SDK_INT is always >= 21">
+        <location column="45" file="src/main/res/values/themes.xml" line="13" />
+    </issue>
+
+    <issue
+        errorLine1="        &lt;item name=&quot;android:statusBarColor&quot; tools:targetApi=&quot;l&quot;>?attr/colorPrimaryVariant&lt;/item>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~"
+        id="ObsoleteSdkInt" message="Unnecessary; SDK_INT is always >= 21">
+        <location column="45" file="src/main/res/values-night/themes.xml" line="14" />
+    </issue>
+
+    <issue errorLine1="                &lt;LinearLayout" errorLine2="                 ~~~~~~~~~~~~"
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable">
+        <location column="18" file="src/main/res/layout/activity_merchant_details.xml" line="140" />
+    </issue>
+
+    <issue errorLine1="        &lt;LinearLayout" errorLine2="         ~~~~~~~~~~~~"
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable">
+        <location column="10" file="src/main/res/layout/item_merchant.xml" line="98" />
+    </issue>
+
+    <issue errorLine1="        &lt;LinearLayout" errorLine2="         ~~~~~~~~~~~~"
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance">
+        <location column="10" file="src/main/res/layout/fragment_cash_back.xml" line="66" />
+    </issue>
+
+    <issue errorLine1="        &lt;LinearLayout" errorLine2="         ~~~~~~~~~~~~"
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance">
+        <location column="10" file="src/main/res/layout/fragment_cash_back.xml" line="114" />
+    </issue>
+
+    <issue errorLine1="    &lt;LinearLayout" errorLine2="     ~~~~~~~~~~~~"
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance">
+        <location column="6" file="src/main/res/layout/fragment_merchant_finish.xml" line="63" />
+    </issue>
+
+    <issue errorLine1="    &lt;LinearLayout" errorLine2="     ~~~~~~~~~~~~"
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance">
+        <location column="6" file="src/main/res/layout/fragment_merchant_finish.xml" line="154" />
+    </issue>
+
+    <issue errorLine1="    &lt;LinearLayout" errorLine2="     ~~~~~~~~~~~~"
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance">
+        <location column="6" file="src/main/res/layout/item_today_sell.xml" line="8" />
+    </issue>
+
+    <issue errorLine1="    &lt;LinearLayout" errorLine2="     ~~~~~~~~~~~~"
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance">
+        <location column="6" file="src/main/res/layout/item_weekly_sell.xml" line="8" />
+    </issue>
+
+    <issue errorLine1="    android:background=&quot;@android:color/white&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="Overdraw"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.Kash4me`)">
+        <location column="5" file="src/main/res/layout/custom_app_bar.xml" line="6" />
+    </issue>
+
+    <issue
+        errorLine1="&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^" id="UnusedResources"
+        message="The resource `R.layout.activity_weekly_sell` appears to be unused">
+        <location column="1" file="src/main/res/layout/activity_weekly_sell.xml" line="2" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;purple_200&quot;>#FFBB86FC&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.purple_200` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="3" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;purple_500&quot;>#FF6200EE&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.purple_500` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="4" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;purple_700&quot;>#FF3700B3&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.purple_700` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="5" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;teal_200&quot;>#FF03DAC5&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.teal_200` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="6" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;teal_700&quot;>#FF018786&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.teal_700` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="7" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;light_green_500&quot;>#8bc34a&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.light_green_500` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="11" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;light_green_700&quot;>#689f38&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.light_green_700` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="12" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;colortextfirst&quot;>#000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.colortextfirst` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="14" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;orange&quot;>#ED6823&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.orange` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="17" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;grayButton&quot;>#C6C6C6&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.grayButton` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="20" />
+    </issue>
+
+    <issue errorLine1="    &lt;color name=&quot;grayText&quot;>#777777&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.color.grayText` appears to be unused">
+        <location column="12" file="src/main/res/values/colors.xml" line="21" />
+    </issue>
+
+    <issue errorLine1="    &lt;dimen name=&quot;paddingETHorizontal&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.dimen.paddingETHorizontal` appears to be unused">
+        <location column="12" file="src/main/res/values/dimens.xml" line="3" />
+    </issue>
+
+    <issue errorLine1="    &lt;dimen name=&quot;paddingETVertical&quot;>8dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~" id="UnusedResources"
+        message="The resource `R.dimen.paddingETVertical` appears to be unused">
+        <location column="12" file="src/main/res/values/dimens.xml" line="4" />
+    </issue>
+
+    <issue
+        errorLine1="&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^" id="UnusedResources"
+        message="The resource `R.layout.fragment_main` appears to be unused">
+        <location column="1" file="src/main/res/layout/fragment_main.xml" line="2" />
+    </issue>
+
+    <issue
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^" id="UnusedResources"
+        message="The resource `R.drawable.ic_camera` appears to be unused">
+        <location column="1" file="src/main/res/drawable/ic_camera.xml" line="1" />
+    </issue>
+
+    <issue
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^" id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_background` appears to be unused">
+        <location column="1" file="src/main/res/drawable/ic_launcher_background.xml" line="2" />
+    </issue>
+
+    <issue
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^" id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_foreground` appears to be unused">
+        <location column="1" file="src/main/res/drawable-v24/ic_launcher_foreground.xml" line="1" />
+    </issue>
+
+    <issue id="UnusedResources" message="The resource `R.drawable.ic_logo` appears to be unused">
+        <location file="src/main/res/drawable/ic_logo.webp" />
+    </issue>
+
+    <issue
+        errorLine1="&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^" id="UnusedResources"
+        message="The resource `R.layout.stepper_layout` appears to be unused">
+        <location column="1" file="src/main/res/layout/stepper_layout.xml" line="2" />
+    </issue>
+
+    <issue errorLine1="        &lt;RadioGroup" errorLine2="         ~~~~~~~~~~" id="UselessParent"
+        message="This `RadioGroup` layout or its `LinearLayout` parent is possibly unnecessary">
+        <location column="10" file="src/main/res/layout/fragment_cash_back.xml" line="34" />
+    </issue>
+
+    <issue id="IconLocation"
+        message="Found bitmap drawable `res/drawable/black_wing.png` in densityless folder">
+        <location file="src/main/res/drawable/black_wing.png" />
+    </issue>
+
+    <issue id="IconLocation"
+        message="Found bitmap drawable `res/drawable/dollar.png` in densityless folder">
+        <location file="src/main/res/drawable/dollar.png" />
+    </issue>
+
+    <issue id="IconLocation"
+        message="Found bitmap drawable `res/drawable/dollar_handling.png` in densityless folder">
+        <location file="src/main/res/drawable/dollar_handling.png" />
+    </issue>
+
+    <issue id="IconLocation"
+        message="Found bitmap drawable `res/drawable/green_wing.png` in densityless folder">
+        <location file="src/main/res/drawable/green_wing.png" />
+    </issue>
+
+    <issue id="IconLocation"
+        message="Found bitmap drawable `res/drawable/ic_logo.webp` in densityless folder">
+        <location file="src/main/res/drawable/ic_logo.webp" />
+    </issue>
+
+    <issue id="IconLocation"
+        message="Found bitmap drawable `res/drawable/kashme_logo.png` in densityless folder">
+        <location file="src/main/res/drawable/kashme_logo.png" />
+    </issue>
+
+    <issue id="IconLocation"
+        message="Found bitmap drawable `res/drawable/logo_without_wings.png` in densityless folder">
+        <location file="src/main/res/drawable/logo_without_wings.png" />
+    </issue>
+
+    <issue id="IconLocation"
+        message="Found bitmap drawable `res/drawable/orange_wing.png` in densityless folder">
+        <location file="src/main/res/drawable/orange_wing.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_background.png, ic_launcher_round_background.png">
+        <location file="src/main/res/mipmap-hdpi/ic_launcher_round_background.png" />
+        <location file="src/main/res/mipmap-hdpi/ic_launcher_background.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_background.png, ic_launcher_round_background.png">
+        <location file="src/main/res/mipmap-mdpi/ic_launcher_round_background.png" />
+        <location file="src/main/res/mipmap-mdpi/ic_launcher_background.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_background.png, ic_launcher_round_background.png">
+        <location file="src/main/res/mipmap-xhdpi/ic_launcher_round_background.png" />
+        <location file="src/main/res/mipmap-xhdpi/ic_launcher_background.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_background.png, ic_launcher_round_background.png">
+        <location file="src/main/res/mipmap-xxhdpi/ic_launcher_round_background.png" />
+        <location file="src/main/res/mipmap-xxhdpi/ic_launcher_background.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_background.png, ic_launcher_round_background.png">
+        <location file="src/main/res/mipmap-xxxhdpi/ic_launcher_round_background.png" />
+        <location file="src/main/res/mipmap-xxxhdpi/ic_launcher_background.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_foreground.png, ic_launcher_round_foreground.png">
+        <location file="src/main/res/mipmap-hdpi/ic_launcher_round_foreground.png" />
+        <location file="src/main/res/mipmap-hdpi/ic_launcher_foreground.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_foreground.png, ic_launcher_round_foreground.png">
+        <location file="src/main/res/mipmap-mdpi/ic_launcher_round_foreground.png" />
+        <location file="src/main/res/mipmap-mdpi/ic_launcher_foreground.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_foreground.png, ic_launcher_round_foreground.png">
+        <location file="src/main/res/mipmap-xhdpi/ic_launcher_round_foreground.png" />
+        <location file="src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_foreground.png, ic_launcher_round_foreground.png">
+        <location file="src/main/res/mipmap-xxhdpi/ic_launcher_round_foreground.png" />
+        <location file="src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" />
+    </issue>
+
+    <issue id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_foreground.png, ic_launcher_round_foreground.png">
+        <location file="src/main/res/mipmap-xxxhdpi/ic_launcher_round_foreground.png" />
+        <location file="src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" />
+    </issue>
+
+    <issue errorLine1="            &lt;Button" errorLine2="             ~~~~~~" id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <location column="14" file="src/main/res/layout/fragment_customer_home.xml" line="41" />
+    </issue>
+
+    <issue errorLine1="            &lt;Button" errorLine2="             ~~~~~~" id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <location column="14" file="src/main/res/layout/fragment_customer_home.xml" line="49" />
+    </issue>
+
+    <issue errorLine1="            &lt;Button" errorLine2="             ~~~~~~" id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <location column="14" file="src/main/res/layout/fragment_customer_home.xml" line="56" />
+    </issue>
+
+    <issue errorLine1="            &lt;Button" errorLine2="             ~~~~~~" id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <location column="14" file="src/main/res/layout/fragment_customer_search.xml" line="40" />
+    </issue>
+
+    <issue errorLine1="            &lt;Button" errorLine2="             ~~~~~~" id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <location column="14" file="src/main/res/layout/fragment_customer_search.xml" line="48" />
+    </issue>
+
+    <issue errorLine1="            &lt;Button" errorLine2="             ~~~~~~" id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <location column="14" file="src/main/res/layout/fragment_customer_search.xml" line="55" />
+    </issue>
+
+    <issue errorLine1="        &lt;ImageView" errorLine2="         ~~~~~~~~~"
+        id="ContentDescription" message="Missing `contentDescription` attribute on image">
+        <location column="10" file="src/main/res/layout/activity_merchant_details.xml" line="22" />
+    </issue>
+
+    <issue errorLine1="        &lt;ImageView" errorLine2="         ~~~~~~~~~"
+        id="ContentDescription" message="Missing `contentDescription` attribute on image">
+        <location column="10" file="src/main/res/layout/activity_merchant_details.xml" line="30" />
+    </issue>
+
+    <issue errorLine1="                    &lt;ImageView"
+        errorLine2="                     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="22" file="src/main/res/layout/activity_merchant_details.xml" line="148" />
+    </issue>
+
+    <issue errorLine1="        &lt;ImageView" errorLine2="         ~~~~~~~~~"
+        id="ContentDescription" message="Missing `contentDescription` attribute on image">
+        <location column="10" file="src/main/res/layout/activity_merchant_details.xml" line="258" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/activity_splash.xml" line="6" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/activity_splash.xml" line="13" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/activity_splash.xml" line="24" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/activity_splash.xml" line="35" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/activity_splash.xml" line="48" />
+    </issue>
+
+    <issue errorLine1="        &lt;ImageView" errorLine2="         ~~~~~~~~~"
+        id="ContentDescription" message="Missing `contentDescription` attribute on image">
+        <location column="10" file="src/main/res/layout/activity_todays_sell.xml" line="21" />
+    </issue>
+
+    <issue errorLine1="        &lt;ImageView" errorLine2="         ~~~~~~~~~"
+        id="ContentDescription" message="Missing `contentDescription` attribute on image">
+        <location column="10" file="src/main/res/layout/activity_weekly_sell.xml" line="21" />
+    </issue>
+
+    <issue errorLine1="        &lt;ImageView" errorLine2="         ~~~~~~~~~"
+        id="ContentDescription" message="Missing `contentDescription` attribute on image">
+        <location column="10" file="src/main/res/layout/custom_app_bar.xml" line="12" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/customer_registration_stepper_layout.xml"
+            line="21" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/customer_registration_stepper_layout.xml"
+            line="32" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/fragment_merchant_cash_back_success.xml"
+            line="10" />
+    </issue>
+
+    <issue errorLine1="            &lt;ImageView" errorLine2="             ~~~~~~~~~"
+        id="ContentDescription" message="Missing `contentDescription` attribute on image">
+        <location column="14" file="src/main/res/layout/item_merchant.xml" line="106" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/merchant_registration_stepper_layout.xml"
+            line="21" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/merchant_registration_stepper_layout.xml"
+            line="31" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/merchant_registration_stepper_layout.xml"
+            line="43" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/registration_stepper_layout.xml" line="21" />
+    </issue>
+
+    <issue errorLine1="    &lt;ImageView" errorLine2="     ~~~~~~~~~" id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location column="6" file="src/main/res/layout/registration_stepper_layout.xml" line="32" />
+    </issue>
+
+    <issue errorLine1="        &lt;EditText" errorLine2="         ~~~~~~~~" id="LabelFor"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`">
+        <location column="10" file="src/main/res/layout/fragment_verify.xml" line="39" />
+    </issue>
+
+    <issue errorLine1="        &lt;EditText" errorLine2="         ~~~~~~~~" id="LabelFor"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`">
+        <location column="10" file="src/main/res/layout/fragment_verify.xml" line="53" />
+    </issue>
+
+    <issue errorLine1="        &lt;EditText" errorLine2="         ~~~~~~~~" id="LabelFor"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`">
+        <location column="10" file="src/main/res/layout/fragment_verify.xml" line="68" />
+    </issue>
+
+    <issue errorLine1="        &lt;EditText" errorLine2="         ~~~~~~~~" id="LabelFor"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`">
+        <location column="10" file="src/main/res/layout/fragment_verify.xml" line="83" />
+    </issue>
+
+    <issue errorLine1="        &lt;EditText" errorLine2="         ~~~~~~~~" id="LabelFor"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`">
+        <location column="10" file="src/main/res/layout/fragment_verify.xml" line="98" />
+    </issue>
+
+    <issue
+        errorLine1="                &quot;$ ${customerCashBack.active_cashback_settings.maturity_amount.formatAmount}&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/fragments/customer/home/CustomerHomeAdapter.kt"
+            line="47" />
+    </issue>
+
+    <issue
+        errorLine1="                    &quot;$ ${customerCashBack.active_cashback_settings.cashback_amount.formatAmount}&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="21"
+            file="src/main/java/com/kash4me/ui/fragments/customer/home/CustomerHomeAdapter.kt"
+            line="58" />
+    </issue>
+
+    <issue
+        errorLine1="                    &quot;$ ${customerCashBack.active_cashback_settings.cashback_percentage.formatAmount}&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="21"
+            file="src/main/java/com/kash4me/ui/fragments/customer/home/CustomerHomeAdapter.kt"
+            line="68" />
+    </issue>
+
+    <issue
+        errorLine1="        holder.amountTV.text = &quot;$ ${String.format(&quot;%.2f&quot;, dashboardTransaction.amount)}&quot;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="32"
+            file="src/main/java/com/kash4me/ui/activity/merchant/merchant_dashboard/MerchantDashBoardAdapter.kt"
+            line="33" />
+    </issue>
+
+    <issue
+        errorLine1="        holder.transactionTV.text = &quot;Transaction: ${dashboardTransaction.transaction}&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="37"
+            file="src/main/java/com/kash4me/ui/activity/merchant/merchant_dashboard/MerchantDashBoardAdapter.kt"
+            line="34" />
+    </issue>
+
+    <issue
+        errorLine1="        holder.transactionTV.text = &quot;Transaction: ${dashboardTransaction.transaction}&quot;"
+        errorLine2="                                     ~~~~~~~~~~~~~" id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location column="38"
+            file="src/main/java/com/kash4me/ui/activity/merchant/merchant_dashboard/MerchantDashBoardAdapter.kt"
+            line="34" />
+    </issue>
+
+    <issue
+        errorLine1="                    &quot;$ ${merchantDetailsWithCustomerInfoResponse.active_cashback_settings.cashback_amount.formatAmount}&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="21"
+            file="src/main/java/com/kash4me/ui/activity/customer/merchant_details/MerchantDetailsActivity.kt"
+            line="120" />
+    </issue>
+
+    <issue
+        errorLine1="                    &quot;$ ${merchantDetailsWithCustomerInfoResponse.active_cashback_settings.cashback_percentage.formatAmount}&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="21"
+            file="src/main/java/com/kash4me/ui/activity/customer/merchant_details/MerchantDetailsActivity.kt"
+            line="128" />
+    </issue>
+
+    <issue
+        errorLine1="                &quot;$ ${merchantDetailsWithCustomerInfoResponse.active_cashback_settings.maturity_amount.formatAmount}&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/activity/customer/merchant_details/MerchantDetailsActivity.kt"
+            line="138" />
+    </issue>
+
+    <issue
+        errorLine1="                &quot;$ ${merchantDetailsWithCustomerInfoResponse.active_cashback_settings.maturity_amount.formatAmount}&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="17"
+            file="src/main/java/com/kash4me/ui/activity/customer/merchant_details/MerchantDetailsActivity.kt"
+            line="146" />
+    </issue>
+
+    <issue
+        errorLine1="                    &quot;$ ${merchantDetailsWithCustomerInfoResponse.active_cashback_settings.cashback_amount.formatAmount}&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="21"
+            file="src/main/java/com/kash4me/ui/activity/customer/merchant_details/MerchantDetailsActivity.kt"
+            line="157" />
+    </issue>
+
+    <issue
+        errorLine1="                    &quot;$ ${merchantDetailsWithCustomerInfoResponse.active_cashback_settings.cashback_percentage.formatAmount}&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="21"
+            file="src/main/java/com/kash4me/ui/activity/customer/merchant_details/MerchantDetailsActivity.kt"
+            line="167" />
+    </issue>
+
+    <issue
+        errorLine1="        holder.earnedTV.text = &quot;$ ${String.format(&quot;%.2f&quot;, dashboardTransaction.earnedAmount)}&quot;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="32"
+            file="src/main/java/com/kash4me/ui/activity/merchant/today_sell/TodaySellAdapter.kt"
+            line="31" />
+    </issue>
+
+    <issue
+        errorLine1="        holder.amountTV.text = &quot;\$ ${String.format(&quot;%.2f&quot;, dashboardTransaction.amount)}&quot;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="32"
+            file="src/main/java/com/kash4me/ui/activity/merchant/today_sell/TodaySellAdapter.kt"
+            line="32" />
+    </issue>
+
+    <issue errorLine1="                resentOTPBtn.text = &quot;Resend OTP in $text&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~" id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="37"
+            file="src/main/java/com/kash4me/ui/fragments/verify/VerifyEmailFragment.kt"
+            line="230" />
+    </issue>
+
+    <issue errorLine1="                resentOTPBtn.text = &quot;Resend OTP in $text&quot;"
+        errorLine2="                                     ~~~~~~~~~~~~~~" id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location column="38"
+            file="src/main/java/com/kash4me/ui/fragments/verify/VerifyEmailFragment.kt"
+            line="230" />
+    </issue>
+
+    <issue errorLine1="                resentOTPBtn.text = &quot;Resend OTP&quot;"
+        errorLine2="                                     ~~~~~~~~~~" id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location column="38"
+            file="src/main/java/com/kash4me/ui/fragments/verify/VerifyEmailFragment.kt"
+            line="237" />
+    </issue>
+
+    <issue
+        errorLine1="        holder.amountTV.text = &quot;$ ${String.format(&quot;%.2f&quot;, weeklySell.amount)}&quot;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location column="32"
+            file="src/main/java/com/kash4me/ui/activity/merchant/weekly_sell/WeeklySellAdapter.kt"
+            line="31" />
+    </issue>
+
+    <issue errorLine1="            android:hint=&quot;Old Password&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Old Password&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_change_password.xml" line="24" />
+    </issue>
+
+    <issue errorLine1="            android:hint=&quot;New Password&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;New Password&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_change_password.xml" line="41" />
+    </issue>
+
+    <issue errorLine1="            android:hint=&quot;Confirm New Password&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Confirm New Password&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_change_password.xml" line="58" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Change Password&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Change Password&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_change_password.xml" line="76" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Send Email&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Send Email&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_forget_password.xml" line="43" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;LOGIN AS BUSINESS USER&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;LOGIN AS BUSINESS USER&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_login.xml" line="57" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Forgot Password?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Forgot Password?&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_login.xml" line="67" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Login&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Login&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_login.xml" line="77" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Not a Member yet? &quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Not a Member yet? &quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/activity_login.xml" line="92" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Join Now&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Join Now&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/activity_login.xml" line="98" />
+    </issue>
+
+    <issue errorLine1="                        android:text=&quot;Spend&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Spend&quot;, should use `@string` resource">
+        <location column="25" file="src/main/res/layout/activity_merchant_details.xml" line="81" />
+    </issue>
+
+    <issue errorLine1="                        android:text=&quot;Earn&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Earn&quot;, should use `@string` resource">
+        <location column="25" file="src/main/res/layout/activity_merchant_details.xml" line="107" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Earned Cash Back&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Earned Cash Back&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_merchant_details.xml" line="177" />
+    </issue>
+
+    <issue errorLine1="                    android:text=&quot;Spent:&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Spent:&quot;, should use `@string` resource">
+        <location column="21" file="src/main/res/layout/activity_merchant_details.xml" line="215" />
+    </issue>
+
+    <issue errorLine1="                    android:text=&quot;Left:&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Left:&quot;, should use `@string` resource">
+        <location column="21" file="src/main/res/layout/activity_merchant_details.xml" line="240" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;go there&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;go there&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_merchant_details.xml" line="279" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;request cash back&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;request cash back&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/activity_merchant_details.xml" line="288" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;TOTAL SELL&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;TOTAL SELL&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/activity_todays_sell.xml" line="37" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$40.00&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$40.00&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/activity_todays_sell.xml" line="48" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;TOTAL SELL&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;TOTAL SELL&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/activity_weekly_sell.xml" line="37" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$40.00&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$40.00&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/activity_weekly_sell.xml" line="48" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Loading...&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Loading...&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/custom_progress_indicator.xml" line="26" />
+    </issue>
+
+    <issue errorLine1="        android:title=&quot;Home&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Home&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/menu/customer_bottom_navigation_menu.xml"
+            line="6" />
+    </issue>
+
+    <issue errorLine1="        android:title=&quot;Search&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/menu/customer_bottom_navigation_menu.xml"
+            line="11" />
+    </issue>
+
+    <issue errorLine1="        android:title=&quot;CashBack&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;CashBack&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/menu/customer_bottom_navigation_menu.xml"
+            line="16" />
+    </issue>
+
+    <issue errorLine1="        android:title=&quot;Person&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Person&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/menu/customer_bottom_navigation_menu.xml"
+            line="21" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Basic Info&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Basic Info&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/customer_registration_stepper_layout.xml"
+            line="47" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Finish&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Finish&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/customer_registration_stepper_layout.xml"
+            line="59" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;ASSIGN CASH BACK&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;ASSIGN CASH BACK&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_calculate_cashback.xml" line="16" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Enter Purchase Amount&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Enter Purchase Amount&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_calculate_cashback.xml" line="28" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Cash back value&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Cash back value&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_calculate_cashback.xml" line="58" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Send&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Send&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_calculate_cashback.xml" line="81" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Select cashback type:&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Select cashback type:&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_cash_back.xml" line="21" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Flat&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Flat&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="47" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Percentage&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Percentage&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="55" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Spend&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Spend&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="85" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Get&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Get&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="102" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Percentage&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Percentage&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="133" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Limit&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Limit&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="150" />
+    </issue>
+
+    <issue
+        errorLine1="        android:text=&quot;Add tags so that user can search using this tags&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="HardcodedText"
+        message="Hardcoded string &quot;Add tags so that user can search using this tags&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_cash_back.xml" line="169" />
+    </issue>
+
+    <issue errorLine1="        android:hint=&quot;#Restaurant #food #Groceries&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;#Restaurant #food #Groceries&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_cash_back.xml" line="177" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Next&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Next&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_cash_back.xml" line="198" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Nickname&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Nickname&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_basic_info.xml"
+            line="35" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Address&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Address&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_basic_info.xml"
+            line="50" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Postal code&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Postal code&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_basic_info.xml"
+            line="66" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Date of Birth&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Date of Birth&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_basic_info.xml"
+            line="83" />
+    </issue>
+
+    <issue errorLine1="                    android:hint=&quot;Phone Number&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Phone Number&quot;, should use `@string` resource">
+        <location column="21" file="src/main/res/layout/fragment_customer_basic_info.xml"
+            line="116" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Next&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Next&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_basic_info.xml"
+            line="133" />
+    </issue>
+
+    <issue
+        errorLine1="        android:text=&quot;Please confirm below information are correct&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="HardcodedText"
+        message="Hardcoded string &quot;Please confirm below information are correct&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="21" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Nickname&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Nickname&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="31" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Your nickname&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Your nickname&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="39" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Country&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Country&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="49" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Your country &quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Your country &quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="57" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Postal Code&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Postal Code&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="67" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Postal code here&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Postal code here&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="75" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Date of Birth&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Date of Birth&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="85" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Your date of brith here&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Your date of brith here&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="93" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Phone Number&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Phone Number&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="103" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Your phone number here...&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Your phone number here...&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="111" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Finish&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Finish&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_finish.xml" line="123" />
+    </issue>
+
+    <issue errorLine1="            android:hint=&quot;Find merchant&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Find merchant&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/fragment_customer_home.xml" line="20" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Left&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Left&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_home.xml" line="46" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Earned&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Earned&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_home.xml" line="54" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Processing&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Processing&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_home.xml" line="62" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Bipin Khanal&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Bipin Khanal&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_profile.xml" line="26" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;View Profile >&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;View Profile >&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_customer_profile.xml" line="39" />
+    </issue>
+
+    <issue errorLine1="            android:hint=&quot;Find store&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Find store&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/fragment_customer_search.xml" line="19" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;A~Z&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;A~Z&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_search.xml" line="45" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Nearest&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Nearest&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_search.xml" line="53" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;CashBack&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;CashBack&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_customer_search.xml" line="60" />
+    </issue>
+
+    <issue errorLine1="        android:hint=&quot;Add Your Address&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Add Your Address&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_main.xml" line="14" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;User Info&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;User Info&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="33" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Nickname&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Nickname&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="43" />
+    </issue>
+
+    <issue errorLine1="                    android:hint=&quot;Phone Number&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Phone Number&quot;, should use `@string` resource">
+        <location column="21" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="109" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Business Info&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Business Info&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="126" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Business Name&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Business Name&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="137" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Add Your Address&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Add Your Address&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="153" />
+    </issue>
+
+    <issue errorLine1="                    android:hint=&quot;Phone Number&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Phone Number&quot;, should use `@string` resource">
+        <location column="21" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="185" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Postal Code&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Postal Code&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="202" />
+    </issue>
+
+    <issue errorLine1="            &lt;TextView" errorLine2="            ^" id="HardcodedText"
+        message="Hardcoded string &quot;If you are branch of any business, fill the information below. Your Head office would be able to see our transactions.&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="214" />
+    </issue>
+
+    <issue errorLine1="                android:hint=&quot;Head Office ID (optional)&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Head Office ID (optional)&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="229" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Next&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Next&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_basic_info.xml"
+            line="247" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Cash back sent&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Cash back sent&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_cash_back_success.xml"
+            line="26" />
+    </issue>
+
+    <issue
+        errorLine1="        android:text=&quot;Thank you for using Kash4me. Your cash back has been assigned to the customer.&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="HardcodedText"
+        message="Hardcoded string &quot;Thank you for using Kash4me. Your cash back has been assigned to the customer.&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_cash_back_success.xml"
+            line="49" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Close&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Close&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_cash_back_success.xml"
+            line="61" />
+    </issue>
+
+    <issue
+        errorLine1="        android:text=&quot;Please confirm below information are correct&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="HardcodedText"
+        message="Hardcoded string &quot;Please confirm below information are correct&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_finish.xml" line="21" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Business Name&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Business Name&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_finish.xml" line="31" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Business Name will be displayed here&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Business Name will be displayed here&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_finish.xml" line="39" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Address&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Address&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_finish.xml" line="49" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Your address will be displayed here&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Your address will be displayed here&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_finish.xml" line="57" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Phone Number&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Phone Number&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_finish.xml" line="84" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;678-678-6780&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;678-678-6780&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_finish.xml" line="91" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Head Office Id&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Head Office Id&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_finish.xml" line="113" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;XXX8987&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;XXX8987&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_finish.xml" line="120" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Cash Back Info&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Cash Back Info&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_finish.xml" line="144" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Spend&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Spend&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_finish.xml" line="176" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$100.00&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$100.00&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_finish.xml" line="183" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Get&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Get&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_finish.xml" line="205" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$20.00&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$20.00&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/fragment_merchant_finish.xml" line="212" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Finish&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Finish&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_finish.xml" line="228" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Merchant Home&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Merchant Home&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_home.xml" line="12" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Merchant Profile&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Merchant Profile&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_profile.xml" line="12" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Merchant Search Screen&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Merchant Search Screen&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_merchant_search.xml" line="12" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Already have account? Login here&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Already have account? Login here&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_register.xml" line="86" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Hello&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Hello&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_scan_qr.xml" line="12" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Verify&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Verify&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_verify.xml" line="119" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Resend OTP&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Resend OTP&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/fragment_verify.xml" line="133" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;South Indian Grocery&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;South Indian Grocery&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/item_earned_cashback.xml" line="22" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Earned&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Earned&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_earned_cashback.xml" line="38" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$15&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$15&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_earned_cashback.xml" line="46" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Processing&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Processing&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_earned_cashback.xml" line="55" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Merchant Address will be displayed here&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="HardcodedText"
+        message="Hardcoded string &quot;Merchant Address will be displayed here&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/item_earned_cashback.xml" line="78" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Spent&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Spent&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_earned_cashback.xml" line="94" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$75&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$75&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_earned_cashback.xml" line="101" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Left&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Left&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_earned_cashback.xml" line="119" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$25&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$25&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_earned_cashback.xml" line="126" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;South Indian Grocery&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;South Indian Grocery&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/item_merchant.xml" line="23" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Spend&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Spend&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_merchant.xml" line="39" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$100&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$100&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_merchant.xml" line="47" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;Earn&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Earn&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_merchant.xml" line="65" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$20&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$20&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_merchant.xml" line="73" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Merchant Address will be displayed here&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        id="HardcodedText"
+        message="Hardcoded string &quot;Merchant Address will be displayed here&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/item_merchant.xml" line="95" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;7.5 KM&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;7.5 KM&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_merchant.xml" line="117" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Today&apos;s Sell&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Today&apos;s Sell&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/item_merchant_transaction_card.xml"
+            line="24" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;$ 30.00&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$ 30.00&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/item_merchant_transaction_card.xml"
+            line="37" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Transactions: 3&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Transactions: 3&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/item_merchant_transaction_card.xml"
+            line="62" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;Hello&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Hello&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/item_profile_menu.xml" line="17" />
+    </issue>
+
+    <issue errorLine1="            android:text=&quot;>&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;>&quot;, should use `@string` resource">
+        <location column="13" file="src/main/res/layout/item_profile_menu.xml" line="28" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;CUSTOMER ID&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;CUSTOMER ID&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_today_sell.xml" line="27" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;BXT1000&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;BXT1000&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_today_sell.xml" line="34" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;EARNED&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;EARNED&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_today_sell.xml" line="49" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$2.00&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$2.00&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_today_sell.xml" line="56" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;AMOUNT&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;AMOUNT&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_today_sell.xml" line="71" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$10.00&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$10.00&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_today_sell.xml" line="78" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;DATE&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;DATE&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_weekly_sell.xml" line="27" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;2022-01-01&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;2022-01-01&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_weekly_sell.xml" line="34" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;AMOUNT&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;AMOUNT&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_weekly_sell.xml" line="50" />
+    </issue>
+
+    <issue errorLine1="                android:text=&quot;$10.00&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;$10.00&quot;, should use `@string` resource">
+        <location column="17" file="src/main/res/layout/item_weekly_sell.xml" line="57" />
+    </issue>
+
+    <issue errorLine1="        android:title=&quot;Home&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Home&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/menu/merchant_bottom_navigation_menu.xml"
+            line="6" />
+    </issue>
+
+    <issue errorLine1="        android:title=&quot;Search&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/menu/merchant_bottom_navigation_menu.xml"
+            line="11" />
+    </issue>
+
+    <issue errorLine1="        android:title=&quot;QR&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;QR&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/menu/merchant_bottom_navigation_menu.xml"
+            line="16" />
+    </issue>
+
+    <issue errorLine1="        android:title=&quot;Person&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Person&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/menu/merchant_bottom_navigation_menu.xml"
+            line="21" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Basic Info&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Basic Info&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/merchant_registration_stepper_layout.xml"
+            line="58" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;CashBack Info&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;CashBack Info&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/merchant_registration_stepper_layout.xml"
+            line="69" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Finish&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Finish&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/merchant_registration_stepper_layout.xml"
+            line="82" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Login Info&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Login Info&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/registration_stepper_layout.xml" line="47" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;Verify&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;Verify&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/registration_stepper_layout.xml" line="59" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;TextView&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;TextView&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/stepper_layout.xml" line="73" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;TextView&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;TextView&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/stepper_layout.xml" line="85" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;TextView&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;TextView&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/stepper_layout.xml" line="97" />
+    </issue>
+
+    <issue errorLine1="        android:text=&quot;TextView&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~" id="HardcodedText"
+        message="Hardcoded string &quot;TextView&quot;, should use `@string` resource">
+        <location column="9" file="src/main/res/layout/stepper_layout.xml" line="109" />
+    </issue>
+
+    <issue errorLine1="                    android:paddingStart=&quot;4dp&quot;>"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="21" file="src/main/res/layout/activity_merchant_details.xml" line="75" />
+    </issue>
+
+    <issue errorLine1="                    android:paddingStart=&quot;4dp&quot;>"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="21" file="src/main/res/layout/activity_merchant_details.xml" line="146" />
+    </issue>
+
+    <issue errorLine1="                    android:paddingStart=&quot;8dp&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="21" file="src/main/res/layout/activity_merchant_details.xml" line="223" />
+    </issue>
+
+    <issue errorLine1="                android:paddingStart=&quot;16dp&quot;>"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="17" file="src/main/res/layout/activity_merchant_details.xml" line="235" />
+    </issue>
+
+    <issue errorLine1="                    android:paddingStart=&quot;8dp&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="21" file="src/main/res/layout/activity_merchant_details.xml" line="248" />
+    </issue>
+
+    <issue errorLine1="            android:paddingStart=&quot;16dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="13" file="src/main/res/layout/custom_progress_indicator.xml" line="25" />
+    </issue>
+
+    <issue errorLine1="                android:paddingRight=&quot;8dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="86" />
+    </issue>
+
+    <issue errorLine1="                android:paddingLeft=&quot;8dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="103" />
+    </issue>
+
+    <issue errorLine1="                android:paddingRight=&quot;8dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="134" />
+    </issue>
+
+    <issue errorLine1="                android:paddingLeft=&quot;8dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="151" />
+    </issue>
+
+    <issue errorLine1="            android:paddingStart=&quot;16dp&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="13" file="src/main/res/layout/item_earned_cashback.xml" line="32" />
+    </issue>
+
+    <issue errorLine1="            android:paddingStart=&quot;16dp&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="13" file="src/main/res/layout/item_earned_cashback.xml" line="88" />
+    </issue>
+
+    <issue errorLine1="            android:paddingStart=&quot;4dp&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="13" file="src/main/res/layout/item_merchant.xml" line="33" />
+    </issue>
+
+    <issue errorLine1="            android:paddingStart=&quot;4dp&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~" id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location column="13" file="src/main/res/layout/item_merchant.xml" line="104" />
+    </issue>
+
+    <issue errorLine1="            android:gravity=&quot;right&quot;"
+        errorLine2="                             ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="30" file="src/main/res/layout/activity_login.xml" line="65" />
+    </issue>
+
+    <issue errorLine1="                    android:gravity=&quot;right&quot;"
+        errorLine2="                                     ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="38" file="src/main/res/layout/activity_merchant_details.xml" line="73" />
+    </issue>
+
+    <issue errorLine1="                    android:gravity=&quot;right&quot;"
+        errorLine2="                                     ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="38" file="src/main/res/layout/activity_merchant_details.xml" line="100" />
+    </issue>
+
+    <issue errorLine1="                    android:gravity=&quot;right&quot;"
+        errorLine2="                                     ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="38" file="src/main/res/layout/activity_merchant_details.xml" line="144" />
+    </issue>
+
+    <issue errorLine1="                android:paddingRight=&quot;8dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="RtlHardcoded"
+        message="Consider replacing `android:paddingRight` with `android:paddingEnd=&quot;8dp&quot;` to better support right-to-left layouts">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="86" />
+    </issue>
+
+    <issue errorLine1="                android:paddingLeft=&quot;8dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="RtlHardcoded"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;8dp&quot;` to better support right-to-left layouts">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="103" />
+    </issue>
+
+    <issue errorLine1="                android:paddingRight=&quot;8dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~" id="RtlHardcoded"
+        message="Consider replacing `android:paddingRight` with `android:paddingEnd=&quot;8dp&quot;` to better support right-to-left layouts">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="134" />
+    </issue>
+
+    <issue errorLine1="                android:paddingLeft=&quot;8dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~" id="RtlHardcoded"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;8dp&quot;` to better support right-to-left layouts">
+        <location column="17" file="src/main/res/layout/fragment_cash_back.xml" line="151" />
+    </issue>
+
+    <issue errorLine1="            android:gravity=&quot;right&quot;"
+        errorLine2="                             ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="30" file="src/main/res/layout/item_earned_cashback.xml" line="30" />
+    </issue>
+
+    <issue errorLine1="            android:gravity=&quot;right&quot;"
+        errorLine2="                             ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="30" file="src/main/res/layout/item_earned_cashback.xml" line="86" />
+    </issue>
+
+    <issue errorLine1="            android:gravity=&quot;right&quot;"
+        errorLine2="                             ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="30" file="src/main/res/layout/item_earned_cashback.xml" line="112" />
+    </issue>
+
+    <issue errorLine1="            android:gravity=&quot;right&quot;"
+        errorLine2="                             ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="30" file="src/main/res/layout/item_merchant.xml" line="31" />
+    </issue>
+
+    <issue errorLine1="            android:gravity=&quot;right&quot;"
+        errorLine2="                             ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="30" file="src/main/res/layout/item_merchant.xml" line="58" />
+    </issue>
+
+    <issue errorLine1="            android:gravity=&quot;right&quot;"
+        errorLine2="                             ~~~~~" id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location column="30" file="src/main/res/layout/item_merchant.xml" line="102" />
+    </issue>
+
+</issues>

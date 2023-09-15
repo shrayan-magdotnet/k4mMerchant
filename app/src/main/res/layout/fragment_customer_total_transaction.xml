@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.customer.total_transaction.CustomerTotalTransactionFragment">
+
+    <LinearLayout
+        android:id="@+id/cashBackAndProcessingLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp"
+        android:background="#144d65"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/green_circle_white_stroke"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintVertical_bias="0.4"
+                android:src="@drawable/ic_money_100_bill"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintBottom_toTopOf="@id/cashBackTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/cashBackTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@id/cashBackLTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_balance"
+                tools:text="$9999999.99" />
+
+            <TextView
+                android:id="@+id/cashBackLTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/your_balance"
+                android:fontFamily="sans-serif-medium"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cashBackTV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/orange_circle_white_stroke"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_on_your_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintVertical_bias="0.4"
+                android:src="@drawable/ic_send"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintBottom_toTopOf="@id/processingTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/processingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:text=""
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                tools:text="$9999999.99"
+                app:layout_constraintBottom_toTopOf="@id/processingLTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_on_your_way" />
+
+            <TextView
+                android:id="@+id/processingLTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/on_your_way"
+                android:layout_marginTop="4dp"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/processingTV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/dividerTop"
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/cashBackAndProcessingLL" />
+
+    <TextView
+        android:id="@+id/infoLTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:padding="16dp"
+        android:text="@string/the_amount_in_green_is_the_amount_you_can_withdraw_anytime_and_processing_amount_might_take_1_2_business_days_to_go_to_green"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/dividerTop" />
+
+    <View
+        android:id="@+id/dividerBottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/infoLTV" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/withdrawCashBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:paddingVertical="16dp"
+        android:text="@string/withdraw"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_pay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dividerBottom" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_pay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:paddingVertical="16dp"
+        android:text="@string/pay"
+        app:cornerRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/withdrawCashBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/withdrawCashBtn"
+        app:layout_constraintTop_toTopOf="@id/withdrawCashBtn" />
+
+
+    <TextView
+        android:id="@+id/transactionsLTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="start"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/transactions"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_text_color"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/withdrawCashBtn" />
+
+    <TextView
+        android:id="@+id/tv_empty_state_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/you_don_t_have_any_transactions"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text_color"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transactionsLTV"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_empty_state_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0.5"
+        android:text="@string/your_transactions_will_be_in_here"
+        android:textAlignment="center"
+        android:textColor="@color/grayText"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_empty_state_title"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cashBackRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transactionsLTV"
+        tools:itemCount="20"
+        tools:listitem="@layout/item_cashback"
+        tools:visibility="gone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

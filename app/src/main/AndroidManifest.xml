@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="geo" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".utils.App"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Kash4me"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.activity.merchant.image_settings.ImageSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.fragments.merchant.announcement.CreateAnnouncementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.accept_kash4me_payment.AcceptKash4mePaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.pay.PayByKash4meActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.merchant_dashboard.qr_scan.ScanQrActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.RequestLocationPermissionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- Required: set your sentry.io project identifier (DSN) -->
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="https://9bf84b5f336344da9fa9cf39e84b8a88@o1281419.ingest.sentry.io/4504909987577856" /> <!-- enable automatic breadcrumbs for user interactions (clicks, swipes, scrolls) -->
+        <meta-data
+            android:name="io.sentry.traces.user-interaction.enable"
+            android:value="true" /> <!-- enable screenshot for crashes -->
+        <meta-data
+            android:name="io.sentry.attach-screenshot"
+            android:value="true" /> <!-- enable view hierarchy for crashes -->
+        <meta-data
+            android:name="io.sentry.attach-view-hierarchy"
+            android:value="true" /> <!-- enable the performance API by setting a sample-rate, adjust in production env -->
+        <meta-data
+            android:name="io.sentry.traces.sample-rate"
+            android:value="1.0" /> <!-- enable profiling when starting transactions, adjust in production env -->
+        <meta-data
+            android:name="io.sentry.traces.profiling.sample-rate"
+            android:value="1.0" />
+        <meta-data
+            android:name="io.sentry.traces.sample-rate"
+            android:value="1.0" />
+
+        <activity
+            android:name=".ui.activity.merchant.return_purchase.PurchaseReturnSuccessActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.return_purchase.PurchaseReturnConfirmationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.return_purchase.PurchaseReturnActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.merchant_details.transactions.TransactionDetainForReturnPurchaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.merchant_details.transactions.TransactionsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.common.FeedbackActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.calculate_cashback.ConfirmAssignCashbackActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.cashback_code.GetCashbackFromCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.send_cashback_code.SendCashbackCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.payment_gateway.PaymentSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.staff.StaffDashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fragments.merchant.sub_user_settings.SubUserSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.merchant_profile.MerchantProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activity.merchant.withdraw_cash.WithdrawCashActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activity.customer.info_box.InfoBoxActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fragments.merchant.search.assign_cashback.AssignCashbackActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.cashback_setting.CashBackSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.branch_details.BranchDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.branch_list.BranchListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.user_details.MerchantUserDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.customer_dashboard.CustomerDashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.final_request_qr.FinalRequestQRActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.cashback_success.MerchantCashBackSuccessActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.MerchantRegistrationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.customer.CustomerRegistrationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.forget_password.ForgetPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.change_password.ChangePasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.merchant_details.MerchantDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.user_details.CustomerDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.merchant.transaction_details.TransactionDetailsActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.calculate_cashback.CalculateCashBackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.RegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".ui.activity.customer.customer_profile.CustomerProfileOldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.request_cashback.RequestCashbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.customer.customer_profile.CustomerProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fragments.merchant.settings.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.about_app.AboutAppActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

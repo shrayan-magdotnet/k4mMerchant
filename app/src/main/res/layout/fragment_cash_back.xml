@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.fragments.merchant.registration.cashbackinfo.CashBackFragment">
+
+
+    <include
+        android:id="@+id/stepper"
+        layout="@layout/merchant_registration_stepper_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1.00" />
+
+    <TextView
+        android:id="@+id/selectFlatOrPercentageTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="8dp"
+        android:text="@string/set_your_cashback_here_so_that_customer_can_find_you_with_your_below_deals_you_can_set_either_flat_rate_or_percentage_basis"
+        android:textColor="@color/grayText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepper" />
+
+    <LinearLayout
+        android:id="@+id/cashBackLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/selectFlatOrPercentageTV">
+
+        <RadioGroup
+            android:id="@+id/cashBackRG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/flatRadio"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/flatRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/flat"
+                android:textAllCaps="true" />
+
+
+            <RadioButton
+                android:id="@+id/percentageRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/percentage"
+                android:textAllCaps="true" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_amount_and_limit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:paddingVertical="8dp"
+        android:text="@string/amount_and_limit"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cashBackLL" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_amount_and_limit">
+
+        <LinearLayout
+            android:id="@+id/spendAndGetLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
+            android:visibility="visible"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cashBackLL">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_weight="1"
+                android:hint="@string/spend">
+
+                <com.blackcat.currencyedittext.CurrencyEditText
+                    android:id="@+id/et_spend"
+                    style="@style/currencyTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_weight="1"
+                android:hint="@string/get">
+
+                <com.blackcat.currencyedittext.CurrencyEditText
+                    android:id="@+id/et_get"
+                    style="@style/currencyTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.75dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_spend_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:textSize="12sp"
+                tools:text="@string/customer_needs_to_spend_xx_amount_to_get_cash_back" />
+
+            <TextView
+                android:id="@+id/tv_get_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:textSize="12sp"
+                tools:text="@string/customer_gets_xx_on_required_amount_spent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/percentageAndLimitLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cashBackLL"
+            tools:visibility="visible">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/percentET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_weight="1"
+                android:hint="@string/percentage">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_weight="1"
+                android:hint="@string/limit">
+
+                <com.blackcat.currencyedittext.CurrencyEditText
+                    android:id="@+id/et_limit"
+                    style="@style/currencyTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.75dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_percentage_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:textSize="12sp"
+                tools:text="@string/spend_limit_customer_needs_to_spend_this_much_amount_to_earn_the_cash_back" />
+
+            <TextView
+                android:id="@+id/tv_limit_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:textSize="12sp"
+                tools:text="@string/cash_back_customer_earns_this_cash_back_amount_on_every_xxx_amount" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_next_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

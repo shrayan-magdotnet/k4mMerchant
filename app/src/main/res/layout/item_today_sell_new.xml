@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:contentPaddingBottom="8dp"
+            app:contentPaddingLeft="8dp"
+            app:contentPaddingRight="8dp"
+            app:contentPaddingTop="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tv_time"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Nickname" />
+
+                <TextView
+                    android:id="@+id/tv_customer_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_weight="2"
+                    android:textAlignment="viewStart"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintStart_toStartOf="@id/tv_nickname"
+                    app:layout_constraintTop_toBottomOf="@id/tv_nickname"
+                    tools:text="TransId1" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@tools:sample/date/hhmm" />
+
+                <com.kash4me.utils.custom_views.CurrencyTextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@tools:sample/lorem" />
+
+                <TextView
+                    android:id="@+id/tv_assign_by"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:layout_marginStart="4dp"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_time"
+                    app:layout_constraintTop_toBottomOf="@id/tv_amount"
+                    tools:text="@tools:sample/lorem" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grayButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+</layout>

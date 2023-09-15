@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.merchant.transaction_details.TransactionDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:contentPaddingBottom="16dp"
+        app:contentPaddingLeft="32dp"
+        app:contentPaddingRight="32dp"
+        app:contentPaddingTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout"
+        app:layout_constraintWidth_min="100dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/totalSellAndImageLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/dollar_handling"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.kash4me.utils.custom_views.CurrencyTextView
+                android:id="@+id/totalSellAmountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/business_dashboard_amounts"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="@id/imageView5"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                tools:text="$50000000.00" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/total_sell"
+                android:textAllCaps="true"
+                android:textColor="@color/business_dashboard_amounts"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@id/totalSellAmountTV"
+                app:layout_constraintStart_toStartOf="@id/totalSellAmountTV"
+                app:layout_constraintTop_toBottomOf="@id/totalSellAmountTV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/bg_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/ui_color"
+        app:layout_constraintBottom_toBottomOf="@id/til_search_transactions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_search_transactions"
+        style="@style/TransactionSummaryTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/filter_your_transactions"
+        android:paddingBottom="16dp"
+        app:boxBackgroundColor="@color/search_bar_background"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_total_amount"
+        app:layout_constraintVertical_bias="0.0"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="@color/app_grey_letters">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textColor="@color/app_grey_letters"
+            android:textColorHint="@color/app_grey_letters" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <include
+        android:id="@+id/empty_state"
+        layout="@layout/layout_empty_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_total_amount" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactionsRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bg_top_view"
+        tools:itemCount="100"
+        tools:listitem="@layout/item_today_sell_new" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

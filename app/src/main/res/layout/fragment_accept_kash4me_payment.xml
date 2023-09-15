@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.merchant.accept_kash4me_payment.AcceptKash4mePaymentFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_transaction_fee_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/lighter_gray"
+        app:cardCornerRadius="16dp"
+        app:contentPaddingBottom="16dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:strokeColor="#2c8db4"
+        app:strokeWidth="0dp">
+
+        <TextView
+            android:id="@+id/tv_transaction_fee_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:justificationMode="inter_word"
+            android:text="Your transaction fee 2.25% ($0.62) will be deducted from the purchase amount."
+            android:textColor="@color/primary_text_color" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_payment_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="@id/cv_transaction_fee_description"
+        app:layout_constraintStart_toStartOf="@id/cv_transaction_fee_description"
+        app:layout_constraintTop_toBottomOf="@id/cv_transaction_fee_description"
+        app:strokeColor="@color/grayText"
+        app:strokeWidth="0.75dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_customer_name"
+                style="@style/Title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/full_names" />
+
+            <TextView
+                android:id="@+id/tv_customer_code"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_customer_name"
+                tools:text="@tools:sample/full_names" />
+
+            <TextView
+                android:id="@+id/tv_purchase_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:textAlignment="center"
+                android:textColor="#216c89"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_customer_code"
+                app:layout_constraintWidth_percent=".80"
+                tools:text="$0.00" />
+
+            <TextView
+                android:id="@+id/tv_enter_amount_to_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/purchase_amount"
+                android:textColor="#216c89"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_purchase_amount"
+                app:layout_constraintStart_toStartOf="@id/tv_purchase_amount"
+                app:layout_constraintTop_toBottomOf="@id/tv_purchase_amount" />
+
+            <TextView
+                android:id="@+id/tv_cashback_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text_color"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_customer_code"
+                app:layout_constraintWidth_percent=".80"
+                tools:text="$0.00" />
+
+            <TextView
+                android:id="@+id/tv_cashback_amount_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/cash_back_amount"
+                android:textColor="@color/primary_text_color"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_purchase_amount"
+                app:layout_constraintStart_toStartOf="@id/tv_purchase_amount"
+                app:layout_constraintTop_toBottomOf="@id/tv_purchase_amount" />
+
+            <TextView
+                android:id="@+id/tv_transaction_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24sp"
+                android:textColor="@color/primary_text_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_transaction_date_caption"
+                app:layout_constraintStart_toStartOf="@id/tv_transaction_date_caption"
+                app:layout_constraintTop_toBottomOf="@id/tv_transaction_date_caption"
+                tools:text="@tools:sample/date/ddmmyy" />
+
+            <TextView
+                android:id="@+id/tv_transaction_date_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="48dp"
+                android:text="@string/transaction_date"
+                android:textColor="@color/primary_text_color"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_cashback_amount" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_accept"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/accept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

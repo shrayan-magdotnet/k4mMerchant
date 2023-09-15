@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:textAppearance="@style/Title2"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/select_language"
+        android:textColor="?attr/colorOnSurface" />
+
+    <RadioGroup
+        android:id="@+id/rgLanguageSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle">
+
+        <RadioButton
+            android:id="@+id/rb_english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:text="@string/english"
+            android:textColor="?attr/colorOnSurface" />
+
+        <RadioButton
+            android:id="@+id/rb_french"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:text="@string/french"
+            android:textColor="?attr/colorOnSurface" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgLanguageSelection"
+        android:layout_alignStart="@id/rgLanguageSelection"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/changing_language_requires_app_restart" />
+
+    <TextView
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_note"
+        android:layout_alignEnd="@id/rgLanguageSelection"
+        android:layout_marginTop="4dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:minWidth="60dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/ok"
+        android:textColor="?attr/colorSecondary"
+        android:fontFamily="sans-serif-medium" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnOk"
+        android:layout_alignBottom="@id/btnOk"
+        android:layout_marginEnd="2dp"
+        android:layout_toStartOf="@id/btnOk"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:minWidth="60dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/cancel"
+        android:textColor="?attr/colorSecondary"
+        android:fontFamily="sans-serif-medium" />
+
+</RelativeLayout>

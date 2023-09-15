@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+
+    <color name="light_green_500">#8bc34a</color>
+    <color name="light_green_700">#689f38</color>
+
+    <color name="primary_text_color">#cc000000</color>
+
+    <color name="greenish_blue">#067196</color>
+    <color name="blue_link">#04A3D7</color>
+
+    <color name="green">#76A541</color>
+    <color name="orange">#f1762b</color>
+    <color name="blue">#067196</color>
+    <color name="linkBlue">#09667F</color>
+    <color name="grayButton">#C6C6C6</color>
+    <color name="grayText">#777777</color>
+    <color name="dark_gray">#3C3C3C</color>
+    <color name="graySurface">#A0A0A0</color>
+
+    <color name="grayBackground">#d3d3d3</color>
+    <color name="lighter_gray">#EBEBEB</color>
+    <color name="lightGrayBackground">#F7F7F7</color>
+    <color name="bgColor">#dbd7d2</color>
+    <color name="grey">#CFCBC8</color>
+
+    <color name="backgroundColor">#dbd7d2</color>
+    <color name="grey_circle">#F2F3F5</color>
+    <!--    <color name="backgroundColor">#F5FFFA</color>-->
+    <color name="dark_orange">#CE5420</color>
+    <color name="reddish_orange">#D8602B</color>
+    <color name="yellow">#FF9300</color>
+    <color name="on_your_way">#ffaf2e</color>
+
+    <color name="green_home">#679435</color>
+    <color name="green_button_outline">#77BB41</color>
+    <color name="green_home_gradient">#ABBB96</color>
+
+    <color name="amount_green">#4FAB20</color>
+    <color name="success_green">#579F2C</color>
+    <color name="amount_red">#F3053D</color>
+    <color name="error_red">#EC3C19</color>
+
+    <color name="dark_green">#38571A</color>
+
+    <color name="tab_bar">#067196</color>
+    <color name="bg_promotional_banner">#96a8b8</color>
+
+    <!--Blue-->
+    <color name="bg_blue">#CBE2FF</color>
+    <color name="app_background">#bfe3f1</color>
+    <color name="blue_progress_made">#197393</color>
+    <color name="blue_progress_remaining">#6eccf0</color>
+
+    <color name="bg_black_transparent">#99000000</color>
+
+    <!--Gray-->
+    <color name="bg_border">#7580A4</color>
+
+    <!--Green-->
+    <color name="bg_green">#4A6D2C</color>
+
+    <!--Orange-->
+    <color name="bg_orange">#EC5A4C</color>
+
+    <array name="progress_dialog">
+        <item>#067196</item>
+        <item>#689f38</item>
+        <item>#ED6823</item>
+    </array>
+
+    <!--New Colors Aug 22-->
+    <color name="ui_color">#f5f5f5</color>
+    <color name="search_bar_background">@android:color/white</color>
+    <color name="table_headers">#f5f5f5</color>
+    <color name="transaction_header_amounts">#049bd1</color>
+    <color name="business_dashboard_amounts">#049bd1</color>
+    <color name="negative_numbers">#FFF76757</color>
+    <color name="all_views_background">#E0E0E0</color>
+    <color name="all_description_banner">#FFF5F5F5</color>
+    <color name="all_card_title_text">#535d66</color>
+    <color name="disabled_button_color">#B5C0D5</color>
+    <color name="enabled_or_selected_button_color">#B5C0D5</color>
+    <color name="promotional_banner">#96a8b8</color>
+
+    <color name="app_green">#76A541</color>
+    <color name="app_orange">#ED6823</color>
+    <color name="app_blue_number">#067196</color>
+    <color name="app_blue_link">#09667F</color>
+    <color name="app_grey_button">#C6C6C6</color>
+    <color name="app_grey_letters">#777777</color>
+
+    <!--
+        Green : # 76A541
+        Orange : # ED6823
+        Blue (numbers) : # 067196
+        Link blue : # 09667F
+        Grey button: # C6C6C6
+        Grey letters : #777777
+        TextBox Height: 45 Points
+        TextBox fontsize : 16 Points
+        Button Height: 45 points
+        Spacing between objects: 16points
+    -->
+
+    <!--
+
+    Colors:
+    =========================
+
+    Transactions headers:
+    UIColor(rgb: 0xf5f5f5)
+    SearchBarBackground: white
+    Table headers : UIColor(rgb: 0xf5f5f5)
+    Transactoin Header Amounts :  UIColor(rgb: 0x049bd1)
+    Business dashboard Amounts:  UIColor(rgb: 0x049bd1)
+    Negative numbers: UIColor(rgb: 0xf76757)
+    All Views Background :  UIColor(rgb: 0xE0E0E0)
+
+    Cell Background: white
+    All Description Banner:   UIColor(rgb: 0xf5f5f5)
+
+    All card Title text: UIColor(rgb: 0x535d66)
+
+    Negative numbers:UIColor(rgb: 0xf76757)
+    Disabled button color :   UIColor(rgb: 0xB5C0D5)
+    Enabled/Selected button : UIColor(rgb: 0x067196)
+    Promotional Banner: UIColor(rgb: 0x96a8b8)
+
+    -->
+
+</resources>

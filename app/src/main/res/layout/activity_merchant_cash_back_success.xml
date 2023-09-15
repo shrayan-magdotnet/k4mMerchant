@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.merchant.cashback_success.MerchantCashBackSuccessActivity">
+
+
+    <include
+        android:id="@+id/customAppBar"
+        layout="@layout/custom_app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/successIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:paddingVertical="20dp"
+        android:src="@drawable/ic_checkmark_outlined"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customAppBar" />
+
+
+    <TextView
+        android:id="@+id/cashBackSentLTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:text="@string/cashback_sent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/successIV" />
+
+    <com.kash4me.utils.custom_views.CurrencyTextView
+        android:id="@+id/cashBackAmountTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:paddingBottom="20dp"
+        android:text=""
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cashBackSentLTV" />
+
+
+    <TextView
+        android:id="@+id/thankYouTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="20dp"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/thank_you_for_using_kash4me_your_cash_back_has_been_assigned_to_the_customer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cashBackAmountTV" />
+
+
+    <Button
+        android:id="@+id/closeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/close"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

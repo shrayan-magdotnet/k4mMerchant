@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:context=".ui.activity.merchant.merchant_profile.MerchantProfileActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#C0C0C0"
+                    android:visibility="gone"
+                    app:cardCornerRadius="0dp"
+                    app:contentPadding="6dp"
+                    app:layout_constraintEnd_toStartOf="@id/cv_cover_photo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:background="#ebebeb"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_insert_photo" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_cover_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#C0C0C0"
+                    app:cardCornerRadius="0dp"
+                    app:contentPadding="6dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cv_logo"
+                    app:layout_constraintTop_toTopOf="@id/cv_logo"
+                    app:layout_constraintBottom_toBottomOf="@id/cv_logo">
+
+                    <ImageView
+                        android:id="@+id/iv_cover_photo"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:background="#ebebeb"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_insert_photo" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_business_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/business_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cv_logo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textCapWords"
+                        android:maxLength="50" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/country"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/til_business_name"
+                    app:layout_constraintStart_toStartOf="@id/til_business_name"
+                    app:layout_constraintTop_toBottomOf="@id/til_business_name" />
+
+                <Spinner
+                    android:id="@+id/sp_countries"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/grey_outline_bg"
+                    android:minHeight="52dp"
+                    android:popupBackground="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/tv_country"
+                    app:layout_constraintStart_toStartOf="@id/tv_country"
+                    app:layout_constraintTop_toBottomOf="@id/tv_country" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_down"
+                    app:layout_constraintBottom_toBottomOf="@id/sp_countries"
+                    app:layout_constraintEnd_toEndOf="@id/sp_countries"
+                    app:layout_constraintTop_toTopOf="@id/sp_countries" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/primary_text_color"
+                    app:layout_constraintEnd_toStartOf="@id/btn_edit"
+                    app:layout_constraintStart_toStartOf="@id/sp_countries"
+                    app:layout_constraintTop_toBottomOf="@id/sp_countries">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address"
+                        android:inputType="textMultiLine" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/edit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grayText"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/til_address"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/til_address" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_zip_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/zip_or_postal_code"
+                    android:textColor="@color/primary_text_color"
+                    app:layout_constraintEnd_toEndOf="@id/btn_edit"
+                    app:layout_constraintStart_toStartOf="@id/til_address"
+                    app:layout_constraintTop_toBottomOf="@id/til_address">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPostalAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_cell_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_rectangle_cornered_outlined"
+                    app:cardCornerRadius="4dp"
+                    app:contentPaddingBottom="6dp"
+                    app:contentPaddingTop="6dp"
+                    app:layout_constraintEnd_toEndOf="@id/til_zip_code"
+                    app:layout_constraintStart_toStartOf="@id/til_zip_code"
+                    app:layout_constraintTop_toBottomOf="@id/til_zip_code"
+                    app:strokeColor="@color/mtrl_outlined_stroke_color"
+                    app:strokeWidth="@dimen/mtrl_textinput_box_stroke_width_default">
+
+                    <LinearLayout
+                        android:id="@+id/phoneLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/countryCode_picker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            app:ccp_hintExampleNumber="true" />
+
+                        <EditText
+                            android:id="@+id/phoneET"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:inputType="phone"
+                            android:maxLength="12"
+                            app:boxBackgroundMode="none" />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_promotional_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/promotions_or_offer"
+                    android:textColor="@color/primary_text_color"
+                    app:layout_constraintEnd_toEndOf="@id/cv_cell_phone"
+                    app:layout_constraintStart_toStartOf="@id/cv_cell_phone"
+                    app:layout_constraintTop_toBottomOf="@id/cv_cell_phone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:maxLength="50" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/add_your_appealing_description"
+                    app:layout_constraintEnd_toEndOf="@id/til_promotional_text"
+                    app:layout_constraintStart_toStartOf="@id/til_promotional_text"
+                    app:layout_constraintTop_toBottomOf="@id/til_promotional_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:maxLength="1000"
+                        android:minHeight="100dp"
+                        tools:text="@tools:sample/lorem/random" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:enabled="false"
+                    android:hint="@string/email"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/til_description"
+                    app:layout_constraintStart_toStartOf="@id/til_description"
+                    app:layout_constraintTop_toBottomOf="@id/til_description"
+                    tools:text="@string/dummy_merchant_email_address">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/website_optional"
+                    app:prefixText="https://"
+                    android:textColor="@color/primary_text_color"
+                    app:layout_constraintEnd_toEndOf="@id/til_head_office_id"
+                    app:layout_constraintStart_toStartOf="@id/til_head_office_id"
+                    app:layout_constraintTop_toBottomOf="@id/til_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textUri" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_head_office_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/head_office_id_optional"
+                    android:textColor="@color/primary_text_color"
+                    app:layout_constraintEnd_toEndOf="@id/til_email"
+                    app:layout_constraintStart_toStartOf="@id/til_email"
+                    app:layout_constraintTop_toBottomOf="@id/til_website">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tagsET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="56dp"
+                    android:hint="@string/add_tags_here"
+                    android:visibility="gone"
+                    app:errorEnabled="false"
+                    app:layout_constraintEnd_toStartOf="@id/btn_add"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_head_office_id">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:lines="30"
+                        android:maxLength="5000"
+                        android:maxLines="50" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="4dp"
+                    android:insetBottom="0dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="12dp"
+                    android:text="@string/add"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/til_tags"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/til_tags"
+                    app:layout_constraintTop_toTopOf="@id/til_tags" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cg_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_rectangle_cornered_outlined"
+                    android:paddingHorizontal="8dp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_add"
+                    app:layout_constraintHeight_min="100dp"
+                    app:layout_constraintStart_toStartOf="@id/til_tags"
+                    app:layout_constraintTop_toBottomOf="@id/til_tags">
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <Button
+                    android:id="@+id/updateBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:letterSpacing="0"
+                    android:padding="16dp"
+                    android:text="@string/update"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cg_tags" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_tags"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/search_tags"
+                    android:textColor="@color/primary_text_color"
+                    app:layout_constraintEnd_toStartOf="@id/btn_add"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_head_office_id">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/atv_tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:completionThreshold="1"
+                        android:drawableEnd="@drawable/ic_down"
+                        android:minHeight="52dp"
+                        android:paddingHorizontal="16dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

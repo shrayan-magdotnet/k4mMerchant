@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custome_registration_nav"
+    app:startDestination="@id/customerBasicInfoFragment">
+    <fragment
+        android:id="@+id/customerBasicInfoFragment"
+        android:name="com.kash4me.ui.fragments.customer.basicinfo.CustomerBasicInfoFragment"
+        android:label="CustomerBasicInfoFragment">
+        <action
+            android:id="@+id/action_customerBasicInfoFragment_to_customerFinishFragment"
+            app:destination="@id/customerFinishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerFinishFragment"
+        android:name="com.kash4me.ui.fragments.customer.finish.CustomerFinishFragment"
+        android:label="CustomerFinishFragment" />
+</navigation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/send_cashback_link_nav"
+    app:startDestination="@id/sendCashbackLinkFragment">
+
+    <fragment
+        android:id="@+id/sendCashbackLinkFragment"
+        android:name="com.kash4me.ui.activity.merchant.send_cashback_code.SendCashbackCodeFragment"
+        android:label="fragment_send_cashback_link"
+        tools:layout="@layout/fragment_send_cashback_code">
+        <action
+            android:id="@+id/action_sendCashbackCodeFragment_to_codeSentFragment"
+            app:destination="@id/linkSentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkSentFragment"
+        android:name="com.kash4me.ui.activity.merchant.send_cashback_code.CodeSentFragment"
+        android:label="fragment_link_sent"
+        tools:layout="@layout/fragment_code_sent">
+        <argument
+            android:name="email_address"
+            app:argType="string" />
+        <argument
+            android:name="purchase_amount"
+            app:argType="string" />
+        <argument
+            android:name="cashback_code"
+            app:argType="string" />
+    </fragment>
+</navigation>

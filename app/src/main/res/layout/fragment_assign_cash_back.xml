@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_total_earned_and_processing"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/green_circle_stroke"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cashBackLTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/total_earned"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_text_color"
+                android:textSize="11sp" />
+
+            <com.kash4me.utils.custom_views.CurrencyTextView
+                android:id="@+id/cashBackTV"
+                style="@style/AmountGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/orange_circle_stroke"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/processingLTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/processing"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_text_color"
+                android:textSize="11sp" />
+
+            <com.kash4me.utils.custom_views.CurrencyTextView
+                android:id="@+id/processingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:text=""
+                android:textColor="@color/orange"
+                android:textSize="14sp"
+                tools:text="$500.00" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/divider_1"
+        layout="@layout/layout_divider"
+        android:layout_width="0dp"
+        android:layout_height="0.75dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_total_earned_and_processing" />
+
+    <TextView
+        android:id="@+id/ltv_recent_cashback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/recent_cash_back"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/divider_1"
+        app:layout_constraintTop_toBottomOf="@id/divider_1" />
+
+    <com.kash4me.utils.custom_views.CurrencyTextView
+        android:id="@+id/tv_recent_cashback"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/primary_text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ltv_recent_cashback"
+        app:layout_constraintEnd_toEndOf="@id/divider_1"
+        app:layout_constraintTop_toTopOf="@id/ltv_recent_cashback"
+        tools:text="@string/dummy_amount" />
+
+    <include
+        android:id="@+id/divider_2"
+        layout="@layout/layout_divider"
+        android:layout_width="0dp"
+        android:layout_height="0.75dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_recent_cashback" />
+
+    <TextView
+        android:id="@+id/ltv_spent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/spent"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/divider_2"
+        app:layout_constraintTop_toBottomOf="@id/divider_2" />
+
+    <com.kash4me.utils.custom_views.CurrencyTextView
+        android:id="@+id/tv_spent"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/primary_text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ltv_spent"
+        app:layout_constraintEnd_toEndOf="@id/divider_2"
+        app:layout_constraintTop_toTopOf="@id/ltv_spent"
+        tools:text="@string/dummy_amount" />
+
+    <include
+        android:id="@+id/divider_3"
+        layout="@layout/layout_divider"
+        android:layout_width="0dp"
+        android:layout_height="0.75dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_spent" />
+
+    <TextView
+        android:id="@+id/ltv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/left"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/divider_3"
+        app:layout_constraintTop_toBottomOf="@id/divider_3" />
+
+    <com.kash4me.utils.custom_views.CurrencyTextView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/primary_text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ltv_left"
+        app:layout_constraintEnd_toEndOf="@id/divider_3"
+        app:layout_constraintTop_toTopOf="@id/ltv_left"
+        tools:text="@string/dummy_amount" />
+
+    <include
+        android:id="@+id/divider_4"
+        layout="@layout/layout_divider"
+        android:layout_width="0dp"
+        android:layout_height="0.75dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_left" />
+
+    <ImageView
+        android:id="@+id/iv_qr_code"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_4"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/tv_qr_code_caption"
+        style="@style/Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/scan_qr_code_to_assign_cash_back"
+        android:textColor="@color/primary_text_color"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_assign_cash_back"
+        app:layout_constraintEnd_toEndOf="@id/iv_qr_code"
+        app:layout_constraintStart_toStartOf="@id/iv_qr_code"
+        app:layout_constraintTop_toBottomOf="@id/iv_qr_code"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_revert_cash_back_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:text="If you want to revert the cash back amount already sent. Use the link below"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_qr_code_caption" />
+
+    <TextView
+        android:id="@+id/tv_revert_cash_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/revert_cash_back"
+        android:textColor="?colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_revert_cash_back_description" />
+
+    <Button
+        android:id="@+id/btn_assign_cash_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/assign_cash_back"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

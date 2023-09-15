@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customer_dashboard_nav"
+    app:startDestination="@id/customerHomeFragment">
+
+    <fragment
+        android:id="@+id/customerHomeFragment"
+        android:name="com.kash4me.ui.fragments.customer.home.CustomerHomeFragment"
+        android:label="CustomerHomeFragment" />
+    <fragment
+        android:id="@+id/customerSearchFragment"
+        android:name="com.kash4me.ui.fragments.customer.search.CustomerSearchFragment"
+        android:label="CustomerSearchFragment" />
+    <fragment
+        android:id="@+id/customerTotalTransactionFragment"
+        android:name="com.kash4me.ui.fragments.customer.total_transaction.CustomerTotalTransactions2Fragment"
+        android:label="fragment_customer_total_transaction"
+        tools:layout="@layout/fragment_customer_total_transaction" />
+    <fragment
+        android:id="@+id/announcementsFragment"
+        android:name="com.kash4me.ui.activity.customer.announcements.AnnouncementsFragment"
+        android:label="Announcements"
+        tools:layout="@layout/fragment_announcements" />
+    <fragment
+        android:id="@+id/customerProfileFragment"
+        android:name="com.kash4me.ui.fragments.customer.profile.CustomerProfileFragment"
+        android:label="CustomerProfileFragment" />
+</navigation>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/merchant_cash_back"
+    app:startDestination="@id/assignCashBackFragment">
+    <fragment
+        android:id="@+id/assignCashBackFragment"
+        android:name="com.kash4me.ui.fragments.merchant.search.assign_cashback.fragment.customer_details.CustomerDetailsFromMerchantFragment"
+        android:label="fragment_assign_cash_back"
+        tools:layout="@layout/fragment_assign_cash_back">
+        <action
+            android:id="@+id/action_assignCashBackFragment_to_purchaseAmountFragment"
+            app:destination="@id/purchaseAmountFragment" />
+        <action
+            android:id="@+id/action_assignCashBackFragment_to_revertCashbackFragment"
+            app:destination="@id/revertCashbackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseAmountFragment"
+        android:name="com.kash4me.ui.fragments.merchant.search.assign_cashback.fragment.purchase_amount.PurchaseAmountFragment"
+        android:label="fragment_purchase_amount"
+        tools:layout="@layout/fragment_purchase_amount">
+        <action
+            android:id="@+id/action_purchaseAmountFragment_to_confirmAssignCashbackFragment"
+            app:destination="@id/confirmAssignCashbackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignCompleteFragment"
+        android:name="com.kash4me.ui.fragments.merchant.search.assign_cashback.fragment.assign_complete.AssignCompleteFragment"
+        android:label="fragment_assign_complete"
+        tools:layout="@layout/fragment_assign_complete">
+        <argument
+            android:name="cashback_amount"
+            app:argType="string" />
+        <argument
+            android:name="customer_name"
+            app:argType="string" />
+        <argument
+            android:name="customer_code"
+            app:argType="string" />
+        <argument
+            android:name="purchase_amount"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/revertCashbackFragment"
+        android:name="com.kash4me.ui.fragments.merchant.search.assign_cashback.fragment.customer_details.rollback.RevertCashbackFragment"
+        android:label="fragment_revert_cashback"
+        tools:layout="@layout/fragment_revert_cashback" />
+    <fragment
+        android:id="@+id/confirmAssignCashbackFragment"
+        android:name="com.kash4me.ui.fragments.merchant.search.assign_cashback.fragment.confirm_assign_cashback.ConfirmAssignCashbackFragment"
+        android:label="fragment_confirm_assign_cashback"
+        tools:layout="@layout/fragment_confirm_assign_cashback">
+        <action
+            android:id="@+id/action_confirmAssignCashbackFragment_to_assignCompleteFragment"
+            app:destination="@id/assignCompleteFragment" />
+        <argument
+            android:name="purchase_amount"
+            app:argType="float" />
+        <argument
+            android:name="cashback_settings"
+            app:argType="integer" />
+    </fragment>
+</navigation>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/request_cashback_nav"
+    app:startDestination="@id/requestCashbackAmountFragment">
+
+
+    <fragment
+        android:id="@+id/requestCashbackAmountFragment"
+        android:name="com.kash4me.ui.activity.customer.request_cashback.RequestCashbackAmountFragment"
+        android:label="fragment_request_cashback_amount"
+        tools:layout="@layout/fragment_request_cashback_amount">
+        <action
+            android:id="@+id/action_requestCashbackAmountFragment_to_confirmRequestingCashbackFragment"
+            app:destination="@id/confirmRequestingCashbackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generateQrCodeForCashbackFragment"
+        android:name="com.kash4me.ui.activity.customer.request_cashback.GenerateQrCodeForCashbackFragment"
+        android:label="fragment_generate_qr_code_for_cashback"
+        tools:layout="@layout/fragment_generate_qr_code_for_cashback">
+        <argument
+            android:name="request"
+            app:argType="com.kash4me.data.models.request.RequestCashbackQrRequest" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmRequestingCashbackFragment"
+        android:name="com.kash4me.ui.activity.customer.request_cashback.ConfirmRequestingCashbackFragment"
+        android:label="fragment_confirm_requesting_cashback"
+        tools:layout="@layout/fragment_confirm_requesting_cashback">
+        <action
+            android:id="@+id/action_confirmRequestingCashbackFragment_to_generateQrCodeForCashbackFragment"
+            app:destination="@id/generateQrCodeForCashbackFragment" />
+        <argument
+            android:name="request"
+            app:argType="com.kash4me.data.models.request.RequestCashbackQrRequest" />
+        <argument
+            android:name="merchant_name"
+            app:argType="string" />
+        <argument
+            android:name="merchant_unique_id"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    app:contentPadding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100dp"
+            app:layout_constraintEnd_toStartOf="@id/tv_purchase_amount"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/date/mmddyy" />
+
+
+        <TextView
+            android:id="@+id/tv_purchase_amount"
+            style="@style/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="36dp"
+            app:layout_constraintEnd_toStartOf="@id/tv_cashback_amount"
+            app:layout_constraintStart_toEndOf="@id/tv_date"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem" />
+
+
+        <TextView
+            android:id="@+id/tv_cashback_amount"
+            style="@style/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:minWidth="36dp"
+            app:layout_constraintEnd_toStartOf="@id/iv_arrow"
+            app:layout_constraintStart_toEndOf="@id/tv_purchase_amount"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_transaction_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/tv_date"
+            app:layout_constraintStart_toStartOf="@id/tv_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_date"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/tv_transaction_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/tv_purchase_amount"
+            app:layout_constraintStart_toStartOf="@id/tv_purchase_amount"
+            app:layout_constraintTop_toBottomOf="@id/tv_purchase_amount"
+            tools:text="@tools:sample/date/hhmm" />
+
+        <TextView
+            android:id="@+id/tv_cashback_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cash_back"
+            app:layout_constraintEnd_toEndOf="@id/tv_cashback_amount"
+            app:layout_constraintStart_toStartOf="@id/tv_cashback_amount"
+            app:layout_constraintTop_toBottomOf="@id/tv_cashback_amount" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+

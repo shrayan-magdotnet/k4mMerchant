@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "289204660928",
+    "project_id": "kash4me-cec4a",
+    "storage_bucket": "kash4me-cec4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289204660928:android:4025d3c7edee9883af5b25",
+        "android_client_info": {
+          "package_name": "com.kash4me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289204660928-u0du2je4pb3agbv85qia50c50d0c695l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVm7SmjemKypzJ0NC7inAvUpPql0yk0Ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289204660928-u0du2je4pb3agbv85qia50c50d0c695l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

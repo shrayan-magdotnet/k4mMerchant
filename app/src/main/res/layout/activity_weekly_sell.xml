@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.activity.merchant.transaction_details.TransactionDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/totalSellAndImageLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/dollar_handling" />
+
+        <LinearLayout
+            android:id="@+id/totalSellLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/totalSellLTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_sell"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalSellAmountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dollar_40_00"
+                android:textColor="@color/green"
+                android:textSize="40sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/totalSellLTV" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroundbox"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/totalSellAndImageLL">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sellRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="100"
+            tools:listitem="@layout/item_weekly_sell" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

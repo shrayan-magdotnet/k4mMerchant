@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.merchant.accept_kash4me_payment.CompleteAcceptKash4mePaymentFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_success"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:elevation="0.1dp"
+        android:layout_marginTop="16dp"
+        app:civ_circle_background_color="@color/white"
+        android:src="@drawable/ic_checkmark_outlined"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/cv_payment_details"
+        app:layout_constraintStart_toStartOf="@id/cv_payment_details"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_success"
+        app:layout_constraintTop_toTopOf="@id/iv_success" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_payment_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line"
+        app:strokeColor="@color/grayText"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_transaction_id"
+                style="@style/Title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/tv_transaction_id_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/primary_text_color"
+                android:textSize="11sp"
+                android:text="Transaction ID"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_customer_name" />
+
+            <TextView
+                android:id="@+id/tv_purchase_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:textAlignment="center"
+                android:textColor="#216c89"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_customer_code"
+                app:layout_constraintWidth_percent=".80"
+                tools:text="$0.00" />
+
+            <TextView
+                android:id="@+id/tv_enter_amount_to_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/actual_payment"
+                android:textColor="#216c89"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_purchase_amount"
+                app:layout_constraintStart_toStartOf="@id/tv_purchase_amount"
+                app:layout_constraintTop_toBottomOf="@id/tv_purchase_amount" />
+
+            <TextView
+                android:id="@+id/tv_transaction_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text_color"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_customer_code"
+                app:layout_constraintWidth_percent=".80"
+                tools:text="$0.00" />
+
+            <TextView
+                android:id="@+id/tv_transaction_fee_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/transaction_fee"
+                android:textColor="@color/primary_text_color"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_purchase_amount"
+                app:layout_constraintStart_toStartOf="@id/tv_purchase_amount"
+                app:layout_constraintTop_toBottomOf="@id/tv_purchase_amount" />
+
+            <TextView
+                android:id="@+id/tv_amount_processed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:textAlignment="center"
+                android:textColor="#497226"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_customer_code"
+                app:layout_constraintWidth_percent=".80"
+                tools:text="$0.00" />
+
+            <TextView
+                android:id="@+id/tv_amount_processed_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="48dp"
+                android:text="@string/amount_processed"
+                android:textColor="#497226"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_purchase_amount"
+                app:layout_constraintStart_toStartOf="@id/tv_purchase_amount"
+                app:layout_constraintTop_toBottomOf="@id/tv_purchase_amount" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:justificationMode="inter_word"
+        android:textColor="@color/primary_text_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/cv_payment_details"
+        app:layout_constraintStart_toStartOf="@id/cv_payment_details"
+        app:layout_constraintTop_toBottomOf="@id/cv_payment_details"
+        tools:maxLines="6"
+        android:textAlignment="center"
+        android:text="Thank you for using Pay by Kash4me. We have successfully processed your transaction. It will take 1-2 business days to reflect in your account." />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/done"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
