@@ -11,7 +11,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.kash4me"
+        applicationId "com.kash4me.merchant"
         minSdk 23
         targetSdk 33
         versionCode 1
@@ -55,7 +55,7 @@ android {
         viewBinding true
         dataBinding true
     }
-    namespace 'com.kash4me'
+    namespace 'com.kash4me.merchant'
 }
 
 kapt {

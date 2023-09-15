@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         maven { url "https://jitpack.io" }
     }
 }
-rootProject.name = "kash4me-Android"
+rootProject.name = "k4mMerchant"
 include ':app'
