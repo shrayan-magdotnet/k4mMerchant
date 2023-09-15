@@ -13,7 +13,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.CheckBox
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -90,7 +89,6 @@ class RegisterFragment : Fragment() {
             goToVerifyScreen(email, view)
         }
 
-        val businessUserCB = view.findViewById<CheckBox>(R.id.businessUserCB)
         val emailET = view.findViewById<TextInputLayout>(R.id.emailET)
         val passwordET = view.findViewById<TextInputLayout>(R.id.passwordET)
         val cPasswordET = view.findViewById<TextInputLayout>(R.id.cPasswordET)
@@ -157,7 +155,7 @@ class RegisterFragment : Fragment() {
             params["email"] = email.lowercase()
             params["password"] = password
             params["confirm_password"] = confirmPassword
-            params["is_merchant"] = businessUserCB.isChecked
+            params["is_merchant"] = true
 
             Timber.d("Request -> $params")
             viewModel.registerUser(params)
@@ -169,7 +167,7 @@ class RegisterFragment : Fragment() {
         viewModel.registerResponse.observe(viewLifecycleOwner) {
             showToast(it.detail)
             ((activity) as RegistrationActivity).customDialogClass.hide()
-            (activity as RegistrationActivity).isBusinessSelected = businessUserCB.isChecked
+            (activity as RegistrationActivity).isBusinessSelected = true
             goToVerifyScreen(email, view)
 
         }

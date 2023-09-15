@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.register.RegisterFragment">
+    tools:context="RegisterFragment">
 
     <include
         android:id="@+id/stepper"
@@ -21,8 +21,8 @@
         android:id="@+id/emailET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/email"
         android:layout_marginTop="16dp"
+        android:hint="@string/email"
         app:layout_constraintTop_toBottomOf="@id/stepper">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -36,9 +36,9 @@
         android:id="@+id/passwordET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:hint="@string/password"
         app:endIconMode="password_toggle"
-        android:layout_marginTop="8dp"
         app:errorIconDrawable="@null"
         app:layout_constraintTop_toBottomOf="@id/emailET">
 
@@ -54,8 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="@string/confirmPassword"
-        app:errorIconDrawable="@null"
         app:endIconMode="password_toggle"
+        app:errorIconDrawable="@null"
         app:layout_constraintTop_toBottomOf="@id/passwordET">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -70,10 +70,10 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="4dp"
         android:layout_marginTop="8dp"
-        android:text="@string/password_requirement"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:justificationMode="inter_word"
+        android:text="@string/password_requirement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cPasswordET" />
 
     <CheckBox
@@ -81,8 +81,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:checked="true"
         android:text="@string/registerBusinessUser"
-        app:layout_constraintTop_toBottomOf="@id/tv_password_criteria" />
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tv_password_criteria"
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/joinBtn"
@@ -98,10 +101,10 @@
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:padding="16dp"
         android:text="@string/already_have_account_login_here"
         android:textColor="@color/linkBlue"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/joinBtn" />
 
     <TextView
