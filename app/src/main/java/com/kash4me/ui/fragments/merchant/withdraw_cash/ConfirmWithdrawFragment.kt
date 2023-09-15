@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.kash4me.R
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.FragmentConfirmWithdrawBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentConfirmWithdrawBinding
 import com.kash4me.ui.activity.payment_gateway.PaymentSettingsViewModel
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.dialog.SuccessDialog

@@ -12,10 +12,10 @@ import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.AutocompleteActivity
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
-import com.kash4me.R
 import com.kash4me.data.models.customer.customer_details.CustomerDetailsResponse
 import com.kash4me.data.models.customer.update_profile.CustomerProfileUpdateRequest
-import com.kash4me.databinding.ActivityCustomerProfileOldBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityCustomerProfileOldBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

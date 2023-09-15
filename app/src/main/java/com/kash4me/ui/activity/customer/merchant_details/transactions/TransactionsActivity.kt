@@ -10,10 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kash4me.R
 import com.kash4me.data.models.customer.transactions_according_to_merchant.Result
 import com.kash4me.data.models.customer.transactions_according_to_merchant.TransactionsAccordingToMerchantResponse
-import com.kash4me.databinding.ActivityTransactionsBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityTransactionsBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.AppConstants
 import com.kash4me.utils.custom_views.CustomProgressDialog

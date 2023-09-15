@@ -8,7 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.kash4me.databinding.BottomSheetPaymentMethodsBinding
+import com.kash4me.merchant.databinding.BottomSheetPaymentMethodsBinding
 import com.kash4me.ui.activity.payment_gateway.PaymentSettingsViewModel
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.custom_views.CustomProgressDialog

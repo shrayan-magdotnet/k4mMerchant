@@ -10,8 +10,8 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.kash4me.R
 import com.kash4me.data.models.CustomerResponse
+import com.kash4me.merchant.R
 import com.kash4me.ui.activity.customer.customer_dashboard.CustomerDashboardActivity
 import com.kash4me.utils.extensions.getNotAvailableIfEmptyOrNull
 

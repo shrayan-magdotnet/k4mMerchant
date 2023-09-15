@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.kash4me.data.models.UserDetails
-import com.kash4me.databinding.FragmentRevertCashbackBinding
+import com.kash4me.merchant.databinding.FragmentRevertCashbackBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

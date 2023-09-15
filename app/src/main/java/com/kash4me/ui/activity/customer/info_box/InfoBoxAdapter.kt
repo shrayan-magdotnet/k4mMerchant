@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.kash4me.data.models.user.InfoBoxResponse
-import com.kash4me.databinding.ItemInfoboxBinding
+import com.kash4me.merchant.databinding.ItemInfoboxBinding
 import com.kash4me.utils.TimeUtils
 import com.kash4me.utils.extensions.getEmptyIfNull
 

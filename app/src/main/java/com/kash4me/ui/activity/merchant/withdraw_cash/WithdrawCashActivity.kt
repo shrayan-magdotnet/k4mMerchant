@@ -5,8 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.kash4me.R
-import com.kash4me.databinding.ActivityWithdrawCashBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityWithdrawCashBinding
 import com.kash4me.ui.fragments.merchant.withdraw_cash.WithdrawCashFragment
 import dagger.hilt.android.AndroidEntryPoint
 

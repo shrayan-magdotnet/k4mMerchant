@@ -4,7 +4,7 @@ import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import com.kash4me.R
+import com.kash4me.merchant.R
 import timber.log.Timber
 
 class CustomProgressDialog(val context: Context) {

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.kash4me.databinding.FragmentConfirmRequestingCashbackBinding
+import com.kash4me.merchant.databinding.FragmentConfirmRequestingCashbackBinding
 import com.kash4me.utils.extensions.formatUsingCurrencySystem
 import com.kash4me.utils.extensions.showToast
 

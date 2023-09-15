@@ -7,7 +7,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
-import com.kash4me.R
+import com.kash4me.merchant.R
 import com.kash4me.utils.AppConstants.goToVerifyScreen
 import com.kash4me.utils.custom_views.CustomProgressDialog
 

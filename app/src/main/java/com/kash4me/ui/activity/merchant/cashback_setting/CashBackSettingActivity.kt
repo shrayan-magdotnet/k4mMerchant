@@ -5,10 +5,10 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.ViewModelProvider
-import com.kash4me.R
 import com.kash4me.data.models.ActiveCashbackSettings
 import com.kash4me.data.models.merchant.cashback.CashbackType
-import com.kash4me.databinding.ActivityCashBackSettingBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityCashBackSettingBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

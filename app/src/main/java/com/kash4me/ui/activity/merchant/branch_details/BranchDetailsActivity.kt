@@ -2,8 +2,8 @@ package com.kash4me.ui.activity.merchant.branch_details
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.kash4me.R
-import com.kash4me.databinding.ActivityBranchDetailsBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityBranchDetailsBinding
 import com.kash4me.ui.fragments.merchant.branch_details.BranchDetailsFragment
 import dagger.hilt.android.AndroidEntryPoint
 

@@ -30,7 +30,7 @@ constructor(
     val loginResponse = SingleLiveEvent<LoginResponse>()
     val errorMessage = SingleLiveEvent<ErrorResponse>()
 
-    fun loginCustomer(request: HashMap<String, String>) {
+    fun loginCustomer(request: HashMap<String, Any>) {
 
         viewModelScope.launch { merchantTransactionSummaryRepository.clearTransactionSummaryFromDb() }
 
@@ -75,7 +75,7 @@ constructor(
 
     }
 
-    fun loginMerchant(request: HashMap<String, String>) {
+    fun loginMerchant(request: HashMap<String, Any>) {
 
         val response = loginRepository.loginMerchant(request = request)
         response.enqueue(object : Callback<LoginResponse> {

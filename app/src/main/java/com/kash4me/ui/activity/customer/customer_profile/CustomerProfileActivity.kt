@@ -19,7 +19,7 @@ import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.kash4me.data.models.customer.customer_details.CustomerDetailsResponse
 import com.kash4me.data.models.customer.update_profile.CustomerProfileUpdateRequestV2
 import com.kash4me.data.models.user.CountryResponse
-import com.kash4me.databinding.ActivityCustomerProfileBinding
+import com.kash4me.merchant.databinding.ActivityCustomerProfileBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

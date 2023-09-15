@@ -14,9 +14,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout
-import com.kash4me.R
 import com.kash4me.data.local.merchant.MerchantTransactionSummaryEntity
-import com.kash4me.databinding.FragmentMerchantHomeBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentMerchantHomeBinding
 import com.kash4me.ui.activity.merchant.branch_list.BranchListActivity
 import com.kash4me.ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity
 import com.kash4me.ui.activity.merchant.merchant_dashboard.payment_setup_reminder.PaymentSetupReminderBottomSheet

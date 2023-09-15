@@ -8,7 +8,7 @@ import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.kash4me.databinding.FragmentPayByKash4meBinding
+import com.kash4me.merchant.databinding.FragmentPayByKash4meBinding
 import com.kash4me.ui.activity.payment_gateway.PaymentSettingsViewModel
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.AppConstants

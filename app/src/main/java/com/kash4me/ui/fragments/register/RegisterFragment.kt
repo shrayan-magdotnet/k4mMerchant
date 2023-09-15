@@ -19,8 +19,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputLayout
-import com.kash4me.R
-import com.kash4me.databinding.FragmentRegisterBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentRegisterBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

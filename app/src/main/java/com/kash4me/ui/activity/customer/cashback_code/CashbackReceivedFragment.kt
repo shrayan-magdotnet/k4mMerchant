@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import com.kash4me.R
-import com.kash4me.databinding.FragmentCashbackReceivedBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentCashbackReceivedBinding
 import com.kash4me.utils.extensions.formatAsCurrency
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

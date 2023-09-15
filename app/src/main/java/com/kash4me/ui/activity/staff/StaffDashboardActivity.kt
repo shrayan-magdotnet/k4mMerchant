@@ -11,11 +11,11 @@ import com.google.zxing.client.android.Intents
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
-import com.kash4me.R
 import com.kash4me.data.models.QRResponse
 import com.kash4me.data.models.customer.pay_by_kash4me.PayByKash4meQr
 import com.kash4me.data.models.merchant.purchase_return.ReturnPurchaseQr
-import com.kash4me.databinding.ActivityStaffDashboardBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityStaffDashboardBinding
 import com.kash4me.security.AES
 import com.kash4me.ui.activity.calculate_cashback.CalculateCashBackActivity
 import com.kash4me.ui.activity.merchant.accept_kash4me_payment.AcceptKash4mePaymentActivity

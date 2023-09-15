@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
-import com.kash4me.R
-import com.kash4me.databinding.ActivityPaymentSettingsBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityPaymentSettingsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 

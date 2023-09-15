@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.kash4me.R
+import com.kash4me.merchant.R
 import kotlinx.coroutines.flow.first
 import timber.log.Timber
 

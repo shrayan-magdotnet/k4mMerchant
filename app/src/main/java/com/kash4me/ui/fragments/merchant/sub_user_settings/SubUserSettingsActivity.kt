@@ -8,9 +8,9 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kash4me.R
 import com.kash4me.data.models.merchant.sub_user_settings.SubUserResponse
-import com.kash4me.databinding.ActivitySubUserSettingsBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivitySubUserSettingsBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.dialog.SuccessDialog
 import com.kash4me.ui.fragments.staff.reset_password.ResetPasswordBottomSheet

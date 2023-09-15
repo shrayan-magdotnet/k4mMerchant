@@ -21,9 +21,9 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.location.LocationServices
 import com.google.android.libraries.places.api.Places
-import com.kash4me.R
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.ActivitySplashBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivitySplashBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

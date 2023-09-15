@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.kash4me.data.models.CustomerDetails
-import com.kash4me.databinding.ItemCustomerSearchBinding
+import com.kash4me.merchant.databinding.ItemCustomerSearchBinding
 import com.kash4me.utils.extensions.formatAsCurrency
 import com.kash4me.utils.extensions.getZeroIfNull
 import com.kash4me.utils.extensions.toLong

@@ -10,10 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kash4me.R
 import com.kash4me.data.models.payment_gateway.PaymentInformationResponse
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.FragmentPaymentInformationBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentPaymentInformationBinding
 import com.kash4me.ui.activity.payment_gateway.PaymentOption
 import com.kash4me.ui.activity.payment_gateway.PaymentSettingsViewModel
 import com.kash4me.ui.dialog.ErrorDialog

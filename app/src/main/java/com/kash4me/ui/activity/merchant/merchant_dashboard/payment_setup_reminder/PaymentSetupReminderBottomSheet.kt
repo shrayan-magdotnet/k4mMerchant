@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.kash4me.databinding.BottomSheetSetupPaymentBinding
+import com.kash4me.merchant.databinding.BottomSheetSetupPaymentBinding
 import com.kash4me.ui.activity.payment_gateway.PaymentSettingsActivity
 
 

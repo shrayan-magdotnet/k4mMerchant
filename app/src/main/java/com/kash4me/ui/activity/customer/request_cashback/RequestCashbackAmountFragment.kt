@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.kash4me.R
 import com.kash4me.data.models.request.RequestCashbackQrRequest
-import com.kash4me.databinding.FragmentRequestCashbackAmountBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentRequestCashbackAmountBinding
 import com.kash4me.ui.fragments.customer.home.CustomerHomeViewModel
 import com.kash4me.utils.AppConstants
 import com.kash4me.utils.extensions.getAmount

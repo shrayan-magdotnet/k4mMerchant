@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.kash4me.R
-import com.kash4me.databinding.ActivityPurchaseReturnSuccessBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityPurchaseReturnSuccessBinding
 import com.kash4me.ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity
 import com.kash4me.utils.extensions.formatUsingCurrencySystem
 import kotlinx.coroutines.CoroutineScope

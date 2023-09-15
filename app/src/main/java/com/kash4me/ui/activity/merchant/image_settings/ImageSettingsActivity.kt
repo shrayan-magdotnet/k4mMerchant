@@ -23,9 +23,9 @@ import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.material.card.MaterialCardView
-import com.kash4me.R
 import com.kash4me.data.models.merchant.profile.MerchantProfileResponse
-import com.kash4me.databinding.ActivityImageSettingsBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityImageSettingsBinding
 import com.kash4me.ui.activity.merchant.merchant_profile.MerchantProfileViewModel
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.dialog.SuccessDialog

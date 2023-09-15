@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kash4me.data.local.customer.total_transactions.CustomerTotalTransactionDetailsEntityV2.Result
-import com.kash4me.databinding.ItemYourBalanceTransactionBinding
+import com.kash4me.merchant.databinding.ItemYourBalanceTransactionBinding
 import com.kash4me.utils.extensions.formatAsCurrency
 import com.kash4me.utils.extensions.formatUsingCurrencySystem
 

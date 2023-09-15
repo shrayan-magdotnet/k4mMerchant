@@ -114,7 +114,7 @@ interface ApiServices {
     fun registerUser(@Body params: HashMap<String, Any>): Call<SuccessResponse>
 
     @POST(LOGIN_URL)
-    fun login(@Body request: HashMap<String, String>): Call<LoginResponse>
+    fun login(@Body request: HashMap<String, Any>): Call<LoginResponse>
 
     @POST(VERIFY_EMAIL_URL)
     fun verifyEmail(@Body params: HashMap<String, String>): Call<VerifyEmailResponse>

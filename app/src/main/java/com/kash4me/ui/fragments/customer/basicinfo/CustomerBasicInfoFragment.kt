@@ -22,9 +22,9 @@ import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.AutocompleteActivity
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.google.android.material.textfield.TextInputLayout
-import com.kash4me.R
 import com.kash4me.data.models.user.CountryResponse
-import com.kash4me.databinding.FragmentCustomerBasicInfoBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentCustomerBasicInfoBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

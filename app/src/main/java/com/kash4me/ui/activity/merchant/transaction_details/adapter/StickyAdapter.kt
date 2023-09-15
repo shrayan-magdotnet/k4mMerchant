@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.kash4me.databinding.ViewListItemBinding
+import com.kash4me.merchant.databinding.ViewListItemBinding
 import com.kash4me.ui.activity.merchant.transaction_details.model.TransactionStickyModel
 import com.kash4me.utils.convertDpToPixel
 

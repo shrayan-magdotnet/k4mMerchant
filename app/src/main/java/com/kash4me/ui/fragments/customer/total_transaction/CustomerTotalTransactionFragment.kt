@@ -15,8 +15,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.appbar.AppBarLayout
-import com.kash4me.R
-import com.kash4me.databinding.FragmentCustomerTotalTransactionBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentCustomerTotalTransactionBinding
 import com.kash4me.ui.activity.customer.pay.PayByKash4meActivity
 import com.kash4me.ui.activity.merchant.withdraw_cash.WithdrawCashActivity
 import com.kash4me.ui.dialog.ErrorDialog

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.kash4me.R
+import com.kash4me.merchant.R
 import com.kash4me.utils.listeners.SingleParamItemClickListener
 
 

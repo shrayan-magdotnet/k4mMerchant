@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
 import com.journeyapps.barcodescanner.CaptureManager
-import com.kash4me.databinding.ActivityScanQrBinding
+import com.kash4me.merchant.databinding.ActivityScanQrBinding
 
 class ScanQrActivity : AppCompatActivity() {
 

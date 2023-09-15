@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.kash4me.databinding.BottomSheetMerchantDetailsInfoBinding
+import com.kash4me.merchant.databinding.BottomSheetMerchantDetailsInfoBinding
 
 class MerchantDetailsInfoBottomSheet : BottomSheetDialogFragment() {
 

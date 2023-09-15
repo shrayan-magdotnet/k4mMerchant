@@ -5,9 +5,9 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.kash4me.R
 import com.kash4me.data.models.merchant.purchase_return.ReturnPurchaseQr
-import com.kash4me.databinding.ActivityPurchaseReturnBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityPurchaseReturnBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.AppConstants
 import com.kash4me.utils.custom_views.CustomProgressDialog

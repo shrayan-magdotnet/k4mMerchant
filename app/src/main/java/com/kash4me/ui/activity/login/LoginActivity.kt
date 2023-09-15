@@ -8,9 +8,9 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.Observer
-import com.kash4me.BuildConfig
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.ActivityLoginBinding
+import com.kash4me.merchant.BuildConfig
+import com.kash4me.merchant.databinding.ActivityLoginBinding
 import com.kash4me.ui.activity.RegistrationActivity
 import com.kash4me.ui.activity.customer.CustomerRegistrationActivity
 import com.kash4me.ui.activity.customer.customer_dashboard.CustomerDashboardActivity
@@ -110,7 +110,7 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val request = HashMap<String, String>()
+            val request = HashMap<String, Any>()
             request["password"] = password
             if (email.contains("@")) {
                 request["email"] = email
@@ -118,14 +118,13 @@ class LoginActivity : AppCompatActivity() {
                 request["user_name"] = email
             }
 
+            request["is_merchant"] = true
+
             customDialogClass.show()
             Timber.d("Request -> $request")
 
-            if (businessUserCB.isChecked) {
-                viewModel.loginMerchant(request = request)
-            } else {
-                viewModel.loginCustomer(request = request)
-            }
+            viewModel.loginMerchant(request = request)
+
         }
 
 

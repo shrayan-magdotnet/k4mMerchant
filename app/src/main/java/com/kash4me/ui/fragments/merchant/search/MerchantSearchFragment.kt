@@ -21,9 +21,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.textfield.TextInputLayout
-import com.kash4me.R
 import com.kash4me.data.models.CustomerDetails
-import com.kash4me.databinding.FragmentMerchantSearchBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentMerchantSearchBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

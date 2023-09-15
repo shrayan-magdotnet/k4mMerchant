@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kash4me.data.local.customer.total_transactions.ProcessingTransactionEntity
-import com.kash4me.databinding.ItemOnYourWayTransactionBinding
+import com.kash4me.merchant.databinding.ItemOnYourWayTransactionBinding
 
 class OnYourWayTransactionsAdapter
 

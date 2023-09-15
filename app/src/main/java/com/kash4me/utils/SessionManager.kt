@@ -9,13 +9,13 @@ import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.kash4me.R
 import com.kash4me.data.local.AppDatabase
 import com.kash4me.data.models.BusinessInfoResponse
 import com.kash4me.data.models.customer.customer_details.CustomerDetailsResponse
 import com.kash4me.data.models.merchant.cashback.CashbackResponseV2
 import com.kash4me.data.models.merchant.profile.MerchantProfileResponse
 import com.kash4me.data.models.user.UserType
+import com.kash4me.merchant.R
 import com.kash4me.ui.activity.login.LoginActivity
 import timber.log.Timber
 

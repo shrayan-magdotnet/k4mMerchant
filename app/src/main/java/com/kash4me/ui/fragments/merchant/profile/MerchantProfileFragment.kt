@@ -16,10 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.kash4me.R
 import com.kash4me.data.models.merchant.cashback.CashbackType
 import com.kash4me.data.models.merchant.profile.MerchantProfileResponse
-import com.kash4me.databinding.FragmentMerchantProfileBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentMerchantProfileBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

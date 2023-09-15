@@ -3,8 +3,8 @@ package com.kash4me.utils
 import android.app.Application
 import android.content.Context
 import com.google.android.libraries.places.api.Places
-import com.kash4me.BuildConfig
-import com.kash4me.R
+import com.kash4me.merchant.BuildConfig
+import com.kash4me.merchant.R
 import dagger.hilt.android.HiltAndroidApp
 import io.sentry.Sentry
 import timber.log.Timber

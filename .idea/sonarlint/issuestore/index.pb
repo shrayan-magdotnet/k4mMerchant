@@ -425,3 +425,5 @@ l
 settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
 ç
 ]app/src/main/java/com/kash4me/ui/activity/customer/final_request_qr/FinalRequestQRActivity.kt,9/e/9eca23365008ba6977b13bbfaf5f6cbefc0a245c
+É
+Sapp/src/main/java/com/kash4me/ui/activity/change_password/ChangePasswordActivity.kt,e/9/e9250ad414b86dc249be56d364acdc783c10484a

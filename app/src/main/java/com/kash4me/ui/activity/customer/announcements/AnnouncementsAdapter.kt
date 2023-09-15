@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kash4me.data.models.customer.annoucement.AnnouncementsResponse
-import com.kash4me.databinding.ItemAnnouncementBinding
+import com.kash4me.merchant.databinding.ItemAnnouncementBinding
 import com.kash4me.utils.listeners.SingleParamItemClickListener
 
 class AnnouncementsAdapter(val clickListener: SingleParamItemClickListener<AnnouncementsResponse.Result?>)

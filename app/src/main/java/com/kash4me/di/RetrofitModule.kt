@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Build
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.kash4me.BuildConfig
+import com.kash4me.merchant.BuildConfig
 import com.kash4me.network.ApiServices
 import com.kash4me.network.EndPoint
 import com.kash4me.network.NetworkConnectionInterceptor

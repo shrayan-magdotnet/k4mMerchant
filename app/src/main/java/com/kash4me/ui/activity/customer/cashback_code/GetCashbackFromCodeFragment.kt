@@ -9,8 +9,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.kash4me.R
-import com.kash4me.databinding.FragmentGetCashbackFromCodeBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentGetCashbackFromCodeBinding
 import com.kash4me.repository.CustomerCashbackViewModel
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.custom_views.CustomProgressDialog

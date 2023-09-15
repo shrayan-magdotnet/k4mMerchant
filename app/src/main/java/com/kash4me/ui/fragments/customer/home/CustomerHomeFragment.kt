@@ -18,11 +18,11 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.appbar.AppBarLayout
-import com.kash4me.R
 import com.kash4me.data.local.customer.cashback.CashbackEntity
 import com.kash4me.data.local.customer.cashback.ShopDetails
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.FragmentCustomerHomeBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentCustomerHomeBinding
 import com.kash4me.ui.activity.customer.merchant_details.MerchantDetailsActivity
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.SessionManager

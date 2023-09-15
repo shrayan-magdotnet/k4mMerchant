@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kash4me.data.models.staff.StaffTransactionsResponse
-import com.kash4me.databinding.ItemStaffTransactionBinding
+import com.kash4me.merchant.databinding.ItemStaffTransactionBinding
 import com.kash4me.utils.extensions.getZeroIfNull
 import com.kash4me.utils.extensions.toLong
 

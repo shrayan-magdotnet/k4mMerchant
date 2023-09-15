@@ -14,9 +14,9 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.material.appbar.AppBarLayout
-import com.kash4me.R
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.FragmentCustomerTotalTransactions2Binding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentCustomerTotalTransactions2Binding
 import com.kash4me.ui.activity.RegistrationActivity
 import com.kash4me.ui.activity.customer.pay.PayByKash4meActivity
 import com.kash4me.ui.activity.login.LoginActivity

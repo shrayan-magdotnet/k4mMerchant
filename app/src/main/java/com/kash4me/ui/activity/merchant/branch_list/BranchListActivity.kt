@@ -7,9 +7,9 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.kash4me.R
 import com.kash4me.data.models.Branch
-import com.kash4me.databinding.ActivityBranchListBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityBranchListBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

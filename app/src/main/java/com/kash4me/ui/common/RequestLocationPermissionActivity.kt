@@ -8,8 +8,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
-import com.kash4me.R
-import com.kash4me.databinding.ActivityRequestLocationPermissionBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityRequestLocationPermissionBinding
 import com.kash4me.ui.activity.customer.customer_dashboard.CustomerDashboardActivity
 import com.kash4me.utils.SessionManager
 import kotlinx.coroutines.Dispatchers

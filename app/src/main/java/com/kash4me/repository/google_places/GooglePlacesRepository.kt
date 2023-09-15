@@ -1,9 +1,9 @@
 package com.kash4me.repository.google_places
 
-import com.kash4me.R
 import com.kash4me.data.models.places_api.DetectCountryResponse
 import com.kash4me.data.models.places_api.ReverseGeocodeResponse
 import com.kash4me.data.models.places_api.TimezoneResponse
+import com.kash4me.merchant.R
 import com.kash4me.network.EndPoint
 import com.kash4me.network.GooglePlacesApi
 import com.kash4me.utils.App

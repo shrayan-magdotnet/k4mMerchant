@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kash4me.data.models.staff.StaffTransactionsResponse
-import com.kash4me.databinding.FragmentMyTransactionsBinding
+import com.kash4me.merchant.databinding.FragmentMyTransactionsBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.custom_views.CustomProgressDialog
 import com.kash4me.utils.network.Resource

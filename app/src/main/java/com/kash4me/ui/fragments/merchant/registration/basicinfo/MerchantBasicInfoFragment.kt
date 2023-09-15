@@ -43,7 +43,6 @@ import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.chip.Chip
-import com.kash4me.R
 import com.kash4me.data.models.BasicInfo
 import com.kash4me.data.models.BusinessInfo
 import com.kash4me.data.models.BusinessInfoResponse
@@ -53,7 +52,8 @@ import com.kash4me.data.models.merchant.profile.MerchantProfileResponse
 import com.kash4me.data.models.merchant.update_profile.MerchantProfileUpdateResponse
 import com.kash4me.data.models.user.CountryResponse
 import com.kash4me.data.models.user.TagResponse
-import com.kash4me.databinding.FragmentMerchantBasicInfoBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentMerchantBasicInfoBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

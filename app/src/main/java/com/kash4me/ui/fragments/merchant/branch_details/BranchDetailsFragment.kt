@@ -12,9 +12,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout
-import com.kash4me.R
 import com.kash4me.data.models.MerchantTransactionSummaryResponse
-import com.kash4me.databinding.FragmentBranchDetailsBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentBranchDetailsBinding
 import com.kash4me.ui.activity.merchant.branch_details.BranchDetailsActivity
 import com.kash4me.ui.activity.merchant.branch_list.BranchListActivity
 import com.kash4me.ui.dialog.ErrorDialog

@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.text.Editable
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.kash4me.R
-import com.kash4me.databinding.ActivityFeedbackBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityFeedbackBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.dialog.SuccessDialog
 import com.kash4me.utils.custom_views.CustomProgressDialog

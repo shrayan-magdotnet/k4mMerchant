@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.kash4me.databinding.DialogSuccessBinding
+import com.kash4me.merchant.databinding.DialogSuccessBinding
 import com.kash4me.utils.listeners.AfterDismissalListener
 
 class SuccessDialog : DialogFragment() {

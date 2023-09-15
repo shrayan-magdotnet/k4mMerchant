@@ -30,14 +30,14 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.card.MaterialCardView
-import com.kash4me.R
 import com.kash4me.data.models.BasicInfo
 import com.kash4me.data.models.BusinessInfo
 import com.kash4me.data.models.BusinessInfoResponse
 import com.kash4me.data.models.HeadOfficeDetails
 import com.kash4me.data.models.TagDetail
 import com.kash4me.data.models.merchant.update_profile.MerchantProfileUpdateResponse
-import com.kash4me.databinding.FragmentImageUploadBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentImageUploadBinding
 import com.kash4me.ui.activity.merchant.MerchantRegistrationActivity
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.fragments.merchant.registration.basicinfo.MerchantBasicInfoViewModel

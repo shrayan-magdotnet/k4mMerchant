@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.kash4me.R
 import com.kash4me.data.models.Branch
+import com.kash4me.merchant.R
 import com.kash4me.ui.activity.merchant.branch_details.BranchDetailsActivity
 
 class BranchListAdapter(private val branchList: List<Branch>) :

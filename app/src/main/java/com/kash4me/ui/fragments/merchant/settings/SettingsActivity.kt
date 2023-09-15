@@ -5,9 +5,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import com.kash4me.R
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.ActivitySettingsBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivitySettingsBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.dialog.SuccessDialog
 import com.kash4me.utils.SessionManager

@@ -11,7 +11,7 @@ import com.google.zxing.MultiFormatWriter
 import com.google.zxing.WriterException
 import com.journeyapps.barcodescanner.BarcodeEncoder
 import com.kash4me.data.models.QRResponse
-import com.kash4me.databinding.ActivityFinalRequestQractivityBinding
+import com.kash4me.merchant.databinding.ActivityFinalRequestQractivityBinding
 import com.kash4me.ui.activity.customer.customer_dashboard.CustomerDashboardActivity
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.fragments.customer.home.CustomerHomeViewModel

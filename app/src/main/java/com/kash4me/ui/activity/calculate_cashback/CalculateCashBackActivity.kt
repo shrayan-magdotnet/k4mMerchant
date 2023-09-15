@@ -7,11 +7,11 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.ViewModelProvider
-import com.kash4me.R
 import com.kash4me.data.models.CashBackSuccessResponse
 import com.kash4me.data.models.QRResponse
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.ActivityCalculateCashbackBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityCalculateCashbackBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

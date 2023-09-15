@@ -17,10 +17,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.textfield.TextInputLayout
-import com.kash4me.R
 import com.kash4me.data.models.merchant.cashback.CashbackResponseV2
 import com.kash4me.data.models.merchant.cashback.CashbackType
-import com.kash4me.databinding.FragmentCashBackBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentCashBackBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

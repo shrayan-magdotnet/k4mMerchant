@@ -8,7 +8,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.appbar.AppBarLayout
-import com.kash4me.R
+import com.kash4me.merchant.R
 import com.kash4me.utils.custom_views.CustomProgressDialog
 import dagger.hilt.android.AndroidEntryPoint
 

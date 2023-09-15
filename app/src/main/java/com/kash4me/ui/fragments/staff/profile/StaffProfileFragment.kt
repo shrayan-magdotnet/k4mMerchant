@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import com.kash4me.databinding.FragmentStaffProfileBinding
+import com.kash4me.merchant.databinding.FragmentStaffProfileBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.SessionManager
 import com.kash4me.utils.custom_views.CustomProgressDialog

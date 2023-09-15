@@ -25,7 +25,7 @@
     </queries>
 
     <application
-        android:name=".utils.App"
+        android:name="com.kash4me.utils.App"
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -38,26 +38,26 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activity.merchant.image_settings.ImageSettingsActivity"
+            android:name="com.kash4me.ui.activity.merchant.image_settings.ImageSettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.fragments.merchant.announcement.CreateAnnouncementActivity"
+            android:name="com.kash4me.ui.fragments.merchant.announcement.CreateAnnouncementActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.accept_kash4me_payment.AcceptKash4mePaymentActivity"
+            android:name="com.kash4me.ui.activity.merchant.accept_kash4me_payment.AcceptKash4mePaymentActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.pay.PayByKash4meActivity"
+            android:name="com.kash4me.ui.activity.customer.pay.PayByKash4meActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.merchant_dashboard.qr_scan.ScanQrActivity"
+            android:name="com.kash4me.ui.activity.merchant.merchant_dashboard.qr_scan.ScanQrActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.common.RequestLocationPermissionActivity"
+            android:name="com.kash4me.ui.common.RequestLocationPermissionActivity"
             android:exported="false"
             android:screenOrientation="portrait" /> <!-- Required: set your sentry.io project identifier (DSN) -->
         <meta-data
@@ -83,55 +83,55 @@
             android:value="1.0" />
 
         <activity
-            android:name=".ui.activity.merchant.return_purchase.PurchaseReturnSuccessActivity"
+            android:name="com.kash4me.ui.activity.merchant.return_purchase.PurchaseReturnSuccessActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.return_purchase.PurchaseReturnConfirmationActivity"
+            android:name="com.kash4me.ui.activity.merchant.return_purchase.PurchaseReturnConfirmationActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.return_purchase.PurchaseReturnActivity"
+            android:name="com.kash4me.ui.activity.merchant.return_purchase.PurchaseReturnActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.merchant_details.transactions.TransactionDetainForReturnPurchaseActivity"
+            android:name="com.kash4me.ui.activity.customer.merchant_details.transactions.TransactionDetainForReturnPurchaseActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.merchant_details.transactions.TransactionsActivity"
+            android:name="com.kash4me.ui.activity.customer.merchant_details.transactions.TransactionsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.common.FeedbackActivity"
+            android:name="com.kash4me.ui.activity.common.FeedbackActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.calculate_cashback.ConfirmAssignCashbackActivity"
+            android:name="com.kash4me.ui.activity.calculate_cashback.ConfirmAssignCashbackActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.cashback_code.GetCashbackFromCodeActivity"
+            android:name="com.kash4me.ui.activity.customer.cashback_code.GetCashbackFromCodeActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.send_cashback_code.SendCashbackCodeActivity"
+            android:name="com.kash4me.ui.activity.merchant.send_cashback_code.SendCashbackCodeActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.payment_gateway.PaymentSettingsActivity"
+            android:name="com.kash4me.ui.activity.payment_gateway.PaymentSettingsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.staff.StaffDashboardActivity"
+            android:name="com.kash4me.ui.activity.staff.StaffDashboardActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.fragments.merchant.sub_user_settings.SubUserSettingsActivity"
+            android:name="com.kash4me.ui.fragments.merchant.sub_user_settings.SubUserSettingsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.merchant_profile.MerchantProfileActivity"
+            android:name="com.kash4me.ui.activity.merchant.merchant_profile.MerchantProfileActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
@@ -140,7 +140,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.activity.merchant.withdraw_cash.WithdrawCashActivity"
+            android:name="com.kash4me.ui.activity.merchant.withdraw_cash.WithdrawCashActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -148,84 +148,84 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.activity.customer.info_box.InfoBoxActivity"
+            android:name="com.kash4me.ui.activity.customer.info_box.InfoBoxActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.fragments.merchant.search.assign_cashback.AssignCashbackActivity"
+            android:name="com.kash4me.ui.fragments.merchant.search.assign_cashback.AssignCashbackActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.cashback_setting.CashBackSettingActivity"
+            android:name="com.kash4me.ui.activity.merchant.cashback_setting.CashBackSettingActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.branch_details.BranchDetailsActivity"
+            android:name="com.kash4me.ui.activity.merchant.branch_details.BranchDetailsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.branch_list.BranchListActivity"
+            android:name="com.kash4me.ui.activity.merchant.branch_list.BranchListActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.user_details.MerchantUserDetailsActivity"
+            android:name="com.kash4me.ui.activity.merchant.user_details.MerchantUserDetailsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.customer_dashboard.CustomerDashboardActivity"
+            android:name="com.kash4me.ui.activity.customer.customer_dashboard.CustomerDashboardActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.final_request_qr.FinalRequestQRActivity"
+            android:name="com.kash4me.ui.activity.customer.final_request_qr.FinalRequestQRActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.cashback_success.MerchantCashBackSuccessActivity"
+            android:name="com.kash4me.ui.activity.merchant.cashback_success.MerchantCashBackSuccessActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.MerchantRegistrationActivity"
+            android:name="com.kash4me.ui.activity.merchant.MerchantRegistrationActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.activity.customer.CustomerRegistrationActivity"
+            android:name="com.kash4me.ui.activity.customer.CustomerRegistrationActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.forget_password.ForgetPasswordActivity"
+            android:name="com.kash4me.ui.activity.forget_password.ForgetPasswordActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.change_password.ChangePasswordActivity"
+            android:name="com.kash4me.ui.activity.change_password.ChangePasswordActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.login.LoginActivity"
+            android:name="com.kash4me.ui.activity.login.LoginActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.merchant_details.MerchantDetailsActivity"
+            android:name="com.kash4me.ui.activity.customer.merchant_details.MerchantDetailsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.user_details.CustomerDetailsActivity"
+            android:name="com.kash4me.ui.activity.customer.user_details.CustomerDetailsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.merchant.transaction_details.TransactionDetailsActivity"
+            android:name="com.kash4me.ui.activity.merchant.transaction_details.TransactionDetailsActivity"
             android:exported="false"
-            android:parentActivityName=".ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity"
+            android:parentActivityName="com.kash4me.ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.calculate_cashback.CalculateCashBackActivity"
+            android:name="com.kash4me.ui.activity.calculate_cashback.CalculateCashBackActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity"
+            android:name="com.kash4me.ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.splash.SplashActivity"
+            android:name="com.kash4me.ui.activity.splash.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -235,7 +235,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.RegistrationActivity"
+            android:name="com.kash4me.ui.activity.RegistrationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
@@ -243,19 +243,19 @@
             android:stateNotNeeded="true"
             tools:replace="android:screenOrientation" />
         <activity
-            android:name=".ui.activity.customer.customer_profile.CustomerProfileOldActivity"
+            android:name="com.kash4me.ui.activity.customer.customer_profile.CustomerProfileOldActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.request_cashback.RequestCashbackActivity"
+            android:name="com.kash4me.ui.activity.customer.request_cashback.RequestCashbackActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.customer.customer_profile.CustomerProfileActivity"
+            android:name="com.kash4me.ui.activity.customer.customer_profile.CustomerProfileActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.fragments.merchant.settings.SettingsActivity"
+            android:name="com.kash4me.ui.fragments.merchant.settings.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.about_app.AboutAppActivity"
+            android:name="com.kash4me.ui.activity.about_app.AboutAppActivity"
             android:screenOrientation="portrait" />
     </application>
 

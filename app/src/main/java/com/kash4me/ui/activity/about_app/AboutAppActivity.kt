@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.kash4me.R
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.ActivityAboutAppBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityAboutAppBinding
 import com.kash4me.ui.activity.payment_gateway.PaymentSettingsViewModel
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.AppConstants

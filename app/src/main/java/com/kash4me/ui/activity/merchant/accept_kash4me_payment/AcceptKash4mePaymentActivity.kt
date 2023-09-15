@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kash4me.data.models.customer.pay_by_kash4me.PayByKash4meQr
-import com.kash4me.databinding.ActivityAcceptKash4mePaymentBinding
+import com.kash4me.merchant.databinding.ActivityAcceptKash4mePaymentBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.kash4me.data.models.Merchant
 import com.kash4me.data.models.merchant.cashback.CashbackType
-import com.kash4me.databinding.ItemMerchantStoreBinding
+import com.kash4me.merchant.databinding.ItemMerchantStoreBinding
 import com.kash4me.utils.ImageUtils
 import com.kash4me.utils.formatAmount
 import com.kash4me.utils.listeners.SingleParamItemClickListener

@@ -13,7 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kash4me.data.models.customer.annoucement.AnnouncementsResponse
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.FragmentAnnouncementsBinding
+import com.kash4me.merchant.databinding.FragmentAnnouncementsBinding
 import com.kash4me.ui.activity.RegistrationActivity
 import com.kash4me.ui.activity.customer.merchant_details.MerchantDetailsActivity
 import com.kash4me.ui.activity.login.LoginActivity

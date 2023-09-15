@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.kash4me.R
-import com.kash4me.databinding.ActivityCustomerDashboardBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityCustomerDashboardBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

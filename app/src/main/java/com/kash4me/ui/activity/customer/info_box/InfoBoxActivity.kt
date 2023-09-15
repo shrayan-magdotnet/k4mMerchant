@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kash4me.databinding.ActivityInfoBoxBinding
+import com.kash4me.merchant.databinding.ActivityInfoBoxBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.custom_views.CustomProgressDialog
 import com.kash4me.utils.network.Resource

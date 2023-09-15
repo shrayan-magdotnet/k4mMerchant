@@ -11,9 +11,9 @@ import androidx.core.view.isVisible
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.kash4me.R
 import com.kash4me.data.models.payment_gateway.PaymentInformationResponse
-import com.kash4me.databinding.FragmentWithdrawCashBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentWithdrawCashBinding
 import com.kash4me.ui.activity.customer.customer_dashboard.CustomerDashboardActivity
 import com.kash4me.ui.activity.merchant.withdraw_cash.WithdrawCashActivity
 import com.kash4me.ui.activity.payment_gateway.PaymentSettingsViewModel

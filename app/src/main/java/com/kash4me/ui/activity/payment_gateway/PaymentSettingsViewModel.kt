@@ -6,11 +6,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.kash4me.R
 import com.kash4me.data.models.payment_gateway.ConnectYourBankResponse
 import com.kash4me.data.models.payment_gateway.PaymentGatewayResponse
 import com.kash4me.data.models.payment_gateway.PaymentInformationResponse
 import com.kash4me.data.models.user.fee_settings.FeeSettingsResponse
+import com.kash4me.merchant.R
 import com.kash4me.repository.PaymentRepository
 import com.kash4me.repository.UserRepository
 import com.kash4me.utils.FeeType

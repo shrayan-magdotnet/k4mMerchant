@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import com.kash4me.R
-import com.kash4me.databinding.ItemTodaySellNewBinding
-import com.kash4me.databinding.ViewBookDetailsComponentBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ItemTodaySellNewBinding
+import com.kash4me.merchant.databinding.ViewBookDetailsComponentBinding
 import com.kash4me.ui.activity.merchant.transaction_details.model.TransactionStickyModel
 import com.kash4me.utils.extensions.getZeroIfNull
 import com.kash4me.utils.extensions.toLong

@@ -12,8 +12,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.kash4me.R
-import com.kash4me.databinding.FragmentAssignCompleteBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentAssignCompleteBinding
 import com.kash4me.ui.fragments.merchant.search.MerchantSearchFragment
 import com.kash4me.ui.fragments.merchant.search.assign_cashback.AssignCashbackActivity
 import com.kash4me.utils.SessionManager

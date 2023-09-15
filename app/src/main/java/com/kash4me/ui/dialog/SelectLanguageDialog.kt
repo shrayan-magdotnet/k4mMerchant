@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
-import com.kash4me.R
-import com.kash4me.databinding.DialogSelectLanguageBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.DialogSelectLanguageBinding
 import com.kash4me.utils.LocaleManager
 import com.kash4me.utils.LocaleManager.Language
 import kotlinx.coroutines.Dispatchers

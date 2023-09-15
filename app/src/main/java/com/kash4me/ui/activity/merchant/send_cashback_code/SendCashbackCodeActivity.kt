@@ -2,7 +2,7 @@ package com.kash4me.ui.activity.merchant.send_cashback_code
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.kash4me.databinding.ActivitySendCashbackCodeBinding
+import com.kash4me.merchant.databinding.ActivitySendCashbackCodeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -2,7 +2,7 @@ package com.kash4me.ui.activity.customer
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.kash4me.R
+import com.kash4me.merchant.R
 import com.kash4me.utils.custom_views.CustomProgressDialog
 
 class CustomerRegistrationActivity : AppCompatActivity() {

@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.kash4me.R
 import com.kash4me.data.models.merchant.sub_user_settings.reset_staff_password.ResetStaffPasswordRequest
-import com.kash4me.databinding.BottomSheetResetPasswordBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.BottomSheetResetPasswordBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.dialog.SuccessDialog
 import com.kash4me.ui.fragments.merchant.sub_user_settings.SubUserSettingsViewModel

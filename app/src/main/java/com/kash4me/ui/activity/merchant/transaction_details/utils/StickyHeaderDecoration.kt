@@ -10,7 +10,7 @@ import android.view.View.MeasureSpec
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.State
-import com.kash4me.databinding.LayoutItemHeaderBinding
+import com.kash4me.merchant.databinding.LayoutItemHeaderBinding
 import com.kash4me.ui.activity.merchant.transaction_details.adapter.StickyAdapter
 
 class StickyHeaderDecoration(private val adapter: StickyAdapter, root: View) :

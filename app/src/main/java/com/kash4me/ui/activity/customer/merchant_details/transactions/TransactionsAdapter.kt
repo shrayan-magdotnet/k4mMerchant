@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kash4me.data.models.customer.transactions_according_to_merchant.Result
-import com.kash4me.databinding.ItemTransaction2Binding
+import com.kash4me.merchant.databinding.ItemTransaction2Binding
 import com.kash4me.utils.extensions.formatAsCurrency
 import com.kash4me.utils.listeners.SingleParamItemClickListener
 import timber.log.Timber

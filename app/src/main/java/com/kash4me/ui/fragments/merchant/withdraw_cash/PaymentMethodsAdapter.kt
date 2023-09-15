@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.kash4me.data.models.payment_gateway.PaymentInformationResponse
-import com.kash4me.databinding.ItemPaymentOptionForCashWithdrawBinding
+import com.kash4me.merchant.databinding.ItemPaymentOptionForCashWithdrawBinding
 import com.kash4me.utils.PaymentMethod
 import com.kash4me.utils.extensions.getFalseIfNull
 import com.kash4me.utils.extensions.getNotAvailableIfEmptyOrNull

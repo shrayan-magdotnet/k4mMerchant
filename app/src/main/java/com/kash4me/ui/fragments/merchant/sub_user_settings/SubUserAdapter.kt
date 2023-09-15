@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kash4me.data.models.merchant.sub_user_settings.SubUserResponse
-import com.kash4me.databinding.ItemSubUserBinding
+import com.kash4me.merchant.databinding.ItemSubUserBinding
 
 class SubUserAdapter(private val listener: SubUserClickListener)
 

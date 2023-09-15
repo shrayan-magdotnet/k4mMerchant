@@ -8,8 +8,8 @@ import android.view.animation.AnimationUtils
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import com.kash4me.R
-import com.kash4me.databinding.FragmentCompleteAcceptKash4mePaymentBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentCompleteAcceptKash4mePaymentBinding
 import com.kash4me.utils.extensions.formatUsingCurrencySystem
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

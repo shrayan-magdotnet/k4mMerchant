@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.kash4me.R
 import com.kash4me.data.models.CashBackSuccessResponse
 import com.kash4me.data.models.QRResponse
-import com.kash4me.databinding.ActivityConfirmAssignCashbackBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityConfirmAssignCashbackBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

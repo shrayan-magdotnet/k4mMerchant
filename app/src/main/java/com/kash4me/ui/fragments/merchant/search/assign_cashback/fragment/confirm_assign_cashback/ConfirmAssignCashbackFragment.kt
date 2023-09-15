@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.kash4me.data.models.CashBackSuccessResponse
-import com.kash4me.databinding.FragmentConfirmAssignCashbackBinding
+import com.kash4me.merchant.databinding.FragmentConfirmAssignCashbackBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.fragments.merchant.search.assign_cashback.AssignCashbackActivity
 import com.kash4me.ui.fragments.merchant.search.assign_cashback.fragment.purchase_amount.PurchaseAmountViewModel

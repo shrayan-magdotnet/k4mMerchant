@@ -6,8 +6,8 @@ import javax.inject.Inject
 class LoginRepository @Inject constructor(private val apiServices: ApiServices) {
 
 
-    fun loginCustomer(request: HashMap<String, String>) = apiServices.login(request = request)
-    fun loginMerchant(request: HashMap<String, String>) = apiServices.login(request = request)
+    fun loginCustomer(request: HashMap<String, Any>) = apiServices.login(request = request)
+    fun loginMerchant(request: HashMap<String, Any>) = apiServices.login(request = request)
 
     fun fetchMerchantDetailsForCashBack(token: String) =
         apiServices.fetchMerchantDetailsForCashBack(token)

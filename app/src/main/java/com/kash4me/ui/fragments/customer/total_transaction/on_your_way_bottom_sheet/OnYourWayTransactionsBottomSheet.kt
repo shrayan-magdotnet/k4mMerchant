@@ -9,8 +9,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.kash4me.R
-import com.kash4me.databinding.BottomSheetOnYourWayTransactionsBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.BottomSheetOnYourWayTransactionsBinding
 import com.kash4me.ui.fragments.customer.total_transaction.CustomerTotalTransactionViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber

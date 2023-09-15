@@ -6,7 +6,7 @@ import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.kash4me.databinding.LoadStateViewBinding
+import com.kash4me.merchant.databinding.LoadStateViewBinding
 
 class CustomerHomeLoadStateAdapter :
     LoadStateAdapter<CustomerHomeLoadStateAdapter.LoadStateViewHolder>() {

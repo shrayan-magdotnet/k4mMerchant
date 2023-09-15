@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import com.kash4me.databinding.ItemPaymentOptionBinding
+import com.kash4me.merchant.databinding.ItemPaymentOptionBinding
 import com.kash4me.ui.activity.payment_gateway.PaymentOption
 import com.kash4me.utils.listeners.SingleParamWithPositionItemClickListener
 import timber.log.Timber

@@ -8,7 +8,7 @@ import com.google.zxing.BarcodeFormat
 import com.google.zxing.MultiFormatWriter
 import com.google.zxing.WriterException
 import com.journeyapps.barcodescanner.BarcodeEncoder
-import com.kash4me.databinding.ActivityTransactionDetainForReturnPurchaseBinding
+import com.kash4me.merchant.databinding.ActivityTransactionDetainForReturnPurchaseBinding
 import com.kash4me.security.AES
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.utils.AppConstants

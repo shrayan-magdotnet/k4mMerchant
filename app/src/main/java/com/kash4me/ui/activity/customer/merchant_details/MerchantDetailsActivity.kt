@@ -32,11 +32,11 @@ import com.google.zxing.BarcodeFormat
 import com.google.zxing.MultiFormatWriter
 import com.google.zxing.WriterException
 import com.journeyapps.barcodescanner.BarcodeEncoder
-import com.kash4me.R
 import com.kash4me.data.models.QRResponse
 import com.kash4me.data.models.customer.view_merchant_details.MerchantDetailsResponse
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.ActivityMerchantDetails2Binding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityMerchantDetails2Binding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

@@ -13,9 +13,9 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.kash4me.R
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.FragmentVerifyBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentVerifyBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

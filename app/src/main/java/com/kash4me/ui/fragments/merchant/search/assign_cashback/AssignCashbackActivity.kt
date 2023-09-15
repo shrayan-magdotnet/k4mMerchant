@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.kash4me.data.models.UserDetails
-import com.kash4me.databinding.ActivityAssignCashbackBinding
+import com.kash4me.merchant.databinding.ActivityAssignCashbackBinding
 import com.kash4me.ui.fragments.merchant.search.assign_cashback.fragment.assign_complete.AssignCompleteViewModel
 import com.kash4me.utils.SessionManager
 import com.kash4me.utils.custom_views.CustomProgressDialog

@@ -36,13 +36,13 @@ import com.google.android.libraries.places.widget.AutocompleteActivity
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.chip.Chip
-import com.kash4me.R
 import com.kash4me.data.models.merchant.TagsDetail
 import com.kash4me.data.models.merchant.profile.MerchantProfileResponse
 import com.kash4me.data.models.merchant.update_profile.MerchantProfileUpdateRequest
 import com.kash4me.data.models.user.CountryResponse
 import com.kash4me.data.models.user.TagResponse
-import com.kash4me.databinding.ActivityMerchantProfileBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityMerchantProfileBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.dialog.SuccessDialog
 import com.kash4me.utils.AppConstants

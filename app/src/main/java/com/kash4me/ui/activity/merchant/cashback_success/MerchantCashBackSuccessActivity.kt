@@ -7,9 +7,9 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.kash4me.R
 import com.kash4me.data.models.CashBackSuccessResponse
 import com.kash4me.data.models.user.UserType
+import com.kash4me.merchant.R
 import com.kash4me.ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity
 import com.kash4me.ui.activity.staff.StaffDashboardActivity
 import com.kash4me.utils.SessionManager

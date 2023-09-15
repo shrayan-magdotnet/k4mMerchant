@@ -9,7 +9,7 @@ import com.google.zxing.BarcodeFormat
 import com.google.zxing.MultiFormatWriter
 import com.google.zxing.WriterException
 import com.journeyapps.barcodescanner.BarcodeEncoder
-import com.kash4me.databinding.FragmentConfirmPayByKash4meBinding
+import com.kash4me.merchant.databinding.FragmentConfirmPayByKash4meBinding
 import com.kash4me.security.AES
 import com.kash4me.utils.extensions.formatUsingCurrencySystem
 import com.kash4me.utils.extensions.getEmptyIfNull

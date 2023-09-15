@@ -15,9 +15,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.AppBarLayout
-import com.kash4me.R
 import com.kash4me.data.models.user.UserType
-import com.kash4me.databinding.FragmentCustomerProfileBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentCustomerProfileBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

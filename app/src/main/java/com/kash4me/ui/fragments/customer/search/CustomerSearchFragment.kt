@@ -12,9 +12,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kash4me.R
 import com.kash4me.data.models.Merchant
-import com.kash4me.databinding.FragmentCustomerSearchBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentCustomerSearchBinding
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

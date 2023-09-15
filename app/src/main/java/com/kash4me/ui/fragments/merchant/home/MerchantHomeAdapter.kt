@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.kash4me.R
 import com.kash4me.data.local.merchant.MerchantTransactionSummaryEntity
+import com.kash4me.merchant.R
 import com.kash4me.ui.activity.merchant.transaction_details.TransactionDetailsActivity
 import com.kash4me.utils.custom_views.CurrencyTextView
 import com.kash4me.utils.extensions.getEmptyIfNull

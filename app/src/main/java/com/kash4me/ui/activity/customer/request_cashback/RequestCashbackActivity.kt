@@ -10,9 +10,9 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import com.kash4me.R
 import com.kash4me.data.models.QRResponse
-import com.kash4me.databinding.ActivityRequestCashbackBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.ActivityRequestCashbackBinding
 import com.kash4me.ui.dialog.ErrorDialog
 import com.kash4me.ui.fragments.customer.home.CustomerHomeViewModel
 import com.kash4me.utils.AppConstants

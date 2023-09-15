@@ -12,10 +12,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.material.appbar.AppBarLayout
-import com.kash4me.R
 import com.kash4me.data.models.merchant.cashback.CashbackResponseV2
 import com.kash4me.data.models.merchant.cashback.CashbackType
-import com.kash4me.databinding.FragmentMerchantFinishBinding
+import com.kash4me.merchant.R
+import com.kash4me.merchant.databinding.FragmentMerchantFinishBinding
 import com.kash4me.ui.activity.merchant.MerchantRegistrationActivity
 import com.kash4me.ui.activity.merchant.merchant_dashboard.MerchantDashBoardActivity
 import com.kash4me.utils.ImageUtils

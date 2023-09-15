@@ -15,10 +15,10 @@ import com.google.zxing.client.android.Intents
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
-import com.kash4me.R
 import com.kash4me.data.models.QRResponse
 import com.kash4me.data.models.customer.pay_by_kash4me.PayByKash4meQr
 import com.kash4me.data.models.merchant.purchase_return.ReturnPurchaseQr
+import com.kash4me.merchant.R
 import com.kash4me.network.ApiServices
 import com.kash4me.network.NetworkConnectionInterceptor
 import com.kash4me.network.NotFoundInterceptor

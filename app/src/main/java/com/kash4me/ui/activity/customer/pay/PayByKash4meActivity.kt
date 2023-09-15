@@ -3,7 +3,7 @@ package com.kash4me.ui.activity.customer.pay
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.kash4me.databinding.ActivityPayByKash4meBinding
+import com.kash4me.merchant.databinding.ActivityPayByKash4meBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

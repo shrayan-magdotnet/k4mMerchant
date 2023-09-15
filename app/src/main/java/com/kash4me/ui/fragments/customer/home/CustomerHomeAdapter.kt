@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.kash4me.data.local.customer.cashback.CashbackEntity
 import com.kash4me.data.local.customer.cashback.ShopDetails
-import com.kash4me.databinding.ItemCashbackCardBinding
+import com.kash4me.merchant.databinding.ItemCashbackCardBinding
 import com.kash4me.utils.CustomFilter
 import com.kash4me.utils.ImageUtils
 import com.kash4me.utils.extensions.formatUsingCurrencySystem
